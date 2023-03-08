@@ -1,0 +1,2666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!--page title-->
+        <title>DevSand</title>
+        
+<!--scaling definition allows page to fit to mobile devices and smaller browser windows-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+<!--site info search engine-->
+        <meta charset="utf-8"> 
+        <meta name="author" content="DevSand">
+        <meta name="description" content="A sandbox code editor & reference guide for budding web developers.">
+        
+<!--links-->
+      <!--codemirror links-->
+        <link href="index.css" rel="stylesheet">
+        <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+      
+        <script src="codemirror/lib/codemirror.js"></script>
+        <script src="codemirror/addon/edit/closetag.js"></script>
+        <script src="codemirror/mode/xml/xml.js"></script>
+        <script src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+        <script src="codemirror/mode/css/css.js"></script>
+        <script src="codemirror/mode/javascript/javascript.js"></script>
+        <script src="codemirror/addon/edit/matchbrackets.js"></script>
+        <script src="codemirror/addon/edit/matchtags.js"></script>
+        <script src="codemirror/addon/fold/xml-fold.js"></script>
+              <script src="codemirror/addon/edit/closebrackets.js"></script>
+
+      <!--toolbar links-->
+
+      
+  </head>
+    
+    
+<!--         
+ _______  _______ _________ _       
+(       )(  ___  )\__   __/( (    /|
+| () () || (   ) |   ) (   |  \  ( |
+| || || || (___) |   | |   |   \ | |
+| |(_)| ||  ___  |   | |   | (\ \) |
+| |   | || (   ) |   | |   | | \   |
+| )   ( || )   ( |___) (___| )  \  |
+|/     \||/     \|\_______/|/    )_)
+                                    
+-->
+    
+    <body>
+        
+   
+        <div class="flexer">
+         
+            
+            <div>
+                <textarea class="sizetextarea" id="myTextarea"></textarea>
+            </div>
+                <iframe class="sizeiframe" id="myIframe"></iframe>
+        </div>
+  
+
+         <!--
+         _______  _______  _______  _______  _______ _________
+        (  ____ \(  ___  )(  ____ )(       )(  ___  )\__   __/
+        | (    \/| (   ) || (    )|| () () || (   ) |   ) (   
+        | (__    | |   | || (____)|| || || || (___) |   | |   
+        |  __)   | |   | ||     __)| |(_)| ||  ___  |   | |   
+        | (      | |   | || (\ (   | |   | || (   ) |   | |   
+        | )      | (___) || ) \ \__| )   ( || )   ( |   | |   
+        |/       (_______)|/   \__/|/     \||/     \|   )_(         
+
+        -->        
+<div id="format">
+                
+        <div>
+        <button  id="enterMe" draggable="true" class=" repeater btnstyl drag" value="&#13;">ENTER</button>
+        <button  onclick="clearMe()" draggable="true" class=" formatbutton btnstyl drag">RESET</button>
+            |
+        <button  id="spaceMe" 
+   
+        draggable="true" class=" repeater btnstyl drag" value="&#32;">SPACE</button>
+            
+            
+            
+            
+<button onclick="deleteMe()" 
+onmousedown="back()" onmouseup="backStop()" onmouseout="backStop()" draggable="true" class=" formatbutton btnstyl drag" >BACKSPACE</button>
+           
+            |
+        <button  onclick="undoMe()" 
+        onmousedown="undoStart()" onmouseup="undoStop()" onmouseout="undoStop()" draggable="true" class=" formatbutton btnstyl drag">UNDO</button>
+        <button  onclick="redoMe()" 
+        onmousedown="redoStart()" onmouseup="redoStop()" onmouseout="redoStop()" draggable="true" class=" formatbutton btnstyl drag">REDO</button>   
+            |
+        <button  onclick="cutMe()" draggable="true" class=" formatbutton btnstyl drag">CUT</button>
+        <button  onclick="copyMe()" draggable="true" class=" formatbutton btnstyl drag">COPY</button> 
+        <button  onclick="pasteMe()" draggable="true" class=" formatbutton btnstyl drag">PASTE</button>   
+            |
+
+            
+        <!--
+         _______  _______  ______   _______   _________ _______  _______  _______ 
+        (  ____ \(  ___  )(  __  \ (  ____ \  \__   __/(  ___  )(  ____ \(  ____ \
+        | (    \/| (   ) || (  \  )| (    \/     ) (   | (   ) || (    \/| (    \/
+        | |      | |   | || |   ) || (__         | |   | (___) || |      | (_____ 
+        | |      | |   | || |   | ||  __)        | |   |  ___  || | ____ (_____  )
+        | |      | |   | || |   ) || (           | |   | (   ) || | \_  )      ) |
+        | (____/\| (___) || (__/  )| (____/\     | |   | )   ( || (___) |/\____) |
+        (_______/(_______)(______/ (_______/     )_(   |/     \|(_______)\_______)
+
+        -->    
+    
+            
+<button draggable="true" class=" formatbutton btnstyl drag" value="&#13;<style>&#13;&#13;</style>&#13;&#13;&#13;&#13;<script>&#13;&#13</script>&#13;">html</button>
+        <button draggable="true" class=" formatbutton btnstyl drag" value="&#13;<script>&#13;&#13;</script>&#13;">script</button>
+        <button draggable="true" class=" formatbutton btnstyl drag" value="&#13;<style>&#13;&#13;</style>&#13;">style</button>
+<button draggable="true" class=" formatbutton btnstyl drag" value=" &#123;&#13;&#13;&#125;">{ }</button>
+
+            |
+        <button draggable="true" class=" formatbutton btnstyl drag" value="&#13;<div>&#13;&#13;</div>&#13;">&lt;div&gt;</button>  
+        <button draggable="true" class=" formatbutton btnstyl drag" value="<span>texthere</span>">&lt;span&gt;</button>
+        <button draggable="true" class=" formatbutton btnstyl drag" value=" style=&#34;&#34;">inline style</button>
+            |
+
+         <!--
+         _______ _________ _        _______ _______ 
+        (  ____ \\__   __/( \      (  ____ \(  ____ \
+        | (    \/   ) (   | (      | (    \/| (    \/
+        | (__       | |   | |      | (__   | (_____ 
+        |  __)      | |   | |      |  __)  (_____  )
+        | (         | |   | |      | (           ) |
+        | )      ___) (___| (____/\| (____/Y\____) |
+        |/       \_______/(_______/(_______|_______)
+
+        -->  
+            
+        <button  onclick="selectAll()" draggable="true" class=" formatbutton btnstyl drag" >SELECT ALL</button>
+        <button  onclick="deselectAll()" draggable="true" class=" formatbutton btnstyl drag" >DESELECT ALL</button>
+            |        
+        <button  onclick="saveTextAsFile()" draggable="true" class=" formatbutton btnstyl drag">SAVE AS</button>
+            :
+            <input  id="nameMe" type="text">
+            .
+            <select id="extendMe">
+                <option>txt</option>
+                <option>html</option>
+                <option>css</option>
+                <option>js</option>
+                <option>json</option>
+              </select>  
+              |
+              <input class="btnstyl" onchange="loadfile(this)" type="file" >
+
+        </div>
+   
+  </div>
+ <!--        
+_________ _______  _______  _        ______   _______  _______    _______ _________ _______  _______ _________
+\__   __/(  ___  )(  ___  )( \      (  ___ \ (  ___  )(  ____ )  (  ____ \\__   __/(  ___  )(  ____ )\__   __/
+   ) (   | (   ) || (   ) || (      | (   ) )| (   ) || (    )|  | (    \/   ) (   | (   ) || (    )|   ) (   
+   | |   | |   | || |   | || |      | (__/ / | (___) || (____)|  | (_____    | |   | (___) || (____)|   | |   
+   | |   | |   | || |   | || |      |  __ (  |  ___  ||     __)  (_____  )   | |   |  ___  ||     __)   | |   
+   | |   | |   | || |   | || |      | (  \ \ | (   ) || (\ (           ) |   | |   | (   ) || (\ (      | |   
+   | |   | (___) || (___) || (____/\| )___) )| )   ( || ) \ \__  /\____) |   | |   | )   ( || ) \ \__   | |   
+   )_(   (_______)(_______)(_______/|/ \___/ |/     \||/   \__/  \_______)   )_(   |/     \||/   \__/   )_( 
+-->              
+        
+
+<div class="tab">
+<button  class="tablinks" onclick="openCity(event, 'metadatatab')" id="defaultOpen">METADATA</button>
+<button  class="tablinks" onclick="openCity(event, 'formstab')">FORMS</button>
+<button  class="tablinks" onclick="openCity(event, 'texttab')">TEXT</button>       
+<button  class="tablinks" onclick="openCity(event, 'imagetab')">IMAGE</button> 
+<button  class="tablinks" onclick="openCity(event, 'transformtab')">TRANSFORM</button> 
+<button  class="tablinks" onclick="openCity(event, 'boxmodeltab')">BOX MODEL</button> 
+<button  class="tablinks" onclick="openCity(event, 'displaytab')">DISPLAY</button>    
+<button  class="tablinks" onclick="openCity(event, 'contenttab')">GENERATED CONTENT</button> 
+<button  class="tablinks" onclick="openCity(event, 'insettab')">INSET</button>  
+<button  class="tablinks" onclick="openCity(event, 'misctab')">MISC</button> 
+<button  class="tablinks" onclick="openCity(event, 'selectorstab')">SELECTORS</button>
+<button  class="tablinks" onclick="openCity(event, 'pagestab')">PAGES</button> 
+<button  class="tablinks" onclick="openCity(event, 'utilitytab')">UTILITY</button> 
+<button  class="tablinks" onclick="openCity(event, 'accesstab')">ACCESSIBILITY</button> 
+<button  class="tablinks" onclick="openCity(event, 'compattab')">COMPATIBILITY</button> 
+
+
+
+</div>
+
+<div id="utilitytab" class="tabcontent" >
+
+    <select id="choiceMe">
+        <option>li</option>
+        <option>td</option>
+        <option>th</option>
+        <option>a</option>
+        <option>option</option>
+      </select> 
+<br>
+    <textarea rows="10" cols="30" id="pudge"></textarea>
+<br>
+<button id="listMake" class=" button" onclick="brush()">tag wrapper</button>
+
+
+</div>
+
+<div id="accesstab" class="tabcontent" >
+
+</div>
+
+<div id="compattab" class="tabcontent" >
+
+</div>
+
+
+
+        
+        
+<div id="metadatatab" class="tabcontent" >
+
+
+    <div class="boxes">
+        <div class="centerMe">metadata</div>
+    
+<div class="columnrows">
+
+<div class="dropdown" style=" background: salmon">
+<button draggable="true" class=" button drag" value="<link>">&lt;link&gt;</button>
+<div class="dropdown-content">
+<div class="columnrows"> 
+
+<button draggable="true" class="column button drag" value=" as=&#34;_self&#34;">as=""</button>    
+
+<button draggable="true" class="column button drag" value=" crossorigin=&#34;anonymous&#34;">crossorigin="anonymous"</button>
+<button draggable="true" class="column button drag" value=" crossorigin=&#34;use-credentials&#34;">crossorigin="use-credentials"</button>  
+<button draggable="true" class="column button drag" value=" disabled">disabled</button>    
+
+<button draggable="true" class="column button drag" value=" href=&#34;addresshere&#34;">href=""</button>    
+<button draggable="true" class="column button drag" value=" hreflang=&#34;languagehere&#34;">hreflang=""</button>  
+    </div>
+    
+    <div class="columnrows"> 
+<button draggable="true" class="column button drag" value=" media=&#34;all&#34;">media="all"</button>
+<button draggable="true" class="column button drag" value=" media=&#34;print&#34;">media="print"</button>  
+<button draggable="true" class="column button drag" value=" media=&#34;screen&#34;">media="screen"</button>  
+<button draggable="true" class="column button drag" value=" media=&#34;speech&#34;">media="speech"</button> 
+</div>
+
+<div class="columnrows"> 
+<button draggable="true" class="column button drag" value=" rel=&#34;alternate&#34;">rel="alternate"</button> 
+<button draggable="true" class="column button drag" value=" rel=&#34;author&#34;">rel="author"</button> 
+<button draggable="true" class="column button drag" value=" rel=&#34;canonical&#34;">rel="canonical"</button> 
+<button draggable="true" class="column button drag" value=" rel=&#34;help&#34;">rel="help"</button> 
+<button draggable="true" class="column button drag" value=" rel=&#34;icon&#34;">rel="icon"</button> 
+<button draggable="true" class="column button drag" value=" rel=&#34;license&#34;">rel="license"</button> 
+<button draggable="true" class="column button drag" value=" rel=&#34;manifest&#34;">rel="manifest"</button> 
+<button draggable="true" class="column button drag" value=" rel=&#34;modulepreload&#34;">rel="modulepreload"</button> 
+<button draggable="true" class="column button drag" value=" rel=&#34;next&#34;">rel="next"</button>      
+<button draggable="true" class="column button drag" value=" rel=&#34;pingback&#34;">rel="pingback"</button> 
+<button draggable="true" class="column button drag" value=" rel=&#34;prefetch&#34;">rel="prefetch"</button>    
+</div> 
+
+<div class="columnrows">      
+<button draggable="true" class="column button drag" value=" rel=&#34;preload&#34;">rel="preload"</button> 
+<button draggable="true" class="column button drag" value=" rel=&#34;prev&#34;">rel="prev"</button>           
+<button draggable="true" class="column button drag" value=" rel=&#34;search&#34;">rel="search"</button>  
+<button draggable="true" class="column button drag" value=" rel=&#34;shortlink&#34;">rel="shortlink"</button>          
+<button draggable="true" class="column button drag" value=" rel=&#34;stylesheet&#34;">rel="stylesheet"</button>          
+<button draggable="true" class="column button drag" value=" sizes=&#34;_top&#34;">sizes="any"</button> 
+<button draggable="true" class="column button drag" value=" sizes=&#34;widthinpixels x heightinpixels&#34;">sizes="widthinpixels x heightinpixels"</button> 
+<button draggable="true" class="column button drag" value=" title=&#34;titlehere&#34;">title=""</button>
+<button draggable="true" class="column button drag" value=" title=&#34;typehere&#34;">type=""</button>
+</div>    
+</div>
+</div> 
+
+<button draggable="true" class="column button drag" value="&#13;<title>&#13;&#13;</title>&#13;">&lt;title&gt;</button>
+
+
+
+<button draggable="true" class="column button drag" value="&#13;<body>&#13;&#13;</body>&#13;">&lt;body&gt;</button>
+
+
+
+<div class="dropdown" style=" background: salmon">
+<button draggable="true" class=" button drag" value="&#13;<html>&#13;&#13;</html>&#13;">&lt;html&gt;</button>
+<div class="dropdown-content">
+    <div class="columnrows"> 
+
+<button draggable="true" class="column button drag" value="foo:tag xmlns:foo=&#34;http://me.com/namespaces/foofoo&#34;">xmlns</button>    
+<button draggable="true" class="column button drag" value=" lang=&#34;en&#34;">lang="en"</button>
+    </div>
+</div>
+</div> 
+
+    
+<button draggable="true" class=" button drag" value="&#13;<head>&#13;&#13;</head>&#13;">&lt;head&gt;</button>
+
+    
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="&#13;<style>&#13;&#13;</style>&#13;">&lt;style&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" media=&#34;all&#34;">media="all"</button>
+<button draggable="true" class="column button drag" value=" media=&#34;print&#34;">media="print"</button>  
+<button draggable="true" class="column button drag" value=" media=&#34;screen&#34;">media="screen"</button>  
+<button draggable="true" class="column button drag" value=" media=&#34;speech&#34;">media="speech"</button> 
+</div>
+</div> 
+    
+
+
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<base>">&lt;base&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" href=&#34;insertaddresshere&#34;">href</button>    
+<button draggable="true" class="column button drag" value=" target=&#34;_self&#34;">target="_self"</button>    
+<button draggable="true" class="column button drag" value=" target=&#34;_blank&#34;">target="_blank"</button>     
+<button draggable="true" class="column button drag" value=" target=&#34;_parent&#34;">target="_parent"</button>     
+<button draggable="true" class="column button drag" value=" target=&#34;_top&#34;">target="_top"</button>  
+</div>
+</div> 
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<meta>">&lt;meta&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" charset=&#34;utf8&#34;">charset="utf8"</button>   
+</div>
+</div> 
+    
+</div>
+    </div>
+        
+
+    <div class="boxes">
+        <div class="centerMe">sections</div>
+
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="&#13;<header>&#13;&#13;</header>&#13;">&lt;header&gt;</button>
+<button draggable="true" class="column button drag" value="&#13;<nav>&#13;&#13;</nav>&#13;">&lt;nav&gt;</button>
+<button draggable="true" class="column button drag" value="&#13;<main>&#13;&#13;</main>&#13;">&lt;main&gt;</button>
+<button draggable="true" class="column button drag" value="&#13;<aside>&#13;&#13;</aside>&#13;">&lt;aside&gt;</button>
+<button draggable="true" class="column button drag" value="&#13;<address>&#13;&#13;</address>&#13;">&lt;address&gt;</button>
+<button draggable="true" class="column button drag" value="&#13;<article>&#13;&#13;</article>&#13;">&lt;article&gt;</button>
+<button draggable="true" class="column button drag" value="&#13;<section>&#13;&#13;</section>&#13;">&lt;section&gt;</button>
+<button draggable="true" class="column button drag" value="&#13;<footer>&#13;&#13;</footer>&#13;">&lt;footer&gt;</button>
+</div>
+
+
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="<h1>Heading1</h1>">&lt;h1&gt;</button>
+<button draggable="true" class="column button drag" value="<h2>Heading2</h2>">&lt;h2&gt;</button>
+<button draggable="true" class="column button drag" value="<h3>Heading3</h3>">&lt;h3&gt;</button>
+<button draggable="true" class="column button drag" value="<h4>Heading4</h4>">&lt;h4&gt;</button>
+<button draggable="true" class="column button drag" value="<h5>Heading5</h5>">&lt;h5&gt;</button>
+<button draggable="true" class="column button drag" value="<h6>Heading6</h6>">&lt;h6&gt;</button>
+</div>  
+
+    </div>
+
+
+    <div class="boxes">
+        <div class="centerMe">semantics</div>
+<div class="columnrows">
+block    
+    
+<button draggable="true" class="column button drag" value="<bdi>texthere</bdi>">&lt;bdi&gt;</button>
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<bdo>texthere</bdo>">&lt;bdo&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" dir=&#34;ltr&#34;">dir="ltr"</button> 
+<button draggable="true" class="column button drag" value=" dir=&#34;rtl&#34;">dir="rtl"</button> 
+</div>
+</div>
+    
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<data>texthere</data>">&lt;data&gt;</button>
+<div class="dropdown-content">
+    <button draggable="true" class="column button drag" value=" value=&#34;valuehere&#34;">value=""</button> 
+</div>
+</div>
+    
+<button draggable="true" class="column button drag" value="<wbr>">&lt;wbr&gt;</button>
+    
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<time>texthere</time>">&lt;time&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" datetime=&#34;timehere&#34;">datetime=""</button> 
+</div>
+</div>  
+    
+
+ruby
+<button draggable="true" class="column button drag" value="<rb>texthere</rb>">&lt;rb&gt;</button>
+<button draggable="true" class="column button drag" value="<rt>texthere</rt>">&lt;rt&gt;</button>
+<button draggable="true" class="column button drag" value="<rp>texthere</rp>">&lt;rp&gt;</button>
+<button draggable="true" class="column button drag" value="<rtc>texthere</rtc>">&lt;rtc&gt;</button>
+<button draggable="true" class="column button drag" value="<ruby>texthere</ruby>">&lt;ruby&gt;</button>
+</div>
+
+<div class="columnrows">
+code
+<button draggable="true" class="column button drag" value="<code>texthere</code>">&lt;code&gt;</button>             
+<button draggable="true" class="column button drag" value="<pre>texthere</pre>">&lt;pre&gt;</button>
+<button draggable="true" class="column button drag" value="<samp>texthere</samp>">&lt;samp&gt;</button>
+<button draggable="true" class="column button drag" value="<kbd>texthere</kbd>">&lt;kbd&gt;</button>
+ <button draggable="true" class="column button drag" value=" 
+kbd {
+background-color: #eee;
+border-radius: 3px;
+border: 1px solid #b4b4b4;
+box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+color: #333;
+display: inline-block;
+font-size: .85em;
+font-weight: 700;
+line-height: 1;
+padding: 2px 4px;
+white-space: nowrap;
+}                                                           
+
+">kbd style</button>    
+
+
+reference
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<blockquote>blockquote</blockquote>">&lt;blockquote&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" cite=&#34;addresshere&#34;">cite=""</button>  
+</div>
+</div> 
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<q>quotations</q>">&lt;q&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" cite=&#34;addresshere&#34;">cite=""</button> 
+</div>
+</div>
+
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<abbr>abbr</abbr>">&lt;abbr&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" title=&#34;titlehere&#34;">title=""</button> 
+</div>
+</div>
+
+<button draggable="true" class="column button drag" value="<cite>cite</cite>">&lt;cite&gt;;</button>
+    
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<dfn>definition</dfn>">&lt;dfn&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" title=&#34;titlehere&#34;">title=""</button> 
+</div>
+</div>
+
+</div>  
+    </div>
+    
+
+    <div class="boxes">
+        <div class="centerMe">semantics</div> 
+
+<div class="columnrows">
+text
+<button draggable="true" class="column button drag" value="<p>&#13;&#13;</p>">&lt;p&gt;</button>
+<button draggable="true" class="column button drag" value="<b>bold</b>">&lt;b&gt;</button>
+<button draggable="true" class="column button drag" value="<i>italic</i>">&lt;i&gt;</button>
+<button draggable="true" class="column button drag" value="<sub>subscript</sub>">&lt;sub&gt;</button>
+<button draggable="true" class="column button drag" value="<sup>superscript</sup>">&lt;sup&gt;</button>
+<button draggable="true" class="column button drag" value="<br>">&lt;br&gt;</button>
+<button draggable="true" class="column button drag" value="<hr>">&lt;hr&gt;</button>
+</div>  
+
+<div class="columnrows">
+markup
+<button draggable="true" class="column button drag" value="<strong>strong</strong>">&lt;strong&gt;</button>
+<button draggable="true" class="column button drag" value="<em>emphasis</em>">&lt;em&gt;</button>
+<button draggable="true" class="column button drag" value="<u>texthere</u>">&lt;u&gt;</button>
+<button draggable="true" class="column button drag" value="<small>texthere</small>">&lt;small&gt;</button>                          
+<button draggable="true" class="column button drag" value="<mark>texthere</mark>">&lt;mark&gt;</button>
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<del>delete</del>">&lt;del&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" cite=&#34;addresshere&#34;">cite=""</button> 
+<button draggable="true" class="column button drag" value=" datetime=&#34;timehere&#34;">datetime=""</button> 
+</div>
+</div> 
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<ins>insert</ins>">&lt;ins&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" cite=&#34;addresshere&#34;">cite=""</button> 
+<button draggable="true" class="column button drag" value=" datetime=&#34;timehere&#34;">datetime=""</button>
+</div>
+</div> 
+
+<button draggable="true" class="column button drag" value="<s>strikethrough</s>">&lt;s&gt;</button>
+<button draggable="true" class="column button drag" value="<var>texthere</var>">&lt;var&gt; </button>
+</div>
+
+    </div>
+
+
+    <div class="boxes">
+    <div class="centerMe">multimedia</div>  
+    <div class="columnrows">
+    images
+        
+    <div class="dropdown">
+    <button draggable="true" class=" button drag" value="<img src=&#34;images/example.jpg&#34;>">&lt;img&gt;</button>
+    <div class="dropdown-content">
+    <button draggable="true" class="column button drag" value=" alt=&#34;descriptionhere&#34;">alt=""</button> 
+    <button draggable="true" class="column button drag" value=" crossorigin=&#34;anonymous&#34;">crossorigin="anonymous"</button>
+    <button draggable="true" class="column button drag" value=" crossorigin=&#34;use-credentials&#34;">crossorigin="use-credentials"</button>
+    <button draggable="true" class="column button drag" value=" decoding=&#34;sync&#34;">decoding="sync"</button> 
+    <button draggable="true" class="column button drag" value=" decoding=&#34;async&#34;">decoding="async"</button> 
+    <button draggable="true" class="column button drag" value=" decoding=&#34;auto&#34;">decoding="auto"</button> 
+    <button draggable="true" class="column button drag" value=" height=&#34;numberhere&#34;">height=""</button> 
+    <button draggable="true" class="column button drag" value=" ismap">ismap</button>
+    <button draggable="true" class="column button drag" value=" sizes=&#34;sizehere&#34;">sizes=""</button> 
+    <button draggable="true" class="column button drag" value=" src=&#34;addresshere&#34;">src=""</button> 
+    <button draggable="true" class="column button drag" value=" srcset=&#34;addresshere, width w, pixeldensity&#34;">srcset=""</button> 
+    <button draggable="true" class="column button drag" value=" usemap=&#34;#nameofmaphere&#34;">usemap=""</button> 
+    <button draggable="true" class="column button drag" value=" width=&#34;numberhere&#34;">width=""</button> 
+
+    </div>
+    </div>      
+
+    <button draggable="true" class="column button drag" 
+    value=
+    "<figure>&#13;
+    <img src=&#34;images/example.jpg&#34; 
+    alt=&#34;alternative text&#34; 
+    title=&#34;example image&#34;>&#13;
+    <figcaption>figcaption</figcaption>&#13;
+    </figure>">&lt;figure&gt;full</button>
+
+    <button draggable="true" class="column button drag" value="&#13;<figure>&#13;&#13;</figure>">&lt;figure&gt;</button>
+    <button draggable="true" class="column button drag" value="<figcaption>figcaption</figcaption>">&lt;figcaption&gt;</button>
+
+    <button draggable="true" class="column button drag" value="<img src=&#34;images/example.jpg&#34; alt=&#34;alternative text&#34; title=&#34;example image&#34;>">&lt;img&gt;full</button>    
+
+    
+    multimedia
+    <div class="dropdown">
+    <button draggable="true" class=" button drag" value="<audio>texthere</audio>">&lt;audio&gt;</button>
+    <div class="dropdown-content">
+    <button draggable="true" class="column button drag" value=" autoplay">autoplay</button> 
+    <button draggable="true" class="column button drag" value=" controls">controls</button>    
+    <button draggable="true" class="column button drag" value=" crossorigin=&#34;anonymous&#34;">crossorigin="anonymous"</button>
+    <button draggable="true" class="column button drag" value=" crossorigin=&#34;use-credentials&#34;">crossorigin="use-credentials"</button> 
+    <button draggable="true" class="column button drag" value=" currentTime=&#34;numberhere&#34;">currentTime=""</button>
+    <button draggable="true" class="column button drag" value=" duration=&#34;numberhere&#34;">duration=""</button>
+    <button draggable="true" class="column button drag" value=" loop">loop</button> 
+    <button draggable="true" class="column button drag" value=" muted">muted</button> 
+    <button draggable="true" class="column button drag" value=" preload=&#34;none&#34;">preload="none"</button> 
+    <button draggable="true" class="column button drag" value=" preload=&#34;metadata&#34;">preload="metadata"</button> 
+    <button draggable="true" class="column button drag" value=" preload=&#34;auto&#34;">preload="auto"</button> 
+    <button draggable="true" class="column button drag" value=" src=&#34;addresshere&#34;">src=""</button> 
+    </div>
+    </div> 
+
+    <div class="dropdown">
+    <button draggable="true" class=" button drag" value="<video>texthere</video>">&lt;video&gt;</button>
+    <div class="dropdown-content">
+    <button draggable="true" class="column button drag" value=" autoplay">autoplay</button> 
+    <button draggable="true" class="column button drag" value=" buffered=&#34;numberhere&#34;">buffered=""</button>
+    <button draggable="true" class="column button drag" value=" controls">controls</button>    
+    <button draggable="true" class="column button drag" value=" crossorigin=&#34;anonymous&#34;">crossorigin="anonymous"</button>
+    <button draggable="true" class="column button drag" value=" crossorigin=&#34;use-credentials&#34;">crossorigin="use-credentials"</button> 
+    <button draggable="true" class="column button drag" value=" currentTime=&#34;numberhere&#34;">currentTime=""</button>
+    <button draggable="true" class="column button drag" value=" duration=&#34;numberhere&#34;">duration=""</button>
+    <button draggable="true" class="column button drag" value=" height=&#34;numberhere&#34;">height=""</button> 
+    <button draggable="true" class="column button drag" value=" loop">loop</button> 
+    <button draggable="true" class="column button drag" value=" muted">muted</button> 
+    <button draggable="true" class="column button drag" value=" playsinline">playsinline</button> 
+    <button draggable="true" class="column button drag" value=" poster=&#34;addresshere&#34;">poster=""</button>    
+    <button draggable="true" class="column button drag" value=" preload=&#34;none&#34;">preload="none"</button> 
+    <button draggable="true" class="column button drag" value=" preload=&#34;metadata&#34;">preload="metadata"</button> 
+    <button draggable="true" class="column button drag" value=" preload=&#34;auto&#34;">preload="auto"</button> 
+    <button draggable="true" class="column button drag" value=" src=&#34;addresshere&#34;">src=""</button>    
+    <button draggable="true" class="column button drag" value=" width=&#34;numberhere&#34;">width=""</button> 
+    </div>
+    </div> 
+
+    <div class="dropdown">
+    <button draggable="true" class=" button drag" value="<track>">&lt;track&gt;</button>
+    <div class="dropdown-content">
+    <button draggable="true" class="column button drag" value=" default">default</button>
+    <button draggable="true" class="column button drag" value=" kind=&#34;subtitles&#34;">kind="subtitles"</button> 
+    <button draggable="true" class="column button drag" value=" kind=&#34;captions&#34;">kind="captions"</button> 
+    <button draggable="true" class="column button drag" value=" kind=&#34;descriptions&#34;">kind="descriptions"</button> 
+    <button draggable="true" class="column button drag" value=" kind=&#34;chapters&#34;">kind="chapters"</button> 
+    <button draggable="true" class="column button drag" value=" kind=&#34;metadata&#34;">kind="metadata"</button> 
+    <button draggable="true" class="column button drag" value=" label=&#34;labelhere&#34;">label=""</button> 
+    <button draggable="true" class="column button drag" value=" src=&#34;addresshere&#34;">src=""</button> 
+    <button draggable="true" class="column button drag" value=" srclang=&#34;languagehere&#34;">srclang=""</button> 
+    </div>
+    </div>
+
+    <div class="dropdown">
+    <button draggable="true" class=" button drag" value="<area>">&lt;area&gt;</button>
+    <div class="dropdown-content">
+    <button draggable="true" class="column button drag" value=" alt=&#34;mapnamehere&#34;">alt=""</button> 
+
+    <button draggable="true" class="column button drag" value=" coords=&#34;x,y&#34;">coords="x,y"</button>
+    <button draggable="true" class="column button drag" value=" coords=&#34;x,y,r&#34;">coords="x,y,r"</button>
+    <button draggable="true" class="column button drag" value=" coords=&#34;x1, y1, x2, y2&#34;">coords="x1, y1, x2, y2"</button>
+
+
+    <button draggable="true" class="column button drag" value=" download=&#34;valuehere&#34;">download=""</button> 
+    <button draggable="true" class="column button drag" value=" href=&#34;addresshere&#34;">href=""</button> 
+    <button draggable="true" class="column button drag" value=" hreflang=&#34;languagehere&#34;">hreflang=""</button> 
+
+    <button draggable="true" class="column button drag" value=" ping=&#34;mapnamehere&#34;">ping=""</button> 
+    <button draggable="true" class="column button drag" value=" rel=&#34;relationshiphere&#34;">rel=""</button> 
+
+    <button draggable="true" class="column button drag" value=" shape=&#34;rect&#34;">shape="rect"</button>
+    <button draggable="true" class="column button drag" value=" shape=&#34;circle&#34;">shape="circle"</button>
+    <button draggable="true" class="column button drag" value=" shape=&#34;poly&#34;">poly=""</button>
+
+
+    <button draggable="true" class="column button drag" value=" target=&#34;_self&#34;">target="_self"</button>    
+    <button draggable="true" class="column button drag" value=" target=&#34;_blank&#34;">target="_blank"</button>     
+    <button draggable="true" class="column button drag" value=" target=&#34;_parent&#34;">target="_parent"</button>     
+    <button draggable="true" class="column button drag" value=" target=&#34;_top&#34;">target="_top"</button> 
+
+    </div>
+    </div>  
+
+    <div class="dropdown">
+    <button draggable="true" class=" button drag" value="<map>texthere</map>">&lt;map&gt;</button>
+    <div class="dropdown-content">
+    <button draggable="true" class="column button drag" value=" name=&#34;mapnamehere&#34;">name=""</button> 
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+
+    <div class="boxes">
+        <div class="centerMe">lists</div>  
+   
+        <div class="columnrows">
+            lists
+            <div class="dropdown">
+            <button draggable="true" class=" button drag" value="<ol>&#13;&#13;</ol>&#13;">&lt;ol&gt;</button>
+            <div class="dropdown-content">
+            <button draggable="true" class="column button drag" value=" reversed">reversed</button>
+            <button draggable="true" class="column button drag" value=" start=&#34;startnumberhere&#34;">number start</button>
+            <button draggable="true" class="column button drag" value=" type=&#34;A&#34;">type UPPER</button>
+            <button draggable="true" class="column button drag" value=" type=&#34;a&#34;">type lower</button>
+            <button draggable="true" class="column button drag" value=" type=&#34;I&#34;">type ROMAN</button>
+            <button draggable="true" class="column button drag" value=" type=&#34;i&#34;">type roman</button>
+            <button draggable="true" class="column button drag" value=" type=&#34;1&#34;">type number</button>
+            </div>
+            </div> 
+                
+            <div class="dropdown">
+            <button draggable="true" class=" button drag" value="<li>ListItem</li>&#13">&lt;li&gt;</button>
+            <div class="dropdown-content">
+            <button draggable="true" class="column button drag" value=" value=&#34;numberhere&#34;">value=""</button>  
+            </div>
+            </div> 
+            
+            <button draggable="true" class="column button drag" value="<ul>&#13;&#13;</ul>&#13;">&lt;ul&gt;</button>
+            <button draggable="true" class="column button drag" value="<li>ListItem</li>&#13">&lt;li&gt;</button>
+                
+                
+            <button draggable="true" class="column button drag" value="<dl>&#13;&#13;</dl>&#13;">&lt;dl&gt;</button>
+            <button draggable="true" class="column button drag" value="<dt>definitionterm</dt>&#13;">&lt;dt&gt;</button>    
+            <button draggable="true" class="column button drag" value="<dd>definition</dd>&#13;">&lt;dd&gt;</button>
+            
+        
+            
+            </div>
+            
+                    
+                
+            
+            <div class="columnrows">
+            tables
+                    
+            <button draggable="true" class="column button drag" value="&#13;<table>&#13;&#13;</table>&#13;">&lt;table&gt;</button>
+            <button draggable="true" class="column button drag" value="&#13;<tr>&#13;&#13;</tr>&#13;">&lt;tr&gt;</button>
+                
+            <div class="dropdown">
+            <button draggable="true" class=" button drag" value="<th>tablehead</th>&#13;">&lt;th&gt;</button>
+            <div class="dropdown-content">
+            <button draggable="true" class="column button drag" value=" abbr=&#34;descriptionhere&#34;">abbr=""</button> 
+            <button draggable="true" class="column button drag" value=" headers=&#34;valuehere&#34;">headers=""</button> 
+            <button draggable="true" class="column button drag" value=" colspan=&#34;numberhere&#34;">colspan=""</button>
+            <button draggable="true" class="column button drag" value=" rowspan=&#34;numberhere&#34;">rowspan=""</button>  
+            <button draggable="true" class="column button drag" value=" scope=&#34;row&#34;">scope="row"</button>
+            <button draggable="true" class="column button drag" value=" scope=&#34;col&#34;">scope="col"</button>
+            <button draggable="true" class="column button drag" value=" scope=&#34;rowgroup&#34;">scope="rowgroup"</button>
+            <button draggable="true" class="column button drag" value=" scope=&#34;colgroup&#34;">scope="colgroup"</button>
+            <button draggable="true" class="column button drag" value=" scope=&#34;auto&#34;">scope="auto"</button>
+            </div>
+            </div>     
+            
+            <div class="dropdown">
+            <button draggable="true" class=" button drag" value="<td>tabledata</td>&#13;">&lt;td&gt;</button>
+            <div class="dropdown-content">
+            <button draggable="true" class="column button drag" value=" headers=&#34;valuehere&#34;">headers=""</button> 
+            <button draggable="true" class="column button drag" value=" colspan=&#34;numberhere&#34;">colspan=""</button>
+            <button draggable="true" class="column button drag" value=" rowspan=&#34;numberhere&#34;">rowspan=""</button> 
+            </div>
+            </div> 
+
+            semantics
+            <button draggable="true" class="column button drag" value="<caption>tablehead</caption>&#13;">&lt;caption&gt;</button>
+            <button draggable="true" class="column button drag" value="&#13;<thead>&#13;&#13;</thead>&#13;">&lt;thead&gt;</button>
+            <button draggable="true" class="column button drag" value="&#13;<tbody>&#13;&#13;</tbody>&#13;">&lt;tbody&gt;</button>
+            <button draggable="true" class="column button drag" value="&#13;<tfoot>&#13;&#13;</tfoot>&#13;">&lt;tfoot&gt;</button>
+            
+            <div class="dropdown">
+            <button draggable="true" class=" button drag" value="<col>">&lt;col&gt;</button>
+            <div class="dropdown-content">
+            <button draggable="true" class="column button drag" value=" span=&#34;numberhere&#34;">span=""</button>
+            </div>
+            </div>         
+            
+            <div class="dropdown">
+            <button draggable="true" class=" button drag" value="<colgroup>tablehead</colgroup>&#13;">&lt;colgroup&gt;</button>
+            <div class="dropdown-content">
+            <button draggable="true" class="column button drag" value=" span=&#34;numberhere&#34;">span=""</button>
+            </div>
+            </div>
+
+            </div>
+
+            <div class="columnrows">
+
+                snippets
+                <button draggable="true" class="column button drag" value=
+                "<ol>&#13;
+                <li>ListItem1</li>&#13;
+                <li>ListItem2</li>&#13;
+                <li>ListItem3</li>&#13;
+                </ol>&#13;">&lt;ol&gt;&lt;/ol&gt;</button>
+                
+                <button draggable="true" class="column button drag" value=
+                "<ul>&#13;
+                <li>ListItem1</li>&#13;
+                <li>ListItem2</li>&#13;
+                <li>ListItem3</li>&#13;
+                </ul>&#13;">&lt;ul&gt;&lt;/ul&gt;</button>
+                
+                <button draggable="true" class="column button drag" value=
+                "<dl>&#13;
+                <dt>definitionterm1</dt>&#13;
+                <dd>definition1</dd>&#13;
+                <dt>definitionterm2</dt>&#13;
+                <dd>definition2</dd>&#13;
+                <dt>definitionterm3</dt>&#13;
+                <dd>definition3</dd>&#13;
+                </dl>&#13;">&lt;dl&gt;&lt;/dl&gt;</button>
+
+row snippets                
+<button draggable="true" class="column button drag" value=
+"<tr>&#13;
+    <th>tablehead1</th>&#13;
+    <th>tablehead2</th>&#13;
+    <th>tablehead3</th>&#13;
+</tr>&#13;">&lt;tr&gt;full row</button>
+<button draggable="true" class="column button drag" value=
+"<tr>&#13;
+    <th>tablehead1</th>&#13;
+    <td>tabledata</td>&#13;
+    <td>tabledata</td>&#13;
+</tr>&#13;">&lt;tr&gt;full column</button>
+<button draggable="true" class="column button drag" value=
+"<tr>&#13;
+    <td>tabledata</td>&#13;
+    <td>tabledata</td>&#13;
+    <td>tabledata</td>&#13;
+</tr>&#13;">&lt;tr&gt;</button>
+                
+                
+                
+table snippets                
+                <button draggable="true" class="column button drag" value=
+                "<table>&#13;
+                <thead>&#13;
+                <tr>&#13;
+                <th></th>&#13;
+                <th>tablehead2</th>&#13;
+                <th>tablehead3</th>&#13;
+                </tr>&#13;
+                </thead>&#13;
+                <tbody>&#13;
+                <tr>&#13;
+                <th>tablehead1</th>&#13;
+                <td>tabledata2</td>&#13;
+                <td>tabledata3</td>&#13;
+                </tr>&#13;
+                </tbody>&#13;
+                <tfoot>&#13;
+                <tr>&#13;
+                <th>tablehead1</th>&#13;
+                <td>tabledata2</td>&#13;
+                <td>tabledata3</td>&#13;
+                </tr>&#13;
+                </tfoot>&#13;
+                </table>&#13;">&lt;table&gt;fullest</button>
+                <button draggable="true" class="column button drag" value=
+                "<table>&#13;
+                <tr>&#13;
+                <th></th>&#13;
+                <th>tablehead2</th>&#13;
+                <th>tablehead3</th>&#13;
+                </tr>&#13;
+                <tr>&#13;
+                <th>tablehead1</th>&#13;
+                <td>tabledata2</td>&#13;
+                <td>tabledata3</td>&#13;
+                </tr>&#13;<tr>&#13;
+                <th>tablehead1</th>&#13;
+                <td>tabledata2</td>&#13;
+                <td>tabledata3</td>&#13;
+                </tr>&#13;
+                </table>&#13;">&lt;table&gt;full</button>
+                <button draggable="true" class="column button drag" value=
+                "<table>&#13;
+                <tr>&#13;
+                <td>tabledata1</td>&#13;
+                <td>tabledata2</td>&#13;
+                <td>tabledata3</td>&#13;
+                </tr>&#13;<tr>&#13;
+                <td>tabledata1</td>&#13;
+                <td>tabledata2</td>&#13;
+                <td>tabledata3</td>&#13;
+                </tr>&#13;<tr>&#13;
+                <td>tabledata1</td>&#13;
+                <td>tabledata2</td>&#13;
+                <td>tabledata3</td>&#13;
+                </tr>&#13;
+                </table>&#13;">&lt;table&gt;&lt;/table&gt;</button>
+                  
+            </div>
+            
+            </div> 
+          
+
+    <div class="boxes">
+        <div class="centerMe">embedded</div>
+    <div class="columnrows">
+        
+        links 
+        <div class="dropdown">
+        <button draggable="true" class=" button drag" value="<a href=&#34;#&#34;>address</a>">&lt;a&gt;</button>
+        <div class="dropdown-content">
+        <button draggable="true" class="column button drag" value=" download=&#34;addresshere&#34;">download=""</button> 
+        <button draggable="true" class="column button drag" value=" href=&#34;addresshere&#34;">href=""</button> 
+        <button draggable="true" class="column button drag" value=" hreflang=&#34;languagehere&#34;">hreflang=""</button> 
+        <button draggable="true" class="column button drag" value=" ping=&#34;addresshere&#34;">ping=""</button> 
+        <button draggable="true" class="column button drag" value=" rel=&#34;relationshiphere&#34;">rel=""</button> 
+        <button draggable="true" class="column button drag" value=" target=&#34;_self&#34;">target="_self"</button>    
+        <button draggable="true" class="column button drag" value=" target=&#34;_blank&#34;">target="_blank"</button>     
+        <button draggable="true" class="column button drag" value=" target=&#34;_parent&#34;">target="_parent"</button>     
+        <button draggable="true" class="column button drag" value=" target=&#34;_top&#34;">target="_top"</button> 
+        <button draggable="true" class="column button drag" value=" type=&#34;typehere&#34;">type=""</button> 
+        </div>
+        </div>
+
+        embedded
+
+        <div class="dropdown">
+        <button draggable="true" class=" button drag" value="<iframe>texthere</iframe>">&lt;iframe&gt;</button>
+        
+        <div class="dropdown-content">
+        <button draggable="true" class="column button drag" value=" allow=&#34;valuehere&#34;">allow=""</button> 
+        <button draggable="true" class="column button drag" value=" allow=&#34;fullscreen&#34;">allow="fullscreen"</button> 
+        <button draggable="true" class="column button drag" value=" allow=&#34;payment&#34;">allow="payment"</button> 
+        <button draggable="true" class="column button drag" value=" height=&#34;numberhere&#34;">height=""</button> 
+        <button draggable="true" class="column button drag" value=" name=&#34;valuehere&#34;">name=""</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;no-referrer&#34;">referrerpolicy="no-referrer"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;no-referrer-when-downgrade&#34;">referrerpolicy="no-referrer-when-downgrade"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;origin&#34;">referrerpolicy="origin"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;origin-when-cross-origin&#34;">referrerpolicy="origin-when-cross-origin"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;same-origin&#34;">referrerpolicy="same-origin"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;strict-origin&#34;">referrerpolicy="strict-origin"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;strict-origin-when-cross-origin&#34;">referrerpolicy="strict-origin-when-cross-origin"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;unsafe-url&#34;">referrerpolicy="unsafe-url"</button> 
+        <button draggable="true" class="column button drag" value=" src=&#34;valuehere&#34;">src=""</button>     
+        <button draggable="true" class="column button drag" value=" srcdoc=&#34;valuehere&#34;">srcdoc=""</button>  
+        <button draggable="true" class="column button drag" value=" sandbox=&#34;allow-forms&#34;">sandbox="allow-forms"</button> 
+        <button draggable="true" class="column button drag" value=" sandbox=&#34;allow-modals&#34;">sandbox="allow-modals"</button> 
+        <button draggable="true" class="column button drag" value=" sandbox=&#34;allow-orientation-lock&#34;">sandbox="allow-orientation-lock"</button> 
+        <button draggable="true" class="column button drag" value=" sandbox=&#34;allow-pointer-lock&#34;">sandbox="allow-pointer-lock"</button> 
+        <button draggable="true" class="column button drag" value=" sandbox=&#34;allow-popups&#34;">sandbox="allow-popups"</button> 
+        <button draggable="true" class="column button drag" value=" sandbox=&#34;allow-popups-to-escape-sandbox&#34;">sandbox="allow-popups-to-escape-sandbox"</button> 
+        <button draggable="true" class="column button drag" value=" sandbox=&#34;allow-presentation&#34;">sandbox="allow-presentation"</button> 
+        <button draggable="true" class="column button drag" value=" sandbox=&#34;allow-same-origin&#34;">sandbox="allow-same-origin"</button> 
+        <button draggable="true" class="column button drag" value=" sandbox=&#34;allow-scripts&#34;">sandbox="allow-scripts"</button> 
+        <button draggable="true" class="column button drag" value=" sandbox=&#34;allow-top-navigation&#34;">sandbox="allow-top-navigation"</button> 
+        <button draggable="true" class="column button drag" value=" sandbox=&#34;allow-top-navigation-by-user-activation&#34;">sandbox="allow-top-navigation-by-user-activation"</button> 
+        <button draggable="true" class="column button drag" value=" width=&#34;numberhere&#34;">width=""</button> 
+        </div>
+        </div>     
+        
+        
+        <div class="dropdown">
+        <button draggable="true" class=" button drag" value="<object>texthere</object>">&lt;object&gt;</button>
+        <div class="dropdown-content">         
+        <button draggable="true" class="column button drag" value=" data=&#34;datahere&#34;">data=""</button> 
+        <button draggable="true" class="column button drag" value=" form=&#34;formidhere&#34;">form=""</button> 
+        <button draggable="true" class="column button drag" value=" name=&#34;namehere&#34;">name=""</button> 
+        <button draggable="true" class="column button drag" value=" type=&#34;namehere&#34;">type=""</button> 
+        <button draggable="true" class="column button drag" value=" typemustmatch=&#34;namehere&#34;">typemustmatch=""</button> 
+        <button draggable="true" class="column button drag" value=" usemap=&#34;#nameofmaphere&#34;">usemap=""</button> 
+        <button draggable="true" class="column button drag" value=" width=&#34;numberhere&#34;">width=""</button> 
+        <button draggable="true" class="column button drag" value=" height=&#34;numberhere&#34;">height=""</button> 
+        </div>
+        </div>     
+        
+        <div class="dropdown">
+        <button draggable="true" class=" button drag" value="<param>">&lt;param&gt;</button>
+        <div class="dropdown-content">
+        <button draggable="true" class="column button drag" value=" name=&#34;namehere&#34;">name=""</button> 
+        <button draggable="true" class="column button drag" value=" value=&#34;valuehere&#34;">value=""</button> 
+        </div>
+        </div> 
+            
+        <button draggable="true" class=" button drag" value="<picture>texthere</picture>">&lt;picture&gt;</button>
+        
+        
+        <div class="dropdown">
+        <button draggable="true" class=" button drag" value="<source>">&lt;source&gt;</button>
+        <div class="dropdown-content">
+        <button draggable="true" class="column button drag" value=" media=&#34;mediahere&#34;">media=""</button> 
+        <button draggable="true" class="column button drag" value=" sizes=&#34;sizehere&#34;">sizes=""</button> 
+        <button draggable="true" class="column button drag" value=" src=&#34;addresshere&#34;">src=""</button> 
+        <button draggable="true" class="column button drag" value=" srcset=&#34;addresshere, width w, pixeldensity&#34;">srcset=""</button> 
+        <button draggable="true" class="column button drag" value=" type=&#34;typehere&#34;">type=""</button> 
+        </div>
+        </div>     
+        
+        
+        <div class="dropdown">
+        <button draggable="true" class=" button drag" value="<canvas>texthere</canvas>">&lt;canvas&gt;</button>
+        <div class="dropdown-content">
+        <button draggable="true" class="column button drag" value=" width=&#34;numberhere&#34;">width=""</button> 
+        <button draggable="true" class="column button drag" value=" height=&#34;numberhere&#34;">height=""</button> 
+        </div>
+        </div>     
+        
+        <button draggable="true" class="column button drag" value="<noscript>texthere</noscript>">&lt;noscript&gt;</button>    
+        
+        <div class="dropdown">
+        <button draggable="true" class=" button drag" value="<script>texthere</script>">&lt;script&gt;</button>
+        <div class="dropdown-content">
+        <button draggable="true" class="column button drag" value=" async">async</button> 
+        <button draggable="true" class="column button drag" value=" crossorigin=&#34;anonymous&#34;">crossorigin="anonymous"</button>
+        <button draggable="true" class="column button drag" value=" crossorigin=&#34;use-credentials&#34;">crossorigin="use-credentials"</button>
+        <button draggable="true" class="column button drag" value=" defer">defer</button> 
+        <button draggable="true" class="column button drag" value=" integrity=&#34;valuehere&#34;">integrity=""</button> 
+        <button draggable="true" class="column button drag" value=" nomodule">nomodule</button> 
+        <button draggable="true" class="column button drag" value=" nonce=&#34;valuehere&#34;">nonce=""</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;no-referrer&#34;">referrerpolicy="no-referrer"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;no-referrer-when-downgrade&#34;">referrerpolicy="no-referrer-when-downgrade"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;origin&#34;">referrerpolicy="origin"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;origin-when-cross-origin&#34;">referrerpolicy="origin-when-cross-origin"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;same-origin&#34;">referrerpolicy="same-origin"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;strict-origin&#34;">referrerpolicy="strict-origin"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;strict-origin-when-cross-origin&#34;">referrerpolicy="strict-origin-when-cross-origin"</button> 
+        <button draggable="true" class="column button drag" value=" referrerpolicy=&#34;unsafe-url&#34;">referrerpolicy="unsafe-url"</button> 
+        <button draggable="true" class="column button drag" value=" src=&#34;valuehere&#34;">src=""</button> 
+        <button draggable="true" class="column button drag" value=" src=&#34;typehere&#34;">type=""</button> 
+        </div>
+        </div>
+        
+        
+        interactive
+        
+        <div class="dropdown">
+        <button draggable="true" class=" button drag" value="<details>texthere</details>">&lt;details&gt;</button>
+        <div class="dropdown-content">
+        <button draggable="true" class="column button drag" value=" open">open</button> 
+        </div>
+        </div>     
+        
+        <div class="dropdown">
+        <button draggable="true" class=" button drag" value="<dialog>texthere</dialogue>">&lt;dialog&gt;</button>
+        <div class="dropdown-content">
+        <button draggable="true" class="column button drag" value=" open">open</button>  
+        </div>
+        </div> 
+        
+        <button draggable="true" class="column button drag" value="<summary>texthere</summary>">&lt;summary&gt;</button>
+        
+        </div>
+
+    </div>
+
+</div>
+                
+
+
+
+
+</div>
+
+
+
+    
+<div id="formstab" class="tabcontent" > 
+          
+
+
+
+
+<div class="columnrows">
+FORMS
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<button>texthere</button>">&lt;button&gt;&lt;/button&gt;</button>       
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" autofocus">autofocus</button>
+<button draggable="true" class="column button drag" value=" disabled">disabled</button>
+<button draggable="true" class="column button drag" value=" form=&#34;formidhere&#34;">form=""</button>
+<button draggable="true" class="column button drag" value=" formaction=&#34;addresshere&#34;">formaction=""</button>
+<button draggable="true" class="column button drag" value=" formenctype=&#34;application/x-www-form-urlencoded&#34;">formenctype="application/<br>x-www-form-urlencoded"</button>
+<button draggable="true" class="column button drag" value=" formenctype=&#34;multipart/form-data&#34;">formenctype="multipart/form-data"</button>
+<button draggable="true" class="column button drag" value=" formenctype=&#34;text/plain&#34;">formenctype="text/plain"</button>
+<button draggable="true" class="column button drag" value=" formmethod=&#34;post&#34;">formmethod="post"</button>
+<button draggable="true" class="column button drag" value=" formmethod=&#34;get&#34;">formmethod="get"</button>
+<button draggable="true" class="column button drag" value=" formnovalidate">formnovalidate</button>
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_self&#34;">formtarget="_self"</button>    
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_blank&#34;">formtarget="_blank"</button>     
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_parent&#34;">formtarget="_parent"</button>     
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_top&#34;">formtarget="_top"</button> 
+<button draggable="true" class="column button drag" value=" name=&#34;namehere&#34;">name=""</button>
+<button draggable="true" class="column button drag" value=" type=&#34;submit&#34;">type="submit"</button>
+<button draggable="true" class="column button drag" value=" type=&#34;reset&#34;">type="reset"</button>
+<button draggable="true" class="column button drag" value=" type=&#34;button&#34;">type="button"</button>
+<button draggable="true" class="column button drag" value=" value=&#34;valuehere&#34;">value=""</button>
+</div>
+</div>     
+
+<button draggable="true" class="column button drag" value="<datalist>texthere</datalist>">&lt;datalist&gt;&lt;/datalist&gt;</button>
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<fieldset>texthere</fieldset>">&lt;fieldset&gt;&lt;/fieldset&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" name=&#34;namehere&#34;">name=""</button>
+<button draggable="true" class="column button drag" value=" form=&#34;formidhere&#34;">form=""</button>
+<button draggable="true" class="column button drag" value=" disabled">disabled</button>
+</div>
+</div>     
+    
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<form>texthere</form>">&lt;form&gt;&lt;/form&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" accept-charset=&#34;valuehere&#34;">accept-charset=""</button>
+<button draggable="true" class="column button drag" value=" action=&#34;formidhere&#34;">action=""</button>
+<button draggable="true" class="column button drag" value=" autocomplete=&#34;off&#34;">autocomplete="off"</button>
+<button draggable="true" class="column button drag" value=" autocomplete=&#34;on&#34;">autocomplete="on"</button>
+<button draggable="true" class="column button drag" value=" enctype=&#34;application/x-www-form-urlencoded&#34;">enctype="application/<br>x-www-form-urlencoded"</button>
+<button draggable="true" class="column button drag" value=" enctype=&#34;multipart/form-data&#34;">enctype="multipart/form-data"</button>
+<button draggable="true" class="column button drag" value=" enctype=&#34;text/plain&#34;">enctype="text/plain"</button>
+<button draggable="true" class="column button drag" value=" method=&#34;post&#34;">method="post"</button>
+<button draggable="true" class="column button drag" value=" method=&#34;get&#34;">method="get"</button>
+<button draggable="true" class="column button drag" value=" method=&#34;dialog&#34;">method="dialog"</button>
+<button draggable="true" class="column button drag" value=" name=&#34;namehere&#34;">name=""</button>
+<button draggable="true" class="column button drag" value=" novalidate">novalidate</button>
+<button draggable="true" class="column button drag" value=" target=&#34;_self&#34;">target="_self"</button>    
+<button draggable="true" class="column button drag" value=" target=&#34;_blank&#34;">target="_blank"</button>     
+<button draggable="true" class="column button drag" value=" target=&#34;_parent&#34;">target="_parent"</button>     
+<button draggable="true" class="column button drag" value=" target=&#34;_top&#34;">target="_top"</button> 
+<button draggable="true" class="column button drag" value=" target=&#34;iframenamehere&#34;">target="iframename"</button> 
+</div>
+</div> 
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<label>texthere</label>">&lt;label&gt;&lt;/label&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" for=&#34;inputidhere&#34;">for=""</button>
+<button draggable="true" class="column button drag" value=" form=&#34;formidhere&#34;">form=""</button>
+</div>
+</div> 
+    
+<button draggable="true" class="column button drag" value="<legend>texthere</legend>">&lt;legend&gt;&lt;/legend&gt;</button>
+      
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<meter>texthere</meter>">&lt;meter&gt;&lt;/meter&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" form=&#34;formidhere&#34;">form=""</button>
+<button draggable="true" class="column button drag" value=" value=&#34;numberhere&#34;">value=""</button>
+<button draggable="true" class="column button drag" value=" min=&#34;numberhere&#34;">min=""</button>
+<button draggable="true" class="column button drag" value=" max=&#34;numberhere&#34;">max=""</button>
+<button draggable="true" class="column button drag" value=" low=&#34;numberhere&#34;">low=""</button>
+<button draggable="true" class="column button drag" value=" high=&#34;numberhere&#34;">high=""</button>
+<button draggable="true" class="column button drag" value=" optimum=&#34;numberhere&#34;">optimum=""</button>
+</div>
+</div> 
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<optgroup>texthere</optgroup>">&lt;optgroup&gt;&lt;/optgroup&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" disabled">disabled</button>
+<button draggable="true" class="column button drag" value=" label=&#34;groupnamehere&#34;">label=""</button>
+<button draggable="true" class="column button drag" value="<option>texthere</option>">&lt;option&gt;&lt;/option&gt;</button>
+<button draggable="true" class="column button drag" value=" disabled">disabled</button>
+<button draggable="true" class="column button drag" value=" label=&#34;groupnamehere&#34;">label=""</button>
+<button draggable="true" class="column button drag" value=" selected">selected=""</button>
+<button draggable="true" class="column button drag" value=" value=&#34;valuehere&#34;">value=""</button>
+</div>
+</div> 
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<output>texthere</output>">&lt;output&gt;&lt;/output&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" for=&#34;inputidhere&#34;">for=""</button>
+<button draggable="true" class="column button drag" value=" form=&#34;formidhere&#34;">form=""</button>
+<button draggable="true" class="column button drag" value=" name=&#34;namehere&#34;">name=""</button>
+</div>
+</div>
+    
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<progress>texthere</progress>">&lt;progress&gt;&lt;/progress&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" max=&#34;maxvaluehere&#34;">max=""</button>
+<button draggable="true" class="column button drag" value=" value=&#34;valuehere&#34;">value=""</button>
+</div>
+</div>
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<select>texthere</select>">&lt;select&gt;&lt;/select&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" autocomplete">autocomplete</button>
+<button draggable="true" class="column button drag" value=" autofocus">autofocus</button>
+<button draggable="true" class="column button drag" value=" form=&#34;formidhere&#34;">form=""</button>
+<button draggable="true" class="column button drag" value=" disabled">disabled</button>
+<button draggable="true" class="column button drag" value=" multiple">multiple</button>
+<button draggable="true" class="column button drag" value=" name=&#34;namehere&#34;">name=""</button>
+<button draggable="true" class="column button drag" value=" required">required</button>
+<button draggable="true" class="column button drag" value=" size=&#34;numberhere&#34;">size=""</button>
+</div>
+</div>
+
+ <div class="dropdown">
+<button draggable="true" class=" button drag" value="<textarea>texthere</textarea>">&lt;textarea&gt;&lt;/textarea&gt;</button> 
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" autocomplete">autocomplete</button>
+<button draggable="true" class="column button drag" value=" autofocus">autofocus</button>    
+<button draggable="true" class="column button drag" value=" cols=&#34;numberhere&#34;">cols=""</button>
+<button draggable="true" class="column button drag" value=" disabled">disabled</button>  
+<button draggable="true" class="column button drag" value=" form=&#34;formidhere&#34;">form=""</button>
+<button draggable="true" class="column button drag" value=" minlength=&#34;numberhere&#34;">minlength=""</button>
+<button draggable="true" class="column button drag" value=" maxlength=&#34;numberhere&#34;">maxlength=""</button>
+<button draggable="true" class="column button drag" value=" name=&#34;namehere&#34;">name=""</button>
+<button draggable="true" class=" button drag" value=" placeholder=&#34;wordshere&#34;">placeholder=""</button>
+<button draggable="true" class="column button drag" value=" readonly">readonly</button>
+<button draggable="true" class="column button drag" value=" required">required</button>
+<button draggable="true" class="column button drag" value=" rows=&#34;numberhere&#34;">rows=""</button>
+<button draggable="true" class="column button drag" value=" spellcheck=&#34;true&#34;">spellcheck="true"</button>
+<button draggable="true" class="column button drag" value=" spellcheck=&#34;default&#34;">spellcheck="default"</button>
+<button draggable="true" class="column button drag" value=" spellcheck=&#34;false&#34;">spellcheck="false"</button>
+<button draggable="true" class="column button drag" value=" wrap=&#34;hard&#34;">wrap="hard"</button>
+<button draggable="true" class="column button drag" value=" wrap=&#34;soft&#34;">wrap="soft"</button>
+</div>
+</div>   
+  
+</div>
+
+        
+    
+
+
+    <div class="columnrows">  
+        
+<button draggable="true" class="column button drag" value="<input>">&lt;input&gt;</button>
+<button draggable="true" class="column button drag" value="<input type=&#34;button&#34;>">&lt;input type="button"&gt;</button>
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<input type=&#34;checkbox&#34;>">&lt;input type="checkbox"&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" checked">checked</button>
+</div>
+</div> 
+
+<button draggable="true" class="column button drag" value="<input type=&#34;color&#34;>">&lt;input type="color"&gt;</button>
+<button draggable="true" class="column button drag" value="<input type=&#34;date&#34;>">&lt;input type="date"&gt;</button>
+<button draggable="true" class="column button drag" value="<input type=&#34;datetime-local&#34;>">&lt;input type="datetime-local"&gt;</button>
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<input type=&#34;email&#34;>">&lt;input type="email"&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" multiple">multiple</button>
+</div>
+</div> 
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<input type=&#34;file&#34;>">&lt;input type="file"&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" accept=&#34;filetypehere&#34;">accept=""</button>
+<button draggable="true" class="column button drag" value=" capture=&#34;valuehere&#34;">capture=""</button>
+<button draggable="true" class="column button drag" value=" multiple">multiple</button>
+</div>
+</div>
+
+<button draggable="true" class="column button drag" value="<input type=&#34;hidden&#34;>">&lt;input type="hidden"&gt;</button>
+        
+        </div>
+<div class="columnrows">
+
+        
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<input type=&#34;image&#34;>">&lt;input type="image"&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" alt=&#34;descriptionhere&#34;">alt=""</button>
+<button draggable="true" class="column button drag" value=" formaction=&#34;addresshere&#34;">formaction=""</button>
+<button draggable="true" class="column button drag" value=" formenctype=&#34;application/x-www-form-urlencoded&#34;">formenctype="application/<br>x-www-form-urlencoded"</button>
+<button draggable="true" class="column button drag" value=" formenctype=&#34;multipart/form-data&#34;">formenctype="multipart/form-data"</button>
+<button draggable="true" class="column button drag" value=" formenctype=&#34;text/plain&#34;">formenctype="text/plain"</button>
+<button draggable="true" class="column button drag" value=" formmethod=&#34;post&#34;">formmethod="post"</button>
+<button draggable="true" class="column button drag" value=" formmethod=&#34;get&#34;">formmethod="get"</button>
+<button draggable="true" class="column button drag" value=" formmethod=&#34;dialog&#34;">formmethod="dialog"</button>
+<button draggable="true" class="column button drag" value=" formnovalidate">formnovalidate</button>
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_self&#34;">formtarget="_self"</button>    
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_blank&#34;">formtarget="_blank"</button>     
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_parent&#34;">formtarget="_parent"</button>     
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_top&#34;">formtarget="_top"</button> 
+<button draggable="true" class="column button drag" value=" height=&#34;numberhere&#34;">height=""</button>
+<button draggable="true" class="column button drag" value=" src=&#34;addresshere&#34;">src=""</button>
+</div>
+</div> 
+
+<button draggable="true" class="column button drag" value="<input type=&#34;month&#34;>">&lt;input type="month"&gt;</button>
+<button draggable="true" class="column button drag" value="<input type=&#34;number&#34;>">&lt;input type="number"&gt;</button>
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<input type=&#34;password&#34;>">&lt;input type="password"&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" maxlength=&#34;numberhere&#34;">maxlength=""</button>
+<button draggable="true" class="column button drag" value=" minlength=&#34;numberhere&#34;">minlength=""</button>
+<button draggable="true" class="column button drag" value=" pattern=&#34;valuehere&#34;">pattern=""</button>
+<button draggable="true" class="column button drag" value=" placeholder=&#34;valuehere&#34;">placeholder=""</button>
+</div>
+</div>   
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<input type=&#34;radio&#34;>">&lt;input type="radio"&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" checked">checked</button>
+</div>
+</div> 
+
+<button draggable="true" class="column button drag" value="<input type=&#34;range&#34;>">&lt;input type="range"&gt;</button>
+        
+        </div>        
+        
+<div class="columnrows">
+        
+        
+<button draggable="true" class="column button drag" value="<input type=&#34;reset&#34;>">&lt;input type="reset"&gt;</button>
+
+ <div class="dropdown">
+<button draggable="true" class=" button drag" value="<input type=&#34;search&#34;>">&lt;input type="search"&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" dirname=&#34;valuehere&#34;">dirname=""</button>
+<button draggable="true" class="column button drag" value=" maxlength=&#34;numberhere&#34;">maxlength=""</button>
+<button draggable="true" class="column button drag" value=" minlength=&#34;numberhere&#34;">minlength=""</button>
+<button draggable="true" class="column button drag" value=" placeholder=&#34;valuehere&#34;">placeholder=""</button>
+</div>
+</div>   
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<input type=&#34;submit&#34;>">&lt;input type="submit"&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" formaction=&#34;addresshere&#34;">formaction=""</button>
+<button draggable="true" class="column button drag" value=" formenctype=&#34;application/x-www-form-urlencoded&#34;">formenctype="application/<br>x-www-form-urlencoded"</button>
+<button draggable="true" class="column button drag" value=" formenctype=&#34;multipart/form-data&#34;">formenctype="multipart/form-data"</button>
+<button draggable="true" class="column button drag" value=" formenctype=&#34;text/plain&#34;">formenctype="text/plain"</button>
+<button draggable="true" class="column button drag" value=" formmethod=&#34;post&#34;">formmethod="post"</button>
+<button draggable="true" class="column button drag" value=" formmethod=&#34;get&#34;">formmethod="get"</button>
+<button draggable="true" class="column button drag" value=" formmethod=&#34;dialog&#34;">formmethod="dialog"</button>
+<button draggable="true" class="column button drag" value=" formnovalidate">formnovalidate</button>
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_self&#34;">formtarget="_self"</button>    
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_blank&#34;">formtarget="_blank"</button>     
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_parent&#34;">formtarget="_parent"</button>     
+<button draggable="true" class="column button drag" value=" formtarget=&#34;_top&#34;">formtarget="_top"</button> 
+</div>
+</div>
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<input type=&#34;tel&#34;>">&lt;input type="tel"&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" maxlength=&#34;numberhere&#34;">maxlength=""</button>
+<button draggable="true" class="column button drag" value=" minlength=&#34;numberhere&#34;">minlength=""</button>
+<button draggable="true" class="column button drag" value=" pattern=&#34;valuehere&#34;">pattern=""</button>
+<button draggable="true" class="column button drag" value=" placeholder=&#34;valuehere&#34;">placeholder=""</button>
+</div>
+</div>
+
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<input type=&#34;text&#34;>">&lt;input type="text"&gt;</button>
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" dirname=&#34;valuehere&#34;">dirname=""</button>
+<button draggable="true" class="column button drag" value=" maxlength=&#34;numberhere&#34;">maxlength=""</button>
+<button draggable="true" class="column button drag" value=" minlength=&#34;numberhere&#34;">minlength=""</button>
+<button draggable="true" class="column button drag" value=" pattern=&#34;valuehere&#34;">pattern=""</button>
+<button draggable="true" class="column button drag" value=" placeholder=&#34;valuehere&#34;">placeholder=""</button>
+</div>
+</div>
+
+<button draggable="true" class=" button drag" value="<input type=&#34;time&#34;>">&lt;input type="time"&gt;</button>
+
+        
+<div class="dropdown">
+<button draggable="true" class=" button drag" value="<input type=&#34;url&#34;>">&lt;input type="url"&gt;</button>    
+<div class="dropdown-content">
+<button draggable="true" class="column button drag" value=" maxlength=&#34;numberhere&#34;">maxlength=""</button>
+<button draggable="true" class="column button drag" value=" minlength=&#34;numberhere&#34;">minlength=""</button>
+<button draggable="true" class="column button drag" value=" placeholder=&#34;valuehere&#34;">placeholder=""</button>
+</div>
+</div>
+
+<button draggable="true" class="column button drag" value="<input type=&#34;week&#34;>">&lt;input type="week"&gt;</button>
+
+    </div>
+    
+    
+        <div class="columnrows">
+            input attributes
+<button draggable="true" class="column button drag" value=" autocomplete=&#34;valuehere&#34;">autocomplete=""</button>
+<button draggable="true" class="column button drag" value=" autofocus">autofocus</button>
+<button draggable="true" class="column button drag" value=" disabled">disabled</button>
+<button draggable="true" class="column button drag" value=" form=&#34;valuehere&#34;">form=""</button>
+<button draggable="true" class="column button drag" value=" name=&#34;valuehere&#34;">name=""</button>
+            <button draggable="true" class="column button drag" value=" size=&#34;valuehere&#34;">size=""</button>
+
+<button draggable="true" class="column button drag" value=" type=&#34;valuehere&#34;">type=""</button>
+<button draggable="true" class="column button drag" value=" value=&#34;valuehere&#34;">value=""</button>
+
+almost all attributes
+<button draggable="true" class="column button drag" value=" list=&#34;filetypehere&#34;">list=""</button>
+<button draggable="true" class="column button drag" value=" readonly">readonly</button>
+<button draggable="true" class="column button drag" value=" required">required</button>
+
+
+    </div>
+            
+<div class="columnrows">
+        numeric attributes
+<button draggable="true" class="column button drag" value=" max=&#34;numberhere&#34;">max=""</button>
+<button draggable="true" class="column button drag" value=" min=&#34;numberhere&#34;">min=""</button>
+<button draggable="true" class="column button drag" value=" step=&#34;numberhere&#34;">step=""</button>
+    
+    global attributes
+<button draggable="true" class="column button drag" value=" id=&#34;valuehere&#34;">id=""</button>
+<button draggable="true" class="column button drag" value=" inputmode=&#34;valuehere&#34;">inputmode=""</button>
+<button draggable="true" class="column button drag" value=" tabindex=&#34;numberhere&#34;">tabindex=""</button>
+<button draggable="true" class="column button drag" value=" title=&#34;texthere&#34;">title=""</button>
+    </div>
+      
+    <div class="columnrows">
+GLOBAL ATTRIBUTES
+<button draggable="true" class="column button drag"value=" accesskey=&#34;valuehere&#34;">accesskey=""</button>
+<button draggable="true" class="column button drag"value=" autocapitalize=&#34;off&#34;">autocapitalize="off"</button>
+<button draggable="true" class="column button drag"value=" autocapitalize=&#34;on&#34;">autocapitalize="on"</button>
+<button draggable="true" class="column button drag"value=" autocapitalize=&#34;words&#34;">autocapitalize="words"</button>
+<button draggable="true" class="column button drag"value=" autocapitalize=&#34;characters&#34;">autocapitalize="characters"</button>
+<button draggable="true" class="column button drag"value=" class=&#34;&#34;">class=""</button>
+<button draggable="true" class="column button drag"value=" contenteditable=&#34;true&#34;">contenteditable="true"</button>
+<button draggable="true" class="column button drag"value=" contenteditable=&#34;false&#34;">contenteditable="false"</button>
+<button draggable="true" class="column button drag"value=" data-*=&#34;valuehere&#34;">data-*=""</button>
+<button draggable="true" class="column button drag"value=" dir=&#34;ltr&#34;">dir="ltr"</button>
+<button draggable="true" class="column button drag"value=" dir=&#34;rtl&#34;">dir="rtl"</button>
+<button draggable="true" class="column button drag"value=" dir=&#34;auto&#34;">dir="auto"</button>
+    
+    </div>
+    
+    <div class="columnrows">
+    
+<button draggable="true" class="column button drag"value=" draggable=&#34;true&#34;">draggable="true"</button>
+<button draggable="true" class="column button drag"value=" draggable=&#34;false&#34;">draggable="false"</button>
+<button draggable="true" class="column button drag"value=" hidden">hidden</button>
+<button draggable="true" class="column button drag"value=" id=&#34;valuehere&#34;">id=""</button>
+<button draggable="true" class="column button drag"value=" inputmode=&#34;valuehere&#34;">inputmode=""</button>
+<button draggable="true" class="column button drag"value=" is=&#34;valuehere&#34;">is=""</button>
+<button draggable="true" class="column button drag"value=" itemid=&#34;valuehere&#34;">itemid=""</button>
+<button draggable="true" class="column button drag"value=" itemprop=&#34;valuehere&#34;">itemprop=""</button>
+<button draggable="true" class="column button drag"value=" itemref=&#34;valuehere&#34;">itemref=""</button>
+<button draggable="true" class="column button drag"value=" itemscope=&#34;valuehere&#34;">itemscope=""</button>
+<button draggable="true" class="column button drag"value=" itemtype=&#34;valuehere&#34;">itemtype=""</button>
+        
+    </div>
+    
+        <div class="columnrows">
+            
+<button draggable="true" class="column button drag"value=" lang=&#34;valuehere&#34;">lang=""</button>
+<button draggable="true" class="column button drag"value=" slot=&#34;valuehere&#34;">slot=""</button>
+<button draggable="true" class="column button drag"value=" style=&#34;valuehere&#34;">style=""</button>
+<button draggable="true" class="column button drag"value=" tabindex=&#34;positivevaluehere&#34;">tabindex="positivevalue"</button>
+<button draggable="true" class="column button drag"value=" tabindex=&#34;negativevaluehere&#34;">tabindex="negativevalue"</button>    
+<button draggable="true" class="column button drag"value=" tabindex=&#34;0&#34;">tabindex="0"</button>    
+<button draggable="true" class="column button drag"value=" title=&#34;valuehere&#34;">title=""</button>
+</div>    
+    
+        </div> 
+        
+    
+
+
+
+        
+    
+
+            
+
+
+
+   
+ 
+
+
+
+
+     
+<!--
+ _______  _______  _        _______  _______ _________ _______  _______ _______ 
+(  ____ \(  ____ \( \      (  ____ \(  ____ \\__   __/(  ___  )(  ____ )(  ____ \
+| (    \/| (    \/| (      | (    \/| (    \/   ) (   | (   ) || (    )|| (    \/
+| (_____ | (__    | |      | (__    | |         | |   | |   | || (____)|| (_____ 
+(_____  )|  __)   | |      |  __)   | |         | |   | |   | ||     __)(_____  )
+      ) || (      | |      | (      | |         | |   | |   | || (\ (        ) |
+/\____) || (____/\| (____/\| (____/\| (____/\   | |   | (___) || ) \ \__/\____) |
+\_______)(_______/(_______/(_______/(_______/   )_(   (_______)|/   \__|_______)
+                                                                                
+--> 
+<div id="selectorstab" class="tabcontent" >
+
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="table">table</button>
+<button draggable="true" class="column button drag" value="tr">tr</button>       
+<button draggable="true" class="column button drag" value="th">th</button>        
+<button draggable="true" class="column button drag" value="td">td</button>        
+<button draggable="true" class="column button drag" value="thead">thead</button>        
+<button draggable="true" class="column button drag" value="tbody">tbody</button>
+<button draggable="true" class="column button drag" value="tfoot">tfoot</button>        
+<button draggable="true" class="column button drag" value="caption">caption</button>                                      
+</div>
+    
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="ol">ol</button>
+<button draggable="true" class="column button drag" value="ul">ul</button>       
+<button draggable="true" class="column button drag" value="li">li</button>        
+<button draggable="true" class="column button drag" value="dl">dl</button>        
+<button draggable="true" class="column button drag" value="dt">dt</button>        
+<button draggable="true" class="column button drag" value="dd">dd</button>             
+</div>
+    
+    </div>    
+             
+
+<div id="displaytab" class="tabcontent" >
+
+<div class="boxes">
+<div class="centerMe">
+display
+
+</div> 
+<div class="columnrows">
+    <button draggable="true" class="column button drag" value="display:">display:</button>
+
+display-outside
+<button draggable="true" class="column button drag" value=" inline&#59;">inline;</button>
+<button draggable="true" class="column button drag" value=" block&#59;">block;</button>
+
+display-inside
+<button draggable="true" class="column button drag" value=" flow-root&#59;">flow-root;</button>
+<button draggable="true" class="column button drag" value=" table&#59;">table;</button>
+<button draggable="true" class="column button drag" value=" flex&#59;">flex;</button>
+<button draggable="true" class="column button drag" value=" grid&#59;">grid;</button>
+
+display-listitem
+<button draggable="true" class="column button drag" value=" list-item&#59;">list-item;</button>
+</div>
+
+<div class="columnrows">
+display-box
+<button draggable="true" class="column button drag" value=" contents&#59;">contents;</button>
+<button draggable="true" class="column button drag" value=" none&#59;">none;</button>
+
+display-legacy
+<button draggable="true" class="column button drag" value=" inline-block&#59;">inline-block;</button>
+<button draggable="true" class="column button drag" value=" inline-table&#59;">inline-table;</button>
+<button draggable="true" class="column button drag" value=" inline-flex&#59;">inline-flex;</button>
+<button draggable="true" class="column button drag" value=" inline-grid&#59;">inline-grid;</button>     
+</div>     
+
+<div class="columnrows">
+display-internal
+<button draggable="true" class="column button drag" value=" table-row-group&#59;">table-row-group;</button>
+<button draggable="true" class="column button drag" value=" table-column-group&#59;">table-column-group;</button>
+<button draggable="true" class="column button drag" value=" table-header-group&#59;">table-header-group;</button>
+<button draggable="true" class="column button drag" value=" table-footer-group&#59;">table-footer-group;</button>
+
+<button draggable="true" class="column button drag" value=" table-row&#59;">table-row;</button>
+<button draggable="true" class="column button drag" value=" table-cell&#59;">table-cell;</button>
+<button draggable="true" class="column button drag" value=" table-column&#59;">table-column;</button>
+<button draggable="true" class="column button drag" value=" table-caption&#59;">table-caption;</button>
+
+</div>    
+
+</div>                                    
+
+                                    
+ <div class="boxes">
+<div class="centerMe">grid</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="grid:">grid:</button>
+<button draggable="true" class="column button drag" value="grid-area:">grid-area:</button>
+<button draggable="true" class="column button drag" value="grid-auto-columns:">grid-auto-columns:</button>
+<button draggable="true" class="column button drag" value="grid-auto-flow:">grid-auto-flow:</button>
+<button draggable="true" class="column button drag" value="grid-auto-rows:">grid-auto-rows:</button>
+<button draggable="true" class="column button drag" value="grid-column:">grid-column:</button>
+<button draggable="true" class="column button drag" value="grid-column-end:">grid-column-end:</button>
+<button draggable="true" class="column button drag" value="grid-column-start:">grid-column-start:</button>
+<button draggable="true" class="column button drag" value="grid-row:">grid-row:</button>
+<button draggable="true" class="column button drag" value="grid-row-end:">grid-row-end:</button>
+</div>    
+
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="grid-row-start:">grid-row-start:</button>
+<button draggable="true" class="column button drag" value="grid-template:">grid-template:</button>
+<button draggable="true" class="column button drag" value="grid-template-areas:">grid-template-areas:</button>
+<button draggable="true" class="column button drag" value="grid-template-columns:">grid-template-columns:</button>
+<button draggable="true" class="column button drag" value="grid-template-rows:">grid-template-rows:</button>
+<button draggable="true" class="column button drag" value="minmax():">minmax():</button>
+
+</div>     
+</div>
+
+<div class="boxes">
+<div class="centerMe">flex</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="<flex>:">&#60;flex&#62;:</button>
+<button draggable="true" class="column button drag" value="flex:">flex:</button>
+<button draggable="true" class="column button drag" value="flex-basis:">flex-basis:</button>
+<button draggable="true" class="column button drag" value="flex-direction:">flex-direction:</button>
+<button draggable="true" class="column button drag" value="flex-flow:">flex-flow:</button>
+<button draggable="true" class="column button drag" value="flex-grow:">flex-grow:</button>
+<button draggable="true" class="column button drag" value="flex-shrink:">flex-shrink:</button>
+<button draggable="true" class="column button drag" value="flex-wrap:">flex-wrap:</button>
+<button draggable="true" class="column button drag" value="fr:">fr:</button>
+<button draggable="true" class="column button drag" value="order:">order:</button>
+</div>     
+</div>
+
+
+<div class="boxes">
+<div class="centerMe">table</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="border-collapse: collapse; ">border collapse</button>
+<button draggable="true" class="column button drag" value="border-spacing:">border-spacing:</button>
+<button draggable="true" class="column button drag" value="caption-side:">caption-side:</button>
+<button draggable="true" class="column button drag" value="empty-cells:">empty-cells:</button>
+<button draggable="true" class="column button drag" value="vertical-align:">vertical-align:</button>
+<button draggable="true" class="column button drag" value="table-layout:">table-layout:</button>
+</div>   
+
+</div>
+
+
+<div class="boxes">
+<div class="centerMe">list</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="list-style:">list-style:</button>
+<button draggable="true" class="column button drag" value="list-style-image:">list-style-image:</button>
+<button draggable="true" class="column button drag" value="list-style-position:">list-style-position:</button>
+<button draggable="true" class="column button drag" value="list-style-type:">list-style-type:</button>
+    <button draggable="true" class="column button drag" value="::marker">::marker</button>
+
+</div>    
+</div>
+
+       
+<div class="boxes">
+<div class="centerMe">box alignment</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="align-content:">align-content:</button>
+<button draggable="true" class="column button drag" value="align-items:">align-items:</button>
+<button draggable="true" class="column button drag" value="align-self:">align-self:</button>    
+
+<button draggable="true" class="column button drag" value="column-gap:">column-gap:</button>
+<button draggable="true" class="column button drag" value="gap:">gap:</button>
+
+<button draggable="true" class="column button drag" value="justify-content:">justify-content:</button>
+<button draggable="true" class="column button drag" value="justify-items:">justify-items:</button>
+<button draggable="true" class="column button drag" value="justify-self:">justify-self:</button>
+
+<button draggable="true" class="column button drag" value="place-content:">place-content:</button>
+<button draggable="true" class="column button drag" value="place-items:">place-items:</button>
+<button draggable="true" class="column button drag" value="place-self:">place-self:</button>
+    
+<button draggable="true" class="column button drag" value="row-gap:">row-gap:</button>
+</div>    
+</div>
+
+<div class="boxes">
+<div class="centerMe">positioning</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="<position>:">&#60;position&#62;:</button>
+<button draggable="true" class="column button drag" value="position:">position:</button>
+
+<button draggable="true" class="column button drag" value="top:">top:</button>
+<button draggable="true" class="column button drag" value="bottom:">bottom:</button>
+<button draggable="true" class="column button drag" value="left:">left:</button>
+<button draggable="true" class="column button drag" value="right:">right:</button>
+    
+    <button draggable="true" class="column button drag" value="z-index:">z-index:</button>
+<button draggable="true" class="column button drag" value="float:">float:</button>
+<button draggable="true" class="column button drag" value="clear:">clear:</button>
+
+</div>    
+</div>
+                 
+<div class="boxes">
+<div class="centerMe">overflow</div>
+    <div class="columnrows">
+
+<button draggable="true" class="column button drag" value="overflow:">overflow:</button>
+<button draggable="true" class="column button drag" value="overflow-x:">overflow-x:</button>
+<button draggable="true" class="column button drag" value="overflow-y:">overflow-y:</button>
+<button draggable="true" class="column button drag" value="-webkit-line-clamp:">-webkit-line-clamp:</button>   
+    </div>
+    </div>
+                                                                
+        </div>
+        
+    
+                        <div id="insettab" class="tabcontent" >
+                            
+<div class="boxes">
+<div class="centerMe">inset</div> 
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="inset:">inset:</button>
+<button draggable="true" class="column button drag" value="inset-block:">inset-block:</button>
+<button draggable="true" class="column button drag" value="inset-block-end:">inset-block-end:</button>
+<button draggable="true" class="column button drag" value="inset-block-start:">inset-block-start:</button>
+<button draggable="true" class="column button drag" value="inset-inline:">inset-inline:</button>
+<button draggable="true" class="column button drag" value="inset-inline-end:">inset-inline-end:</button>
+<button draggable="true" class="column button drag" value="inset-inline-start:">inset-inline-start:</button>
+         
+</div>
+</div>
+                            
+<div class="boxes">
+<div class="centerMe">size</div> 
+<div class="columnrows">
+  <button draggable="true" class="column button drag" value="block-size:">block-size:</button>
+<button draggable="true" class="column button drag" value="min-block-size:">min-block-size:</button>
+    <button draggable="true" class="column button drag" value="inline-size:">inline-size:</button>
+<button draggable="true" class="column button drag" value="min-inline-size:">min-inline-size:</button>
+</div>
+</div>                            
+               
+<div class="boxes">
+<div class="centerMe">padding</div> 
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="padding-block:">padding-block:</button>
+<button draggable="true" class="column button drag" value="padding-block-end:">padding-block-end:</button>
+<button draggable="true" class="column button drag" value="padding-block-start:">padding-block-start:</button>
+<button draggable="true" class="column button drag" value="padding-inline:">padding-inline:</button>
+<button draggable="true" class="column button drag" value="padding-inline-end:">padding-inline-end:</button>
+<button draggable="true" class="column button drag" value="padding-inline-start:">padding-inline-start:</button> 
+</div>
+</div>
+                            
+                            
+<div class="boxes">
+<div class="centerMe">margin</div> 
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="margin-block:">margin-block:</button>
+<button draggable="true" class="column button drag" value="margin-block-end:">margin-block-end:</button>
+<button draggable="true" class="column button drag" value="margin-block-start:">margin-block-start:</button>
+<button draggable="true" class="column button drag" value="margin-inline:">margin-inline:</button>
+<button draggable="true" class="column button drag" value="margin-inline-end:">margin-inline-end:</button>
+<button draggable="true" class="column button drag" value="margin-inline-start:">margin-inline-start:</button> 
+</div>
+</div>
+                            
+<div class="boxes">
+<div class="centerMe">border</div> 
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="border-block:">border-block:</button>
+<button draggable="true" class="column button drag" value="border-block-end:">border-block-end:</button>
+<button draggable="true" class="column button drag" value="border-block-start:">border-block-start:</button>
+    
+<button draggable="true" class="column button drag" value="border-inline:">border-inline:</button>
+<button draggable="true" class="column button drag" value="border-inline-end:">border-inline-end:</button>
+<button draggable="true" class="column button drag" value="border-inline-start:">border-inline-start:</button>    
+    </div>
+    
+    <div class="columnrows">
+
+<button draggable="true" class="column button drag" value="border-block-end-width:">border-block-end-width:</button>
+<button draggable="true" class="column button drag" value="border-block-start-width:">border-block-start-width:</button>
+<button draggable="true" class="column button drag" value="border-block-width:">border-block-width:</button>
+<button draggable="true" class="column button drag" value="border-inline-end-width:">border-inline-end-width:</button>
+<button draggable="true" class="column button drag" value="border-inline-start-width:">border-inline-start-width:</button>
+<button draggable="true" class="column button drag" value="border-inline-width:">border-inline-width:</button>    
+    </div>  
+        <div class="columnrows">
+
+<button draggable="true" class="column button drag" value="border-block-color:">border-block-color:</button>
+<button draggable="true" class="column button drag" value="border-block-end-color:">border-block-end-color:</button>
+<button draggable="true" class="column button drag" value="border-block-start-color:">border-block-start-color:</button>
+<button draggable="true" class="column button drag" value="border-inline-color:">border-inline-color:</button>
+<button draggable="true" class="column button drag" value="border-inline-end-color:">border-inline-end-color:</button>
+<button draggable="true" class="column button drag" value="border-inline-start-color:">border-inline-start-color:</button>
+    </div>
+            <div class="columnrows">       
+<button draggable="true" class="column button drag" value="border-block-end-style:">border-block-end-style:</button>
+<button draggable="true" class="column button drag" value="border-block-start-style:">border-block-start-style:</button>
+<button draggable="true" class="column button drag" value="border-block-style:">border-block-style:</button>
+<button draggable="true" class="column button drag" value="border-inline-end-style:">border-inline-end-style:</button>
+<button draggable="true" class="column button drag" value="border-inline-start-style:">border-inline-start-style:</button>
+<button draggable="true" class="column button drag" value="border-inline-style:">border-inline-style:</button>
+    </div>
+                
+<div class="columnrows">      
+<button draggable="true" class="column button drag" value="border-end-end-radius:">border-end-end-radius:</button>
+<button draggable="true" class="column button drag" value="border-end-start-radius:">border-end-start-radius:</button>   
+<button draggable="true" class="column button drag" value="border-start-end-radius:">border-start-end-radius:</button>
+<button draggable="true" class="column button drag" value="border-start-start-radius:">border-start-start-radius:</button> 
+    
+</div>
+</div>                            
+                            
+
+</div>
+
+        
+
+
+<div id="boxmodeltab" class="tabcontent" >
+<div class="boxes">
+<div class="centerMe">width/height</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="width:">width:</button>
+<button draggable="true" class="column button drag" value="min-width:">min-width:</button>
+<button draggable="true" class="column button drag" value="max-width:">max-width:</button>
+<button draggable="true" class="column button drag" value="height:">height:</button>
+<button draggable="true" class="column button drag" value="min-height:">min-height:</button>
+<button draggable="true" class="column button drag" value="max-height:">max-height:</button>    
+ 
+</div>
+</div>
+    
+    
+<div class="boxes">
+<div class="centerMe">padding</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="padding:">padding:</button>
+    <button draggable="true" class="column button drag" value="padding-top:">padding-top:</button>
+<button draggable="true" class="column button drag" value="padding-right:">padding-right:</button>
+<button draggable="true" class="column button drag" value="padding-bottom:">padding-bottom:</button>
+<button draggable="true" class="column button drag" value="padding-left:">padding-left:</button>
+
+</div>
+</div>
+    
+<div class="boxes">
+<div class="centerMe">border</div>
+                    <div class="columnrows">
+<button draggable="true" class="column button drag" value="border:">border:</button>
+<button draggable="true" class="column button drag" value="border-top:">border-top:</button>
+<button draggable="true" class="column button drag" value="border-right:">border-right:</button>
+<button draggable="true" class="column button drag" value="border-bottom:">border-bottom:</button>
+<button draggable="true" class="column button drag" value="border-left:">border-left:</button>   
+    </div>
+    
+<div class="columnrows">                        
+<button draggable="true" class="column button drag" value="border-width:">border-width:</button>
+<button draggable="true" class="column button drag" value="border-top-width:">border-top-width:</button>
+<button draggable="true" class="column button drag" value="border-right-width:">border-right-width:</button>
+<button draggable="true" class="column button drag" value="border-bottom-width:">border-bottom-width:</button>
+<button draggable="true" class="column button drag" value="border-left-width:">border-left-width:</button>                       
+    </div>
+    
+<div class="columnrows">                        
+<button draggable="true" class="column button drag" value="border-style:">border-style:</button>
+<button draggable="true" class="column button drag" value="border-top-style:">border-top-style:</button>
+<button draggable="true" class="column button drag" value="border-right-style:">border-right-style:</button>               
+<button draggable="true" class="column button drag" value="border-bottom-style:">border-bottom-style:</button>
+<button draggable="true" class="column button drag" value="border-left-style:">border-left-style:</button>                        
+    </div>
+    
+ <div class="columnrows">                       
+<button draggable="true" class="column button drag" value="border-color:">border-color:</button>
+<button draggable="true" class="column button drag" value="border-top-color:">border-top-color:</button>
+<button draggable="true" class="column button drag" value="border-right-color:">border-right-color:</button>
+<button draggable="true" class="column button drag" value="border-bottom-color:">border-bottom-color:</button>
+<button draggable="true" class="column button drag" value="border-left-color:">border-left-color:</button>
+    </div>
+    
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="border-image:">border-image:</button>
+<button draggable="true" class="column button drag" value="border-image-outset:">border-image-outset:</button>
+<button draggable="true" class="column button drag" value="border-image-repeat:">border-image-repeat:</button>
+<button draggable="true" class="column button drag" value="border-image-slice:">border-image-slice:</button>
+<button draggable="true" class="column button drag" value="border-image-source:">border-image-source:</button>
+<button draggable="true" class="column button drag" value="border-image-width:">border-image-width:</button>
+    </div>                       
+
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="border-radius:">border-radius:</button>
+<button draggable="true" class="column button drag" value="border-top-left-radius:">border-top-left-radius:</button>
+<button draggable="true" class="column button drag" value="border-top-right-radius:">border-top-right-radius:</button>
+<button draggable="true" class="column button drag" value="border-bottom-left-radius:">border-bottom-left-radius:</button>
+<button draggable="true" class="column button drag" value="border-bottom-right-radius:">border-bottom-right-radius:</button>             
+    </div>   
+</div>
+    
+    
+    
+<div class="boxes">
+<div class="centerMe">margin</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="margin:">margin:</button>
+<button draggable="true" class="column button drag" value="margin-bottom:">margin-bottom:</button>
+<button draggable="true" class="column button drag" value="margin-left:">margin-left:</button>
+<button draggable="true" class="column button drag" value="margin-right:">margin-right:</button>
+<button draggable="true" class="column button drag" value="margin-top:">margin-top:</button>  
+
+</div>
+</div>
+    
+<div class="boxes">
+<div class="centerMe">outline</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="outline:">outline:</button>
+<button draggable="true" class="column button drag" value="outline-color:">outline-color:</button>
+<button draggable="true" class="column button drag" value="outline-offset:">outline-offset:</button>
+<button draggable="true" class="column button drag" value="outline-style:">outline-style:</button>
+<button draggable="true" class="column button drag" value="outline-width:">outline-width:</button>
+</div>
+</div>
+    
+<div class="boxes">
+<div class="centerMe">box</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="box-decoration-break:">box-decoration-break:</button>
+<button draggable="true" class="column button drag" value="box-shadow:">box-shadow:</button>
+<button draggable="true" class="column button drag" value="box-sizing:">box-sizing:</button>
+  <button draggable="true" class="column button drag" value="resize:">resize:</button>
+<button draggable="true" class="column button drag" value="visibility:">visibility:</button>     
+</div>
+</div>     
+    
+
+    
+       
+
+
+
+    
+    
+    
+</div>
+
+
+<div id="texttab" class="tabcontent" >
+    
+<div class="boxes">
+<div class="centerMe">text</div>  
+<div class="columnrows">
+<!--css text category-->
+<!--experiemental safari-->
+<button draggable="true" class="column button drag" value="hanging-punctuation:">hanging-punctuation:</button>
+<button draggable="true" class="column button drag" value="hyphens:">hyphens:</button>
+<button draggable="true" class="column button drag" value="letter-spacing:">letter-spacing:</button>
+<button draggable="true" class="column button drag" value="line-break:">line-break:</button>
+<button draggable="true" class="column button drag" value="overflow-wrap:">overflow-wrap:</button>
+<button draggable="true" class="column button drag" value="tab-size:">tab-size:</button>
+    </div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value="text-align:">text-align:</button>
+<button draggable="true" class="column button drag" value="text-align-last:">text-align-last:</button>
+<button draggable="true" class="column button drag" value="text-indent:">text-indent:</button>
+<button draggable="true" class="column button drag" value="text-justify:">text-justify:</button>  
+<button draggable="true" class="column button drag" value="text-transform:">text-transform:</button>
+    
+<button draggable="true" class="column button drag" value="word-break:">word-break:</button>
+<button draggable="true" class="column button drag" value="word-spacing:">word-spacing:</button>
+<button draggable="true" class="column button drag" value="word-wrap:">word-wrap:</button>
+<button draggable="true" class="column button drag" value="white-space:">white-space:</button>    
+</div>   
+</div>
+
+<div class="boxes">
+  <div class="centerMe">text decoration</div>    
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="text-decoration:">text-decoration:</button>
+<button draggable="true" class="column button drag" value="text-decoration-color:">text-decoration-color:</button>
+<button draggable="true" class="column button drag" value="text-decoration-line:">text-decoration-line:</button>
+<button draggable="true" class="column button drag" value="text-decoration-style:">text-decoration-style:</button>
+<button draggable="true" class="column button drag" value="text-emphasis:">text-emphasis:</button>
+ <button draggable="true" class="column button drag" value="text-emphasis-color:">text-emphasis-color:</button>
+<button draggable="true" class="column button drag" value="text-emphasis-position:">text-emphasis-position:</button>
+<button draggable="true" class="column button drag" value="text-emphasis-style:">text-emphasis-style:</button>   
+    
+    </div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value="text-shadow:">text-shadow:</button>
+<button draggable="true" class="column button drag" value="text-underline-offset:">text-underline-offset:</button>
+<button draggable="true" class="column button drag" value="text-underline-position:">text-underline-position:</button>
+        <!--text overflow was originally under basic interface category-->
+            <button draggable="true" class="column button drag" value="text-overflow:">text-overflow:</button>
+                <!--color was originally under color category-->
+
+        <button draggable="true" class="column button drag" value="color:">color:</button>
+<button draggable="true" class="column button drag" value="::first-letter (:first-letter)">::first-letter (:first-letter)</button>
+<button draggable="true" class="column button drag" value="::first-line (:first-line)">::first-line (:first-line)</button>
+<button draggable="true" class="column button drag" value="::cue">::cue</button>
+<button draggable="true" class="column button drag" value=":dir">:dir</button>
+
+</div>
+
+    </div>
+  
+<div class="boxes">
+  <div class="centerMe">font</div>    
+
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value="font:">font:</button>
+<button draggable="true" class="column button drag" value="font-family:">font-family:</button>
+<button draggable="true" class="column button drag" value="font-feature-settings:">font-feature-settings:</button>
+<button draggable="true" class="column button drag" value="font-kerning:">font-kerning:</button>
+<button draggable="true" class="column button drag" value="font-language-override:">font-language-override:</button>
+<button draggable="true" class="column button drag" value="font-optical-sizing:">font-optical-sizing:</button>
+<button draggable="true" class="column button drag" value="font-size:">font-size:</button>
+ <button draggable="true" class="column button drag" value="font-size-adjust:">font-size-adjust:</button>
+        
+       
+</div>
+                    
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="font-stretch:">font-stretch:</button>
+<button draggable="true" class="column button drag" value="font-style:">font-style:</button>
+<button draggable="true" class="column button drag" value="font-synthesis:">font-synthesis:</button>
+<button draggable="true" class="column button drag" value="font-variant:">font-variant:</button>
+<button draggable="true" class="column button drag" value="font-variant-alternates:">font-variant-alternates:</button>
+<button draggable="true" class="column button drag" value="font-variant-caps:">font-variant-caps:</button>
+    <button draggable="true" class="column button drag" value="font-variant-east-asian:">font-variant-east-asian:</button>
+    
+
+</div>
+                    
+              <div class="columnrows">
+<button draggable="true" class="column button drag" value="font-variant-ligatures:">font-variant-ligatures:</button>
+<button draggable="true" class="column button drag" value="font-variant-numeric:">font-variant-numeric:</button>
+<button draggable="true" class="column button drag" value="font-variant-position:">font-variant-position:</button>
+<button draggable="true" class="column button drag" value="font-weight:">font-weight:</button>
+                          <button draggable="true" class="column button drag" value="line-height:">line-height:</button>  
+                  <button draggable="true" class="column button drag" value="line-height-step:">line-height-step:</button>
+            
+
+            </div>
+    </div>
+    
+<div class="boxes">
+    <div class="centerMe">@ rules</div>  
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="@font-face:">@font-face:</button>
+<button draggable="true" class="column button drag" value="@font-feature-values:">@font-feature-values:</button>  
+<button draggable="true" class="column button drag" value="font-family (@font-face):">font-family (@font-face):</button>
+<button draggable="true" class="column button drag" value="font-stretch (@font-face):">font-stretch (@font-face):</button>
+<button draggable="true" class="column button drag" value="font-style (@font-face):">font-style (@font-face):</button>
+<button draggable="true" class="column button drag" value="font-variation-settings (@font-face):">font-variation-settings (@font-face):</button>
+<button draggable="true" class="column button drag" value="font-weight (@font-face):">font-weight (@font-face):</button>
+<button draggable="true" class="column button drag" value="src (@font-face):">src (@font-face):</button>
+<button draggable="true" class="column button drag" value="unicode-range (@font-face):">unicode-range (@font-face):</button>
+    <button draggable="true" class="column button drag" value="format():">format():</button>
+<button draggable="true" class="column button drag" value="local():">local():</button>
+</div>   
+</div>    
+    
+    <div class="boxes">
+            <div class="centerMe">writing mode</div>   
+
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="text-combine-upright:">text-combine-upright:</button>
+<button draggable="true" class="column button drag" value="text-orientation:">text-orientation:</button>
+<button draggable="true" class="column button drag" value="direction:">direction:</button>
+<button draggable="true" class="column button drag" value="unicode-bidi:">unicode-bidi:</button>
+<button draggable="true" class="column button drag" value="writing-mode:">writing-mode:</button>
+    </div>   
+</div> 
+    
+<!-- will need to be added as sub menu of @ feature values-->
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="@annotation:">@annotation:</button>
+<button draggable="true" class="column button drag" value="annotation():">annotation():</button>
+<button draggable="true" class="column button drag" value="@swash:">@swash:</button>
+<button draggable="true" class="column button drag" value="swash():">swash():</button>
+<button draggable="true" class="column button drag" value="@ornaments:">@ornaments:</button>
+<button draggable="true" class="column button drag" value="ornaments():">ornaments():</button>
+<button draggable="true" class="column button drag" value="@styleset:">@styleset:</button>
+<button draggable="true" class="column button drag" value="styleset():">styleset():</button>
+<button draggable="true" class="column button drag" value="@stylistic:">@stylistic:</button>
+<button draggable="true" class="column button drag" value="stylistic():">stylistic():</button>
+<button draggable="true" class="column button drag" value="@character-variant:">@character-variant:</button>
+<button draggable="true" class="column button drag" value="character-variant():">character-variant():</button>
+</div>             
+    
+</div>
+
+<div id="transformtab" class="tabcontent" >
+
+<div class="boxes">
+<div class="centerMe">animation</div>     
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="animation:">animation:</button>
+<button draggable="true" class="column button drag" value="animation-delay:">animation-delay:</button>
+<button draggable="true" class="column button drag" value="animation-direction:">animation-direction:</button>
+<button draggable="true" class="column button drag" value="animation-duration:">animation-duration:</button>
+<button draggable="true" class="column button drag" value="animation-fill-mode:">animation-fill-mode:</button>
+<button draggable="true" class="column button drag" value="animation-iteration-count:">animation-iteration-count:</button>
+<button draggable="true" class="column button drag" value="animation-name:">animation-name:</button>
+<button draggable="true" class="column button drag" value="animation-play-state:">animation-play-state:</button>
+<button draggable="true" class="column button drag" value="animation-timing-function:">animation-timing-function:</button>
+<button draggable="true" class="column button drag" value="@keyframes:">@keyframes:</button>
+</div>
+</div>
+<!--transitions-->
+<div class="boxes">
+<div class="centerMe">transition</div>     
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="transition:">transition:</button>
+<button draggable="true" class="column button drag" value="transition-delay:">transition-delay:</button>
+<button draggable="true" class="column button drag" value="transition-duration:">transition-duration:</button>
+<button draggable="true" class="column button drag" value="transition-property:">transition-property:</button>
+<button draggable="true" class="column button drag" value="transition-timing-function:">transition-timing-function:</button>
+<!--timing functions-->
+<button draggable="true" class="column button drag" value="cubic-bezier():">cubic-bezier():</button>
+<button draggable="true" class="column button drag" value="steps():">steps():</button>
+
+</div>
+</div>
+
+<div class="boxes">
+<div class="centerMe">transform</div>     
+
+<div class="columnrows">
+        <div class="centerMe">transform</div>
+
+<button draggable="true" class="column button drag" value="transform:">transform:</button>
+<button draggable="true" class="column button drag" value="transform-box:">transform-box:</button>
+<button draggable="true" class="column button drag" value="transform-origin:">transform-origin:</button>
+<button draggable="true" class="column button drag" value="transform-style:">transform-style:</button>
+<button draggable="true" class="column button drag" value="backface-visibility:">backface-visibility:</button>
+
+</div>
+
+
+<div class="columnrows">
+     <div class="centerMe">matrix</div>
+   
+<button draggable="true" class="column button drag" value="matrix():">matrix():</button>
+<button draggable="true" class="column button drag" value="matrix3d():">matrix3d():</button>
+</div>
+    
+
+<div class="columnrows">
+     <div class="centerMe">perspective</div>
+   
+<button draggable="true" class="column button drag" value="perspective:">perspective:</button>
+<button draggable="true" class="column button drag" value="perspective():">perspective():</button>
+<button draggable="true" class="column button drag" value="perspective-origin:">perspective-origin:</button>
+</div>
+    
+    
+
+ 
+<div class="columnrows">
+     <div class="centerMe">rotate</div>
+   
+<button draggable="true" class="column button drag" value="rotate:">rotate:</button>
+<button draggable="true" class="column button drag" value="rotate():">rotate():</button>
+<button draggable="true" class="column button drag" value="rotate3d():">rotate3d():</button>
+<button draggable="true" class="column button drag" value="rotateX():">rotateX():</button>
+<button draggable="true" class="column button drag" value="rotateY():">rotateY():</button>
+<button draggable="true" class="column button drag" value="rotateZ():">rotateZ():</button>
+</div>
+
+ 
+<div class="columnrows">
+    <div class="centerMe">scale</div>
+
+<button draggable="true" class="column button drag" value="scale:">scale:</button>
+<button draggable="true" class="column button drag" value="scale():">scale():</button>
+<button draggable="true" class="column button drag" value="scale3d():">scale3d():</button>
+<button draggable="true" class="column button drag" value="scaleX():">scaleX():</button>
+<button draggable="true" class="column button drag" value="scaleY():">scaleY():</button>
+<button draggable="true" class="column button drag" value="scaleZ():">scaleZ():</button>
+</div>
+
+
+<div class="columnrows">
+        <div class="centerMe">skew</div>
+
+<button draggable="true" class="column button drag" value="skew():">skew():</button>
+<button draggable="true" class="column button drag" value="skewX():">skewX():</button>
+<button draggable="true" class="column button drag" value="skewY():">skewY():</button>
+</div>
+
+ 
+<div class="columnrows">
+    <div class="centerMe">translate</div>
+<button draggable="true" class="column button drag" value="translate:">translate:</button>
+<button draggable="true" class="column button drag" value="translate():">translate():</button>
+<button draggable="true" class="column button drag" value="translate3d():">translate3d():</button>
+<button draggable="true" class="column button drag" value="translateX():">translateX():</button>
+<button draggable="true" class="column button drag" value="translateY():">translateY():</button>
+<button draggable="true" class="column button drag" value="translateZ():">translateZ():</button>
+</div>
+     </div>   
+
+    
+</div>
+
+
+<div id="contenttab" class="tabcontent" >
+    
+ <div class="boxes">
+<div class="centerMe">@ counter-style</div> 
+<div class="columnrows"> 
+    <button draggable="true" class="column button drag" value="symbols():">symbols():</button>
+
+<button draggable="true" class="column button drag" value="@counter-style:">@counter-style:</button>
+<button draggable="true" class="column button drag" value="additive-symbols (@counter-style):">additive-symbols (@counter-style):</button>
+<button draggable="true" class="column button drag" value="fallback (@counter-style):">fallback (@counter-style):</button>
+<button draggable="true" class="column button drag" value="negative (@counter-style):">negative (@counter-style):</button>
+<button draggable="true" class="column button drag" value="pad (@counter-style):">pad (@counter-style):</button>
+<button draggable="true" class="column button drag" value="prefix (@counter-style):">prefix (@counter-style):</button>
+<button draggable="true" class="column button drag" value="range (@counter-style):">range (@counter-style):</button>
+<button draggable="true" class="column button drag" value="speak-as (@counter-style):">speak-as (@counter-style):</button>
+<button draggable="true" class="column button drag" value="suffix (@counter-style):">suffix (@counter-style):</button>
+<button draggable="true" class="column button drag" value="symbols (@counter-style):">symbols (@counter-style):</button>
+<button draggable="true" class="column button drag" value="system (@counter-style):">system (@counter-style):</button>    
+</div>
+</div>
+    
+    
+<div class="boxes">
+<div class="centerMe">counter</div> 
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="counter-increment:">counter-increment:</button>
+<button draggable="true" class="column button drag" value="counter-reset:">counter-reset:</button>
+<button draggable="true" class="column button drag" value="counter-set:">counter-set:</button>
+<button draggable="true" class="column button drag" value="counters():">counters():</button>  
+    
+</div>      
+</div>
+    
+<div class="boxes">
+<div class="centerMe">content/quotes</div> 
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="content:">content:</button>
+<button draggable="true" class="column button drag" value="quotes:">quotes:</button> 
+    <button draggable="true" class="column button drag" value="::slotted">::slotted</button>
+<button draggable="true" class="column button drag" value="::after (:after)">::after (:after)</button>
+    <button draggable="true" class="column button drag" value="::before (:before)">::before (:before)</button>
+</div>      
+</div>    
+    
+    
+    
+
+</div>
+
+<div id="misctab" class="tabcontent" >
+    
+<div class="boxes">
+<div class="centerMe">interface</div>
+<div class="columnrows">
+ <button draggable="true" class="column button drag" value="pointer-events:">pointer-events:</button>
+    <button draggable="true" class="column button drag" value="touch-action:">touch-action:</button>  
+    <button draggable="true" class="column button drag" value="cursor:">cursor:</button>
+<button draggable="true" class="column button drag" value="caret-color:">caret-color:</button>
+<button draggable="true" class="column button drag" value="::selection">::selection</button>
+<button draggable="true" class="column button drag" value="::placeholder">::placeholder</button>
+    <button draggable="true" class="column button drag" value=":in-range">:in-range</button>
+
+</div>
+</div>
+    
+<div class="boxes">
+<div class="centerMe">@ meta rules</div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value="@charset:">@charset:</button>
+<button draggable="true" class="column button drag" value="@import:">@import:</button>
+<button draggable="true" class="column button drag" value="@namespace:">@namespace:</button>
+    </div>
+</div> 
+    
+    <div class="boxes">
+<div class="centerMe">@ conditional rules</div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value="@media:">@media:</button>
+<button draggable="true" class="column button drag" value="@supports:">@supports:</button>
+
+    </div>
+</div>
+    
+<div class="boxes">
+<div class="centerMe">custom</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="--*:">--*:</button>
+<button draggable="true" class="column button drag" value="var():">var():</button>
+<button draggable="true" class="column button drag" value="env():">env():</button>
+</div>
+</div>     
+ 
+    
+<div class="boxes">
+<div class="centerMe">misc</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="attr():">attr():</button>
+<button draggable="true" class="column button drag" value="calc():">calc():</button>
+<button draggable="true" class="column button drag" value="repeat():">repeat():</button>
+<button draggable="true" class="column button drag" value="url():">url():</button>
+    
+    <button draggable="true" class="column button drag" value="clamp():">clamp():</button>
+<button draggable="true" class="column button drag" value="fit-content():">fit-content():</button>
+<button draggable="true" class="column button drag" value="max():">max():</button>
+<button draggable="true" class="column button drag" value="min():">min():</button>
+</div>
+</div>  
+
+    
+    
+<div class="boxes">
+<div class="centerMe">global</div>
+    <div class="columnrows">
+        <button draggable="true" class="column button drag" value="all:">all:</button>
+<button draggable="true" class="column button drag" value="inherit:">inherit:</button>
+<button draggable="true" class="column button drag" value="initial:">initial:</button>
+<button draggable="true" class="column button drag" value="unset:">unset:</button>
+        <!--revert special value, not well supported-->
+<button draggable="true" class="column button drag" value="revert:">revert:</button>
+        
+    </div>
+</div>     
+    
+    <div class="boxes">
+<div class="centerMe">optimizations</div>
+    <div class="columnrows">
+  <button draggable="true" class="column button drag" value="text-rendering:">text-rendering:</button>
+<button draggable="true" class="column button drag" value="will-change:">will-change:</button>
+    </div>
+</div>   
+    
+    <div class="boxes">   
+    <div class="centerMe">angle</div>
+    <div class="columnrows">
+<!--used in gradients and transforms-->
+    <button draggable="true" class="column button drag" value="deg:">deg:</button>
+<button draggable="true" class="column button drag" value="grad:">grad:</button>
+<button draggable="true" class="column button drag" value="rad:">rad:</button>
+<button draggable="true" class="column button drag" value="turn:">turn:</button>
+        
+        
+    </div>
+</div> 
+    
+    
+<div class="boxes">   
+    <div class="centerMe">time</div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value="s:">s:</button>
+<button draggable="true" class="column button drag" value="ms:">ms:</button>
+<button draggable="true" class="column button drag" value="Hz:">Hz:</button>
+<button draggable="true" class="column button drag" value="kHz:">kHz:</button>
+    </div>
+</div>     
+    
+<div class="boxes">   
+    <div class="centerMe">font relative length</div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value="ch:">ch:</button>
+<button draggable="true" class="column button drag" value="em:">em:</button>
+<button draggable="true" class="column button drag" value="ex:">ex:</button>
+<button draggable="true" class="column button drag" value="rem:">rem:</button>
+    </div>
+</div> 
+
+<div class="boxes">   
+    <div class="centerMe">viewport percentage length</div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value="vh:">vh:</button>
+<button draggable="true" class="column button drag" value="vmax:">vmax:</button>
+<button draggable="true" class="column button drag" value="vmin:">vmin:</button>
+<button draggable="true" class="column button drag" value="vw:">vw:</button>
+
+    </div>
+</div> 
+    
+<div class="boxes">   
+    <div class="centerMe">absolute length</div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value="cm:">cm:</button>
+<button draggable="true" class="column button drag" value="in:">in:</button>
+<button draggable="true" class="column button drag" value="mm:">mm:</button>
+<button draggable="true" class="column button drag" value="pc:">pc:</button>
+<button draggable="true" class="column button drag" value="pt:">pt:</button>
+<button draggable="true" class="column button drag" value="px:">px:</button>
+<button draggable="true" class="column button drag" value="Q:">Q:</button>
+
+    </div>
+</div>    
+    
+
+<div class="boxes">   
+    <div class="centerMe">resolution</div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value="dpcm:">dpcm:</button>
+<button draggable="true" class="column button drag" value="dpi:">dpi:</button>
+<button draggable="true" class="column button drag" value="dppx:">dppx:</button>
+<button draggable="true" class="column button drag" value="x:">x:</button> <!--dppx alias-->
+
+    </div>
+</div> 
+ 
+<div class="boxes">   
+    <div class="centerMe">pseudo-child</div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value=":first-child">:first-child</button>
+<button draggable="true" class="column button drag" value=":first-of-type">:first-of-type</button>
+<button draggable="true" class="column button drag" value=":last-child">:last-child</button>
+<button draggable="true" class="column button drag" value=":last-of-type">:last-of-type</button>   
+<button draggable="true" class="column button drag" value=":nth-child">:nth-child</button>
+<button draggable="true" class="column button drag" value=":nth-last-child">:nth-last-child</button>
+<button draggable="true" class="column button drag" value=":nth-last-of-type">:nth-last-of-type</button>
+<button draggable="true" class="column button drag" value=":nth-of-type">:nth-of-type</button>   
+<button draggable="true" class="column button drag" value=":only-child">:only-child</button>
+
+    </div>
+</div>    
+    
+    
+<div class="boxes">   
+    <div class="centerMe">pseudo-form</div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value=":disabled">:disabled</button>
+<button draggable="true" class="column button drag" value=":enabled">:enabled</button>
+<button draggable="true" class="column button drag" value=":read-only">:read-only</button>
+<button draggable="true" class="column button drag" value=":read-write">:read-write</button>
+<button draggable="true" class="column button drag" value=":required">:required</button>
+<button draggable="true" class="column button drag" value=":checked">:checked</button>
+<button draggable="true" class="column button drag" value=":default">:default</button>
+<button draggable="true" class="column button drag" value=":focus">:focus</button>
+<button draggable="true" class="column button drag" value=":focus-within">:focus-within</button> 
+<button draggable="true" class="column button drag" value=":indeterminate">:indeterminate</button>
+<button draggable="true" class="column button drag" value=":invalid">:invalid</button>
+<button draggable="true" class="column button drag" value=":optional">:optional</button>
+<button draggable="true" class="column button drag" value=":out-of-range">:out-of-range</button>
+<button draggable="true" class="column button drag" value=":valid">:valid</button>  
+
+    </div>
+</div>     
+    
+<div class="boxes">   
+    <div class="centerMe">pseudo-link</div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value=":link">:link</button>
+<button draggable="true" class="column button drag" value=":hover">:hover</button>
+<button draggable="true" class="column button drag" value=":visited">:visited</button>
+<button draggable="true" class="column button drag" value=":active">:active</button>
+
+    </div>
+</div>       
+    
+ <div class="boxes">   
+    <div class="centerMe">pseudo-document</div>
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value=":empty">:empty</button>
+<button draggable="true" class="column button drag" value=":only-of-type">:only-of-type</button>
+<button draggable="true" class="column button drag" value=":root">:root</button>
+<button draggable="true" class="column button drag" value=":scope">:scope</button>
+<button draggable="true" class="column button drag" value=":not">:not</button>
+<button draggable="true" class="column button drag" value=":target">:target</button>
+<button draggable="true" class="column button drag" value=":lang">:lang</button>
+<button draggable="true" class="column button drag" value=":fullscreen">:fullscreen</button>
+    <button draggable="true" class="column button drag" value="::backdrop">::backdrop</button>
+
+    </div>
+</div>      
+    
+
+</div>
+
+                        <div id="imagetab" class="tabcontent" >
+                            
+<div class="boxes">
+<div class="centerMe">image</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="image():">image():</button>
+<button draggable="true" class="column button drag" value="image-orientation:">image-orientation:</button>
+<button draggable="true" class="column button drag" value="image-rendering:">image-rendering:</button>
+<button draggable="true" class="column button drag" value="object-fit:">object-fit:</button>
+<button draggable="true" class="column button drag" value="object-position:">object-position:</button>
+    <button draggable="true" class="column button drag" value="element():">element():</button>
+
+    <!--image-set() had no category-->
+        <button draggable="true" class="column button drag" value="image-set():">image-set():</button>
+</div>
+    
+ </div>
+                            
+<div class="boxes">
+<div class="centerMe">color</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="color-adjust:">color-adjust:</button>
+<button draggable="true" class="column button drag" value="rgb():">rgb():</button>
+<button draggable="true" class="column button drag" value="rgba():">rgba():</button>
+<button draggable="true" class="column button drag" value="hsl():">hsl():</button>
+<button draggable="true" class="column button drag" value="hsla():">hsla():</button> 
+<button draggable="true" class="column button drag" value="opacity:">opacity:</button>
+</div>
+</div>
+
+
+<div class="boxes">
+<div class="centerMe">gradient</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="conic-gradient():">conic-gradient():</button>
+<button draggable="true" class="column button drag" value="linear-gradient():">linear-gradient():</button>
+<button draggable="true" class="column button drag" value="radial-gradient():">radial-gradient():</button>
+<button draggable="true" class="column button drag" value="repeating-linear-gradient():">repeating-linear-gradient():</button>
+<button draggable="true" class="column button drag" value="repeating-radial-gradient():">repeating-radial-gradient():</button>
+</div>
+</div>
+                            
+                            
+<div class="boxes">
+<div class="centerMe">shape</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="clip:">clip:</button>
+<button draggable="true" class="column button drag" value="clip-path:">clip-path:</button>  
+<button draggable="true" class="column button drag" value="inset():">inset():</button>
+<button draggable="true" class="column button drag" value="circle():">circle():</button>
+<button draggable="true" class="column button drag" value="ellipse():">ellipse():</button>
+<button draggable="true" class="column button drag" value="polygon():">polygon():</button>
+<!--use clip path instead for rect()-->
+<button draggable="true" class="column button drag" value="rect():">rect():</button>
+    <button draggable="true" class="column button drag" value="shape-image-threshold:">shape-image-threshold:</button>
+<button draggable="true" class="column button drag" value="shape-margin:">shape-margin:</button>
+<button draggable="true" class="column button drag" value="shape-outside:">shape-outside:</button>
+</div>
+</div>
+                            
+<div class="boxes">
+<div class="centerMe">filter</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="filter:">filter:</button>
+<button draggable="true" class="column button drag" value="blur():">blur():</button>
+<button draggable="true" class="column button drag" value="brightness():">brightness():</button>
+<button draggable="true" class="column button drag" value="contrast():">contrast():</button>
+<button draggable="true" class="column button drag" value="drop-shadow():">drop-shadow():</button>
+<button draggable="true" class="column button drag" value="grayscale():">grayscale():</button>
+<button draggable="true" class="column button drag" value="invert():">invert():</button>   
+<button draggable="true" class="column button drag" value="hue-rotate():">hue-rotate():</button>
+<button draggable="true" class="column button drag" value="opacity():">opacity():</button>
+<button draggable="true" class="column button drag" value="saturate():">saturate():</button>
+<button draggable="true" class="column button drag" value="sepia():">sepia():</button>
+</div>
+</div> 
+                            
+<div class="boxes">
+<div class="centerMe">compositing and blending</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="isolation:">isolation:</button>
+<button draggable="true" class="column button drag" value="mix-blend-mode:">mix-blend-mode:</button>
+<button draggable="true" class="column button drag" value="background-blend-mode:">background-blend-mode:</button>
+    <button draggable="true" class="column button drag" value="cross-fade():">cross-fade():</button>
+
+</div>
+</div>
+                            
+                            
+<div class="boxes">
+<div class="centerMe">mask</div>
+<div class="columnrows">   
+<button draggable="true" class="column button drag" value="mask:">mask:</button>
+<button draggable="true" class="column button drag" value="mask-clip:">mask-clip:</button>
+<button draggable="true" class="column button drag" value="mask-composite:">mask-composite:</button>
+<button draggable="true" class="column button drag" value="mask-image:">mask-image:</button>
+<button draggable="true" class="column button drag" value="mask-mode:">mask-mode:</button>
+<button draggable="true" class="column button drag" value="mask-origin:">mask-origin:</button>
+<button draggable="true" class="column button drag" value="mask-position:">mask-position:</button>
+<button draggable="true" class="column button drag" value="mask-repeat:">mask-repeat:</button>
+<button draggable="true" class="column button drag" value="mask-size:">mask-size:</button>
+<button draggable="true" class="column button drag" value="mask-type:">mask-type:</button>
+</div>
+</div>                            
+ 
+<div class="boxes">
+<div class="centerMe">background</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="background:">background:</button>
+<button draggable="true" class="column button drag" value="background-attachment:">background-attachment:</button>
+<button draggable="true" class="column button drag" value="background-clip:">background-clip:</button>
+<button draggable="true" class="column button drag" value="background-color:">background-color:</button>
+<button draggable="true" class="column button drag" value="background-image:">background-image:</button>
+<button draggable="true" class="column button drag" value="background-origin:">background-origin:</button>
+<button draggable="true" class="column button drag" value="background-position:">background-position:</button>
+<button draggable="true" class="column button drag" value="background-repeat:">background-repeat:</button>
+<button draggable="true" class="column button drag" value="background-size:">background-size:</button>
+</div>
+</div>
+                            
+</div>
+        
+                        <div id="pagestab" class="tabcontent" >
+
+<div class="boxes">
+<div class="centerMe">@ viewport</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="@viewport:">@viewport:</button>
+
+<button draggable="true" class="column button drag" value="width (@viewport):">width (@viewport):</button>    
+<button draggable="true" class="column button drag" value="min-width (@viewport):">min-width (@viewport):</button>
+<button draggable="true" class="column button drag" value="max-width (@viewport):">max-width (@viewport):</button>   
+<button draggable="true" class="column button drag" value="height (@viewport):">height (@viewport):</button>
+<button draggable="true" class="column button drag" value="min-height (@viewport):">min-height (@viewport):</button>
+<button draggable="true" class="column button drag" value="max-height (@viewport):">max-height (@viewport):</button>
+</div>
+<div class="columnrows">
+
+<button draggable="true" class="column button drag" value="zoom (@viewport):">zoom (@viewport):</button>
+<button draggable="true" class="column button drag" value="max-zoom (@viewport):">max-zoom (@viewport):</button>
+<button draggable="true" class="column button drag" value="min-zoom (@viewport):">min-zoom (@viewport):</button>
+<button draggable="true" class="column button drag" value="user-zoom (@viewport):">user-zoom (@viewport):</button>
+<button draggable="true" class="column button drag" value="orientation (@viewport):">orientation (@viewport):</button>
+</div>
+</div>
+                            
+                            
+<div class="boxes">
+<div class="centerMe">column</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="column-count:">column-count:</button>
+<button draggable="true" class="column button drag" value="column-fill:">column-fill:</button>
+<button draggable="true" class="column button drag" value="column-gap:">column-gap:</button>
+<button draggable="true" class="column button drag" value="column-rule:">column-rule:</button>
+<button draggable="true" class="column button drag" value="column-rule-color:">column-rule-color:</button>
+<button draggable="true" class="column button drag" value="column-rule-style:">column-rule-style:</button>
+<button draggable="true" class="column button drag" value="column-rule-width:">column-rule-width:</button>
+<button draggable="true" class="column button drag" value="column-span:">column-span:</button>
+<button draggable="true" class="column button drag" value="column-width:">column-width:</button>
+<button draggable="true" class="column button drag" value="columns:">columns:</button>
+</div>    
+</div>
+                            
+                            
+ <div class="boxes">
+<div class="centerMe">@page</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="@page:">@page:</button>
+<button draggable="true" class="column button drag" value="@top-center:">@top-center:</button>
+<button draggable="true" class="column button drag" value="@right-bottom:">@right-bottom:</button>
+<button draggable="true" class="column button drag" value="@bottom-center:">@bottom-center:</button>
+<button draggable="true" class="column button drag" value="@left-bottom:">@left-bottom:</button>
+</div>
+</div>       
+                            
+                            
+  <div class="boxes">
+<div class="centerMe">@page</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value=":first">:first</button>   
+<button draggable="true" class="column button drag" value="orphans:">orphans:</button>
+<button draggable="true" class="column button drag" value="widows:">widows:</button>
+<button draggable="true" class="column button drag" value=":left">:left</button>
+<button draggable="true" class="column button drag" value=":right">:right</button>
+<button draggable="true" class="column button drag" value="break-after:">break-after:</button>
+<button draggable="true" class="column button drag" value="break-before:">break-before:</button>
+<button draggable="true" class="column button drag" value="break-inside:">break-inside:</button>
+<button draggable="true" class="column button drag" value="page-break-after:">page-break-after:</button>
+<button draggable="true" class="column button drag" value="page-break-before:">page-break-before:</button>
+<button draggable="true" class="column button drag" value="page-break-inside:">page-break-inside:</button>
+</div>
+</div>                             
+                            
+                            
+                            
+
+                            
+  <div class="boxes">
+<div class="centerMe">scroll</div>
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="scroll-behavior:">scroll-behavior:</button>
+<button draggable="true" class="column button drag" value="scrollbar-color:">scrollbar-color:</button>
+<button draggable="true" class="column button drag" value="scrollbar-width:">scrollbar-width:</button>
+</div>
+
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="scroll-margin:">scroll-margin:</button>
+<button draggable="true" class="column button drag" value="scroll-margin-top:">scroll-margin-top:</button>
+<button draggable="true" class="column button drag" value="scroll-margin-right:">scroll-margin-right:</button>
+<button draggable="true" class="column button drag" value="scroll-margin-bottom:">scroll-margin-bottom:</button>
+<button draggable="true" class="column button drag" value="scroll-margin-left:">scroll-margin-left:</button>
+    </div>
+    
+ <div class="columnrows">
+<button draggable="true" class="column button drag" value="scroll-margin-block:">scroll-margin-block:</button>
+<button draggable="true" class="column button drag" value="scroll-margin-block-end:">scroll-margin-block-end:</button>
+<button draggable="true" class="column button drag" value="scroll-margin-block-start:">scroll-margin-block-start:</button>
+    
+<button draggable="true" class="column button drag" value="scroll-margin-inline:">scroll-margin-inline:</button>
+<button draggable="true" class="column button drag" value="scroll-margin-inline-end:">scroll-margin-inline-end:</button>
+<button draggable="true" class="column button drag" value="scroll-margin-inline-start:">scroll-margin-inline-start:</button>
+
+</div>
+
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="scroll-padding:">scroll-padding:</button>
+<button draggable="true" class="column button drag" value="scroll-padding-top:">scroll-padding-top:</button> 
+<button draggable="true" class="column button drag" value="scroll-padding-right:">scroll-padding-right:</button>
+<button draggable="true" class="column button drag" value="scroll-padding-left:">scroll-padding-left:</button>
+<button draggable="true" class="column button drag" value="scroll-padding-bottom:">scroll-padding-bottom:</button>
+    </div>    
+    
+    <div class="columnrows">
+<button draggable="true" class="column button drag" value="scroll-padding-block:">scroll-padding-block:</button>
+<button draggable="true" class="column button drag" value="scroll-padding-block-end:">scroll-padding-block-end:</button>
+<button draggable="true" class="column button drag" value="scroll-padding-block-start:">scroll-padding-block-start:</button>
+    
+<button draggable="true" class="column button drag" value="scroll-padding-inline:">scroll-padding-inline:</button>
+<button draggable="true" class="column button drag" value="scroll-padding-inline-end:">scroll-padding-inline-end:</button>
+<button draggable="true" class="column button drag" value="scroll-padding-inline-start:">scroll-padding-inline-start:</button>
+
+</div>
+
+<div class="columnrows">
+<button draggable="true" class="column button drag" value="scroll-snap-align:">scroll-snap-align:</button>
+<button draggable="true" class="column button drag" value="scroll-snap-stop:">scroll-snap-stop:</button>
+<button draggable="true" class="column button drag" value="scroll-snap-type:">scroll-snap-type:</button>
+</div>
+</div>                               
+                            
+</div>
+
+    
+    </div>  
+    <script src="sandbonus.js"></script>
+    <script src="sandtext.js"></script>
+    <script src="sandframe.js"></script>
+    <script src="sandbuttons.js"></script>
+    <script src="sandbar.js"></script>
+
+
+</body>
+</html>

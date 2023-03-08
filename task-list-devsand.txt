@@ -1,0 +1,94 @@
+DEVSAND
+go through devhtml and devcss and sort out css files
+javascript debugger
+javascript compat data for devsand
+color code buttons for deprecated and experimental code
+freecodecamp preview
+what happened to stumptown
+ask webref on mdn forum
+
+snippets for html tags, skeleton maker
+possibly add in from w3schools snippets
+
+deprecated and obsolete, optional labeling
+maybe make two sets of attr for elements object
+take lists for html-var into past folder
+
+css create classes for obsolete and experimental values
+make function to clean value of button and place data types where needed, ex <number> is changed to 10
+color outside buttons to indicate expandable
+clean up css by removing drop-bottom main button
+deep recursion isnt showing some tags, use linear gradient as an example
+
+
+possibly generate css stylesheet within devcss
+fix transform origin, does not skip to new line as intended, must skip at the |
+can create a shorthand property button to hide longhand values
+highlight initial tag value, usually is first in list of tags
+
+performance reduce json size of css
+
+
+unlisted in data types
+<hex-color>
+<indent>
+<declaration-value>
+
+	
+-webkit-border-before removed intefere with "color"
+font-variant, overscroll-behavior needs array of shorthand
+place-content and overflow do not have arrays
+mask and gap and text-emphasis also
+
+
+
+
+start with html and css
+
+have reference guide to syntax within editor, ex what do ? or + or {4,1} do?
+filterable table of css properties
+use csv and then tablemaker
+can replace the syntax values such as ? with <sup>opt</sup> the show optional
+have option to change syntax to beginner friendly format
+add global attributes on side for html
+
+HTML
+CSS
+JAVASCRIPT
+
+
+
+& | ||  [] # + * ? ! {1,3}
+
+
+UTILITY
+tag wrapper include custom wrappers also
+add size option to global attribute or applicable elements, such as in text inputs
+make tag wrapper its on function to allow preview
+
+UNDER JAVASCRIPT TAB
+comparison of javascript methods, strings and arrays 
+substring is analgous to slice in array
+or += is same as push
+how to add, subtract, multiply, and divide data types
+numbers, strings, arrays, objects
+.replace() for subtracting strings
+.push() for arrays
+
+
+
+tag dewrapper
+table maker
+
+LOW PRIORITY
+how to limit page size so editor will not create scrollbars
+change speed of reload iframe time to prevent blinking
+create inbuilt console for glob to see realtime similar freecodecamp
+
+
+add arrow buttons
+adjust button values to google style guide, ex div element opening and closing should be on two seperate lines.
+add status pictures in buttons, standard or experimental
+have inlet access css data types for easy change
+
+
