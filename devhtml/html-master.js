@@ -141,11 +141,9 @@ when scrolling attribute buttons don't stay in place
         //checks for booleans, example: disabled instead of href=""
         key == el
           ?          rawcode.push(`
-<button draggable="true" class="column button drag" value='${key}'>${key}</button>
-<br>`)
+<button draggable="true" class="column button drag" value='${key}'>${key}</button>`)
         :          rawcode.push(`
-<button draggable="true" class="column button drag" value='${key}${el}'>${key}${el}</button>
-<br>`)
+<button draggable="true" class="column button drag" value='${key}${el}'>${key}${el}</button>`)
       }) 
 
 
