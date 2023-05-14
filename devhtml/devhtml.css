@@ -64,27 +64,26 @@
 
 
 /* DROPDOWN MENUS */
+  /* Drop down menu for attributes */
+  .dropdown {
+    overflow: hidden;
+  }
 
-.dropdown {
-/*overflow: hidden; causing buttons to spread*/
-position: relative;
-display: inline-block;
-}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    z-index: 1;
+  }
 
-.dropdown-content {
-display: none;
-position: fixed;
-background: white;
-z-index: 1;
-}
+  .dropdown-content button {
+    display: block;
+  }
 
-.dropdown-content button {
-display: inline-block;
-}
 
-.dropdown:hover .dropdown-content {
-display: inline-block;
-}
+  .dropdown:hover .dropdown-content {
+    display: inline-block;
+  }
 
 
   
