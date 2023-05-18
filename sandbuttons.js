@@ -148,53 +148,6 @@ function clearMe() {
         /*REPEATER BAR SCRIPT END*/        
 
 
-//LOAD AND SAVE START
-    
-function loadfile(input){
-    var reader = new FileReader();
-    reader.onload = function(e) {
-    
-        if ( editor.somethingSelected() ) {
-        editor.replaceSelection( e.target.result );
-        return;
-        }
-    
-        editor.replaceRange(e.target.result, editor.getCursor());};
-        reader.readAsText(input.files[0]);}
-                
 
-
-
-
-    let nameMe = document.getElementById("nameMe");
-    let extendMe = document.getElementById("extendMe");
-    
-    function saveTextAsFile()
-    {      
-    var textToWrite = editor.getValue();
-    var textToWrite = textToWrite.replace(/\n/g, "\r\n");
-    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-    var fileNameToSaveAs = `${nameMe.value}.${extendMe.value}`;
-    
-    var downloadLink = document.createElement("a");
-    downloadLink.download = fileNameToSaveAs;
-    downloadLink.innerHTML = nameMe;//<--custom change, find out meaning
-    
-    window.URL = window.URL || window.webkitURL;
-    
-    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-    
-    downloadLink.onclick = destroyClickedElement;
-    downloadLink.style.display = "none";
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    }
-    
-    function destroyClickedElement(event)
-    {
-    document.body.removeChild(event.target);
-    }  
-
-//LOAD AND SAVE END
 
 
