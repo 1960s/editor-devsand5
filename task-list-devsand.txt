@@ -1,4 +1,11 @@
 DEVSAND
+base html categorization off of this https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content
+Create full HTML tags for quick, meter tag can be prefilled with attributes, do this all eligible elements
+setup text editor for use in chromium, codemirror and monaco and ace tests
+full featured like mousepad on linux, use as template
+console on page
+coverter
+
 go through devhtml and devcss and sort out css files
 javascript debugger
 javascript compat data for devsand

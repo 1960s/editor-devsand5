@@ -99,9 +99,13 @@ let fileLocation = filePath[filePath.length - 1]
   /**/
   function init(){
     async function openFile(){
+    
+    	const options = {
+	  startIn: fileDirectory,  //how is this captured, custom address, plit location.pathname
+	};
 
       // Destructure the one-element array.
-      [fileHandle] = await window.showOpenFilePicker(); //options
+      [fileHandle] = await window.showOpenFilePicker(options); //options
       // Do something with the file handle.
       const file = await fileHandle.getFile();
       const contents = await file.text();
