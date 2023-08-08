@@ -1,4 +1,6 @@
 DEVSAND
+
+use browser built-in-objects to create documentation button generator
 base html categorization off of this https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content
 Create full HTML tags for quick, meter tag can be prefilled with attributes, do this all eligible elements
 setup text editor for use in chromium, codemirror and monaco and ace tests
