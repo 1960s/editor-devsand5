@@ -16,6 +16,22 @@ replace $ and ! tags
 fix booleans values
 use dom vs innerhtml and add content to nodes
 how to organize data sheets for easiest generation
+
+can add data* values for immutability and 
+
+
+
+3 ways to generate code
+nested loops: outside to inside method, can be hard to read, can us one data structure, hard to change/modify structure
+referencing dom elements: appending code to element, can break up code and easy to read,
+  structures are easy to modify, though redundancy needed to reference other data structures.
+create string code: inside to outside method, generate inner code first and then append to the next level
+
+
+
+make as functions
+can also use browser objects to get keys
+use typeof to find whether method or property
 */
 
 function test() {
@@ -34,13 +50,12 @@ function test() {
 
   for (let [tabs, module] of Object.entries(grouping)) {
 
-    tabs == "HTML"
-      ? rawcode.push(`
-<button id="defaultOpen" class="tablinks" onclick="openTab(event, '${tabs}')">${tabs}</button>
+    //will empty string cause break
+      rawcode.push(`
+<button ${tabs == "HTML" ? 'id="defaultOpen"' : ""}
+class="tablinks" onclick="openTab(event, '${tabs}')">${tabs}</button>
 `)
-      : rawcode.push(`
-<button  class="tablinks" onclick="openTab(event, '${tabs}')">${tabs}</button>
-`)
+
   }
 
   rawcode.push(`

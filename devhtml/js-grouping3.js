@@ -42,3 +42,29 @@ let attributes = {
         "with"
     ]
 }
+
+let grouping3 = {
+        "Indexed Collections": {
+            "indexed": [
+                "Array"
+            ],
+            "signed": [
+                "Int8Array",
+                "Int16Array",
+                "Int32Array",
+                "BigInt64Array"
+            ],
+            "unsigned": [
+                "Uint8Array",
+                "Uint8ClampedArray",
+                "Uint16Array",
+                "Uint32Array",
+                "BigUint64Array"
+            ],
+            "float": [
+                "Float32Array",
+                "Float64Array"
+            ]
+        },
+
+    }

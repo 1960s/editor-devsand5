@@ -1,5 +1,58 @@
 /*
+let arr = []
+for (let group in grouping) {
+  for (let key of grouping[group]) {
+
+    for (let element in elements) {
+
+      if (key === element) {
+
+
+        for (let key2 of elements[element]) {
+
+
+          if (key == "Fundamental objects") {
+
+            let props = Object.getOwnPropertyNames(window[key2])
+            for (let prop of props) {
+              arr.push(`${group}\t${key}\t${key2}\t${prop}`)
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+let arr = str.split("\n").map(x=> x.split("\t"))
+let obj = {}
+for (let name of arr) {
+
+
+  if (!Object.hasOwn(obj, [name[0]])) {
+    obj[name[0]] = {}
+  }
+
+  if (!Object.hasOwn(obj[name[0]], [name[1]])) {
+    obj[name[0]][name[1]] = []
+  }
+  if (!obj[name[0]][name[1]].includes(name[2])) {
+    obj[name[0]][name[1]].push(name[2])
+  }
+
+}
+
 */
+
+
+
 
 function test() {
   console.time()
@@ -12,18 +65,14 @@ function test() {
   let htmlCode = document.getElementById("htmlCode")
 
   rawcode.push(`
-<div class="tab">
+  <div class="tab">
 `)
 
   for (let [tabs, module] of Object.entries(grouping)) {
-
-    tabs == "Built-ins"
-      ? rawcode.push(`
-<button id="defaultOpen" class="tablinks" onclick="openTab(event, '${tabs}')">${tabs.toUpperCase()}</button>
-`)
-      : rawcode.push(`
-<button  class="tablinks" onclick="openTab(event, '${tabs}')">${tabs.toUpperCase()}</button>
-`)
+    rawcode.push(`
+    <button ${tabs === "Built-ins" ? 'id="defaultOpen"' : ""}
+    class="tablinks" onclick="openTab(event, '${tabs}')">${tabs}</button>
+    `)
   }
 
   rawcode.push(`
@@ -32,195 +81,107 @@ function test() {
 
   //htmlCode.innerHTML = rawcode.join("");
 
-
-
-
-
   //setting up tabcontent and groups
-  for (let [tabs, modules] of Object.entries(grouping)) {
+  for (let [tabs, module] of Object.entries(grouping)) {
     rawcode.push(`<div id="${tabs}" class="tabcontent">`)
 
-    for (let module of modules) {
+    module.forEach(key => {
 
       rawcode.push(`
-<div class="boxes">
-<div class="centerMe">${module}</div>
-`)
+  <div class="boxes" id="${key}">
+  <div class="centerMe">${key}</div>
+  `)
+      {/* <span id="${el}">${el}</span> */ }
+      for (let [title, element] of Object.entries(elements)) {
 
-      for (let [element, contents] of Object.entries(elements)) {
+        if (key === title) {
+          rawcode.push(`<div class="columnrows">`)
 
-        if (element == module) {
-
-          rawcode.push(`
-                    <div class="columnrows">
-                    
-                    `)
-
-
-
-          contents.forEach(x => {
+          element.forEach(el => {
             rawcode.push(`
-                        <div>
-        <button draggable="true" class=" button drag" value=''>${x}</button>
-        </div>
-        `)
-            for (let [attribute, method] of Object.entries(attributes)) {
-              if (x == attribute) {
-
-                rawcode.push(`
             <div class="dropdown">
-<button class=" button drag">Array</button>
-<div class="dropdown-content">
-  <div class="columnrows dir">
-    <div>
+            <button draggable="true" class=" button drag" value='${el}'>${el}</button>
+            <div class="dropdown-content">
             `)
-            method.forEach(y => {
-              rawcode.push(`<button class="column button drag">${y}</button>`)
-            })
-            
+            rawcode.push(`<div class="columnrows" id="${el}"></div>`)
 
+            rawcode.push(`</div>`)
+            rawcode.push(`</div>`)
 
+          })
 
-            rawcode.push(`
-            </div>
-            </div>
-          </div>
-          </div>     
-            `)
-
-
-              }
-
-            }
-
-
-
-          });
-
-          rawcode.push(`
-                      </div>
-                    `)
-
-
-
+          rawcode.push(`</div>`)
         }
       }
+      rawcode.push(`</div>`)
+
+    })
+    rawcode.push(`</div>`)
+  }
+
+  htmlCode.innerHTML = rawcode.join("");
 
 
 
 
+  //setting up element buttons
+  for (let [boxTitle, key2] of Object.entries(grouping3)) {
+    rawcode = []
 
+    rawcode.push(`
+<div class="centerMe">${boxTitle}</div>
+`)
+
+    for (let [title, element] of Object.entries(key2)) {
+      rawcode.push(`<div class="columnrows">`)
+      rawcode.push(`<div id="${title}">${title}</div>`)
+
+      element.forEach(el => {
+        rawcode.push(`
+<div class="dropdown">
+<button draggable="true" class=" button drag" value='${el}'>${el}</button>
+<div class="dropdown-content">
+`)
+        rawcode.push(`<div class="columnrows" id="${el}"></div>`)
+
+        rawcode.push(`</div>`)
+        rawcode.push(`</div>`)
+      }
+
+      )
       rawcode.push(`</div>`)
     }
 
-    rawcode.push(`</div>`)
 
-    htmlCode.innerHTML = rawcode.join("");
+    // find id of element and attach the dropdown menu with attributes
+    //adding element layer to document
+
+    //clears elements
+    let replaceBox = document.getElementById(`${boxTitle}`)
+    while (replaceBox.firstChild) {
+      replaceBox.removeChild(replaceBox.firstChild)
+    }
+
+    let child = document.createElement("div")
+    child.innerHTML = rawcode.join("")
+    replaceBox.appendChild(child)
 
   }
 
 
+  for (let [buttonTitle, attribute] of Object.entries(attributes)) {
+    let buttonAdd = document.getElementById(`${buttonTitle}`)
 
+    rawcode = []
 
+    attribute.forEach(key=>rawcode.push(`
+    <button draggable="true" class="column button drag" value='${key}'>${key}</button>`))
+   
 
-
-  /*
-  
-      //setting up element buttons
-      for (let [key, attr] of Object.entries(elements)) {
-        rawcode = []
-        //for elements with no attribtues
-        if(elements[key].attributes.length == 0){
-          rawcode.push(`
-  <button draggable="true" class=" button drag" value='${elements[key].value}'>${key}</button>
-  `)
-  
-        }
-  
-        //setting up dropdown menus for elements with attributes
-        else{
-          rawcode.push(`
-  <div class="dropdown">
-  <button draggable="true" class=" button drag" value='${elements[key].value}'>${key}</button>
-  <div class="dropdown-content">
-  `)
-  
-          elements[key].attributes.forEach(el =>
-                                           rawcode.push(`<div class="columnrows ${el}"></div>`)                    
-                                          )
-          rawcode.push(`</div>`)
-          rawcode.push(`</div>`)
-        }
-  
-  
-  
-        //adding element layer to document
-        let tabElement = document.getElementById(`${elements[key].subgroup}`)
-        let child = document.createElement("div")
-        child.innerHTML = rawcode.join("").replace(/\$/g, "");
-        tabElement.appendChild(child)
-  
-      }
-  
-  
-  
-  
-  
-  
-  
-  
-      //setting up attributes buttons and their values
-      for (let [key, attr] of Object.entries(attributes)) {
-        rawcode = []
-  
-  
-        attributes[key].values.forEach(el => {
-          //single quotes were used on the value='' 
-          //because double quotes caused letters to be lowercase and prepend a white space
-  
-          //checks for booleans, example: disabled instead of href=""
-          key == el
-            ?          rawcode.push(`
-  <button draggable="true" class="column button drag" value='${key}'>${key}</button>
-  <br>`)
-          :          rawcode.push(`
-  <button draggable="true" class="column button drag" value='${key}${el}'>${key}${el}</button>
-  <br>`)
-        }) 
-  
-  
-        //adding attribute layer to document
-        let tabElement = document.getElementsByClassName(`${key}`)
-        tabElement = Array.from(tabElement)
-  
-        tabElement.forEach(el =>{
-          let child = document.createElement("div")
-          child.innerHTML = rawcode.join("").replace(/!/g, "");
-          el.appendChild(child)
-  
-        }) 
-      }
-      
-  */
-
-
-
-
-
-
-
-
-
-
-
-
-  // console.log(document.getElementById("HTML"))
-
-
-
-
-
-
+    let child = document.createElement("div")
+    child.innerHTML = rawcode.join("")
+    buttonAdd.appendChild(child)
+  }
 
 
 
