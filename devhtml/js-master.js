@@ -54,7 +54,7 @@ for (let name of arr) {
 
 
 
-function test() {
+(function () {
   console.time()
 
 
@@ -174,8 +174,8 @@ function test() {
 
 
   console.timeEnd()
-}
-test()
+})()
+
 
 //opens HTML tab
 document.getElementById("defaultOpen").click();

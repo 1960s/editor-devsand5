@@ -34,7 +34,7 @@ can also use browser objects to get keys
 use typeof to find whether method or property
 */
 
-function test() {
+(function () {
   console.time()
 
 
@@ -178,8 +178,8 @@ function test() {
 
 
   console.timeEnd()
-}
-test()
+})()
+
 
 //opens HTML tab
 document.getElementById("defaultOpen").click();

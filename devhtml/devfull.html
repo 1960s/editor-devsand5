@@ -18,6 +18,12 @@
   <script src="html-data-attributes.js"></script>
   <script src="html-data-elements.js"></script>
 
+  <script  src="css-data-categories.js"></script>
+<script  src="css-data-properties.js"></script>
+<script  src="css-data-syntax.js"></script>
+<script  src="css-functions-recursion.js"></script>
+<script  src="css-functions.js"></script>
+
   <script  src="js-grouping.js"></script>
   <script  src="js-grouping2.js"></script>
   <script  src="js-grouping3.js"></script>
@@ -35,7 +41,8 @@
 
 let tabHTML = Object.keys(grouping)
 let tabJS = Object.keys(groupingJS)
-let tabs = [...tabHTML,...tabJS]
+let tabCSS = Object.keys(categories)
+let tabs = [...tabHTML,...tabCSS,...tabJS]
   for (let tab of tabs ) {
     rawcode.push(`
     <button ${tab === "HTML" ? 'id="defaultOpen"' : ""}
@@ -52,6 +59,7 @@ htmlCode.innerHTML = rawcode.join("");
 </script>
 
   <script src="html-master.js"></script>
+  <script  src="master-test.js"></script>
   <script  src="js-master.js"></script>
 
 </body>
