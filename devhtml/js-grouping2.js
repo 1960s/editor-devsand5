@@ -1,5 +1,5 @@
 
-let elements = {
+let elementsJS = {
 //Built-ins
 "Value properties":[
 "globalThis",

@@ -68,7 +68,7 @@ function test() {
   <div class="tab">
 `)
 
-  for (let [tabs, module] of Object.entries(grouping)) {
+  for (let [tabs, module] of Object.entries(groupingJS)) {
     rawcode.push(`
     <button ${tabs === "Built-ins" ? 'id="defaultOpen"' : ""}
     class="tablinks" onclick="openTab(event, '${tabs}')">${tabs}</button>
@@ -82,7 +82,7 @@ function test() {
   //htmlCode.innerHTML = rawcode.join("");
 
   //setting up tabcontent and groups
-  for (let [tabs, module] of Object.entries(grouping)) {
+  for (let [tabs, module] of Object.entries(groupingJS)) {
     rawcode.push(`<div id="${tabs}" class="tabcontent">`)
 
     module.forEach(key => {
@@ -92,7 +92,7 @@ function test() {
   <div class="centerMe">${key}</div>
   `)
       {/* <span id="${el}">${el}</span> */ }
-      for (let [title, element] of Object.entries(elements)) {
+      for (let [title, element] of Object.entries(elementsJS)) {
 
         if (key === title) {
           rawcode.push(`<div class="columnrows">`)
@@ -125,7 +125,7 @@ function test() {
 
 
   //setting up element buttons
-  for (let [boxTitle, key2] of Object.entries(grouping3)) {
+  for (let [boxTitle, key2] of Object.entries(grouping3JS)) {
     rawcode = []
 
     rawcode.push(`
@@ -169,7 +169,7 @@ function test() {
   }
 
 
-  for (let [buttonTitle, attribute] of Object.entries(attributes)) {
+  for (let [buttonTitle, attribute] of Object.entries(attributesJS)) {
     let buttonAdd = document.getElementById(`${buttonTitle}`)
 
     rawcode = []

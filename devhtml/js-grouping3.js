@@ -1,4 +1,4 @@
-let attributes = {
+let attributesJS = {
     "Array":[
         "length",
         "constructor",
@@ -43,7 +43,7 @@ let attributes = {
     ]
 }
 
-let grouping3 = {
+let grouping3JS = {
         "Indexed Collections": {
             "indexed": [
                 "Array"

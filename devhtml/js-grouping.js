@@ -1,5 +1,5 @@
 
-let grouping = {
+let groupingJS = {
 "Built-ins": [
     "Value properties",
     "Function properties",
