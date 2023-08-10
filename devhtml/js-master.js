@@ -60,29 +60,13 @@ function test() {
 
 
 
-  //setting up tab categories
-  let rawcode = []
-  let htmlCode = document.getElementById("htmlCode")
 
-  rawcode.push(`
-  <div class="tab">
-`)
 
-  for (let [tabs, module] of Object.entries(groupingJS)) {
-    rawcode.push(`
-    <button ${tabs === "Built-ins" ? 'id="defaultOpen"' : ""}
-    class="tablinks" onclick="openTab(event, '${tabs}')">${tabs}</button>
-    `)
-  }
-
-  rawcode.push(`
-  </div>
-`)
-
-  //htmlCode.innerHTML = rawcode.join("");
 
   //setting up tabcontent and groups
   for (let [tabs, module] of Object.entries(groupingJS)) {
+
+    rawcode = []
     rawcode.push(`<div id="${tabs}" class="tabcontent">`)
 
     module.forEach(key => {
@@ -117,9 +101,13 @@ function test() {
 
     })
     rawcode.push(`</div>`)
+
+    let child = document.createElement("div")
+    child.innerHTML = rawcode.join("")
+    htmlCode.appendChild(child)
   }
 
-  htmlCode.innerHTML = rawcode.join("");
+
 
 
 

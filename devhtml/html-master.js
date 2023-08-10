@@ -40,35 +40,10 @@ function test() {
 
 
 
-  //setting up tab categories
-  let rawcode = []
-  let htmlCode = document.getElementById("htmlCode")
-
-  rawcode.push(`
-<div class="tab">
-`)
-
-  for (let [tabs, module] of Object.entries(grouping)) {
-
-    //will empty string cause break
-      rawcode.push(`
-<button ${tabs == "HTML" ? 'id="defaultOpen"' : ""}
-class="tablinks" onclick="openTab(event, '${tabs}')">${tabs}</button>
-`)
-
-  }
-
-  rawcode.push(`
-  </div>
-`)
-
-
-
-
-
-
   //setting up tabcontent and groups
   for (let [tabs, module] of Object.entries(grouping)) {
+
+    rawcode = []
     rawcode.push(`<div id="${tabs}" class="tabcontent">`)
 
     for (let [key, value] of Object.entries(grouping[tabs])) {
@@ -90,7 +65,9 @@ class="tablinks" onclick="openTab(event, '${tabs}')">${tabs}</button>
 
     rawcode.push(`</div>`)
 
-    htmlCode.innerHTML = rawcode.join("");
+    let child = document.createElement("div")
+    child.innerHTML = rawcode.join("")
+    htmlCode.appendChild(child)
 
   }
 

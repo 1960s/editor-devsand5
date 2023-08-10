@@ -17,6 +17,11 @@
   <script src="html-data-grouping.js"></script>
   <script src="html-data-attributes.js"></script>
   <script src="html-data-elements.js"></script>
+
+  <script  src="js-grouping.js"></script>
+  <script  src="js-grouping2.js"></script>
+  <script  src="js-grouping3.js"></script>
+
 <script>
 
   //setting up tab categories
@@ -27,10 +32,14 @@
   <div class="tab">
 `)
 
-  for (let [tabs, module] of Object.entries(grouping)) {
+
+let tabHTML = Object.keys(grouping)
+let tabJS = Object.keys(groupingJS)
+let tabs = [...tabHTML,...tabJS]
+  for (let tab of tabs ) {
     rawcode.push(`
-    <button ${tabs === "HTML" ? 'id="defaultOpen"' : ""}
-    class="tablinks" onclick="openTab(event, '${tabs}')">${tabs}</button>
+    <button ${tab === "HTML" ? 'id="defaultOpen"' : ""}
+    class="tablinks" onclick="openTab(event, '${tab}')">${tab}</button>
     `)
   }
 
@@ -43,9 +52,8 @@ htmlCode.innerHTML = rawcode.join("");
 </script>
 
   <script src="html-master.js"></script>
+  <script  src="js-master.js"></script>
 
 </body>
 
 </html>
-
-
