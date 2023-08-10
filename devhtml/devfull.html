@@ -46,7 +46,7 @@ let tabs = [...tabHTML,...tabCSS,...tabJS]
   for (let tab of tabs ) {
     rawcode.push(`
     <button ${tab === "HTML" ? 'id="defaultOpen"' : ""}
-    class="tablinks" onclick="openTab(event, '${tab}')">${tab}</button>
+    class="tablinks" onclick="openTab(event, '${tab}')">${tab.toUpperCase()}</button>
     `)
   }
 
