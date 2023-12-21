@@ -1,0 +1,1542 @@
+Built-ins	Value properties	globalThis	Object					
+Built-ins	Value properties	globalThis	Function					
+Built-ins	Value properties	globalThis	Array					
+Built-ins	Value properties	globalThis	Number					
+Built-ins	Value properties	globalThis	parseFloat					
+Built-ins	Value properties	globalThis	parseInt					
+Built-ins	Value properties	globalThis	Infinity					
+Built-ins	Value properties	globalThis	NaN					
+Built-ins	Value properties	globalThis	undefined					
+Built-ins	Value properties	globalThis	Boolean					
+Built-ins	Value properties	globalThis	String					
+Built-ins	Value properties	globalThis	Symbol					
+Built-ins	Value properties	globalThis	Date					
+Built-ins	Value properties	globalThis	Promise					
+Built-ins	Value properties	globalThis	RegExp					
+Built-ins	Value properties	globalThis	Error					
+Built-ins	Value properties	globalThis	AggregateError					
+Built-ins	Value properties	globalThis	EvalError					
+Built-ins	Value properties	globalThis	RangeError					
+Built-ins	Value properties	globalThis	ReferenceError					
+Built-ins	Value properties	globalThis	SyntaxError					
+Built-ins	Value properties	globalThis	TypeError					
+Built-ins	Value properties	globalThis	URIError					
+Built-ins	Value properties	globalThis	globalThis					
+Built-ins	Value properties	globalThis	JSON					
+Built-ins	Value properties	globalThis	Math					
+Built-ins	Value properties	globalThis	Intl					
+Built-ins	Value properties	globalThis	ArrayBuffer					
+Built-ins	Value properties	globalThis	Uint8Array					
+Built-ins	Value properties	globalThis	Int8Array					
+Built-ins	Value properties	globalThis	Uint16Array					
+Built-ins	Value properties	globalThis	Int16Array					
+Built-ins	Value properties	globalThis	Uint32Array					
+Built-ins	Value properties	globalThis	Int32Array					
+Built-ins	Value properties	globalThis	Float32Array					
+Built-ins	Value properties	globalThis	Float64Array					
+Built-ins	Value properties	globalThis	Uint8ClampedArray					
+Built-ins	Value properties	globalThis	BigUint64Array					
+Built-ins	Value properties	globalThis	BigInt64Array					
+Built-ins	Value properties	globalThis	DataView					
+Built-ins	Value properties	globalThis	Map					
+Built-ins	Value properties	globalThis	BigInt					
+Built-ins	Value properties	globalThis	Set					
+Built-ins	Value properties	globalThis	WeakMap					
+Built-ins	Value properties	globalThis	WeakSet					
+Built-ins	Value properties	globalThis	Proxy					
+Built-ins	Value properties	globalThis	Reflect					
+Built-ins	Value properties	globalThis	FinalizationRegistry					
+Built-ins	Value properties	globalThis	WeakRef					
+Built-ins	Value properties	globalThis	decodeURI					
+Built-ins	Value properties	globalThis	decodeURIComponent					
+Built-ins	Value properties	globalThis	encodeURI					
+Built-ins	Value properties	globalThis	encodeURIComponent					
+Built-ins	Value properties	globalThis	escape					
+Built-ins	Value properties	globalThis	unescape					
+Built-ins	Value properties	globalThis	eval					
+Built-ins	Value properties	globalThis	isFinite					
+Built-ins	Value properties	globalThis	isNaN					
+Built-ins	Value properties	globalThis	console					
+Built-ins	Value properties	globalThis	Option					
+Built-ins	Value properties	globalThis	Image					
+Built-ins	Value properties	globalThis	Audio					
+Built-ins	Value properties	globalThis	webkitURL					
+Built-ins	Value properties	globalThis	webkitRTCPeerConnection					
+Built-ins	Value properties	globalThis	webkitMediaStream					
+Built-ins	Value properties	globalThis	WebKitMutationObserver					
+Built-ins	Value properties	globalThis	WebKitCSSMatrix					
+Built-ins	Value properties	globalThis	XSLTProcessor					
+Built-ins	Value properties	globalThis	XPathResult					
+Built-ins	Value properties	globalThis	XPathExpression					
+Built-ins	Value properties	globalThis	XPathEvaluator					
+Built-ins	Value properties	globalThis	XMLSerializer					
+Built-ins	Value properties	globalThis	XMLHttpRequestUpload					
+Built-ins	Value properties	globalThis	XMLHttpRequestEventTarget					
+Built-ins	Value properties	globalThis	XMLHttpRequest					
+Built-ins	Value properties	globalThis	XMLDocument					
+Built-ins	Value properties	globalThis	WritableStreamDefaultWriter					
+Built-ins	Value properties	globalThis	WritableStreamDefaultController					
+Built-ins	Value properties	globalThis	WritableStream					
+Built-ins	Value properties	globalThis	Worker					
+Built-ins	Value properties	globalThis	Window					
+Built-ins	Value properties	globalThis	WheelEvent					
+Built-ins	Value properties	globalThis	WebSocket					
+Built-ins	Value properties	globalThis	WebGLVertexArrayObject					
+Built-ins	Value properties	globalThis	WebGLUniformLocation					
+Built-ins	Value properties	globalThis	WebGLTransformFeedback					
+Built-ins	Value properties	globalThis	WebGLTexture					
+Built-ins	Value properties	globalThis	WebGLSync					
+Built-ins	Value properties	globalThis	WebGLShaderPrecisionFormat					
+Built-ins	Value properties	globalThis	WebGLShader					
+Built-ins	Value properties	globalThis	WebGLSampler					
+Built-ins	Value properties	globalThis	WebGLRenderingContext					
+Built-ins	Value properties	globalThis	WebGLRenderbuffer					
+Built-ins	Value properties	globalThis	WebGLQuery					
+Built-ins	Value properties	globalThis	WebGLProgram					
+Built-ins	Value properties	globalThis	WebGLFramebuffer					
+Built-ins	Value properties	globalThis	WebGLContextEvent					
+Built-ins	Value properties	globalThis	WebGLBuffer					
+Built-ins	Value properties	globalThis	WebGLActiveInfo					
+Built-ins	Value properties	globalThis	WebGL2RenderingContext					
+Built-ins	Value properties	globalThis	WaveShaperNode					
+Built-ins	Value properties	globalThis	VisualViewport					
+Built-ins	Value properties	globalThis	VirtualKeyboardGeometryChangeEvent					
+Built-ins	Value properties	globalThis	ValidityState					
+Built-ins	Value properties	globalThis	VTTCue					
+Built-ins	Value properties	globalThis	UserActivation					
+Built-ins	Value properties	globalThis	URLSearchParams					
+Built-ins	Value properties	globalThis	URLPattern					
+Built-ins	Value properties	globalThis	URL					
+Built-ins	Value properties	globalThis	UIEvent					
+Built-ins	Value properties	globalThis	TrustedTypePolicyFactory					
+Built-ins	Value properties	globalThis	TrustedTypePolicy					
+Built-ins	Value properties	globalThis	TrustedScriptURL					
+Built-ins	Value properties	globalThis	TrustedScript					
+Built-ins	Value properties	globalThis	TrustedHTML					
+Built-ins	Value properties	globalThis	TreeWalker					
+Built-ins	Value properties	globalThis	TransitionEvent					
+Built-ins	Value properties	globalThis	TransformStreamDefaultController					
+Built-ins	Value properties	globalThis	TransformStream					
+Built-ins	Value properties	globalThis	TrackEvent					
+Built-ins	Value properties	globalThis	TouchList					
+Built-ins	Value properties	globalThis	TouchEvent					
+Built-ins	Value properties	globalThis	Touch					
+Built-ins	Value properties	globalThis	TimeRanges					
+Built-ins	Value properties	globalThis	TextTrackList					
+Built-ins	Value properties	globalThis	TextTrackCueList					
+Built-ins	Value properties	globalThis	TextTrackCue					
+Built-ins	Value properties	globalThis	TextTrack					
+Built-ins	Value properties	globalThis	TextMetrics					
+Built-ins	Value properties	globalThis	TextEvent					
+Built-ins	Value properties	globalThis	TextEncoderStream					
+Built-ins	Value properties	globalThis	TextEncoder					
+Built-ins	Value properties	globalThis	TextDecoderStream					
+Built-ins	Value properties	globalThis	TextDecoder					
+Built-ins	Value properties	globalThis	Text					
+Built-ins	Value properties	globalThis	TaskSignal					
+Built-ins	Value properties	globalThis	TaskPriorityChangeEvent					
+Built-ins	Value properties	globalThis	TaskController					
+Built-ins	Value properties	globalThis	TaskAttributionTiming					
+Built-ins	Value properties	globalThis	SyncManager					
+Built-ins	Value properties	globalThis	SubmitEvent					
+Built-ins	Value properties	globalThis	StyleSheetList					
+Built-ins	Value properties	globalThis	StyleSheet					
+Built-ins	Value properties	globalThis	StylePropertyMapReadOnly					
+Built-ins	Value properties	globalThis	StylePropertyMap					
+Built-ins	Value properties	globalThis	StorageEvent					
+Built-ins	Value properties	globalThis	Storage					
+Built-ins	Value properties	globalThis	StereoPannerNode					
+Built-ins	Value properties	globalThis	StaticRange					
+Built-ins	Value properties	globalThis	ShadowRoot					
+Built-ins	Value properties	globalThis	Selection					
+Built-ins	Value properties	globalThis	SecurityPolicyViolationEvent					
+Built-ins	Value properties	globalThis	ScriptProcessorNode					
+Built-ins	Value properties	globalThis	ScreenOrientation					
+Built-ins	Value properties	globalThis	Screen					
+Built-ins	Value properties	globalThis	Scheduling					
+Built-ins	Value properties	globalThis	Scheduler					
+Built-ins	Value properties	globalThis	SVGViewElement					
+Built-ins	Value properties	globalThis	SVGUseElement					
+Built-ins	Value properties	globalThis	SVGUnitTypes					
+Built-ins	Value properties	globalThis	SVGTransformList					
+Built-ins	Value properties	globalThis	SVGTransform					
+Built-ins	Value properties	globalThis	SVGTitleElement					
+Built-ins	Value properties	globalThis	SVGTextPositioningElement					
+Built-ins	Value properties	globalThis	SVGTextPathElement					
+Built-ins	Value properties	globalThis	SVGTextElement					
+Built-ins	Value properties	globalThis	SVGTextContentElement					
+Built-ins	Value properties	globalThis	SVGTSpanElement					
+Built-ins	Value properties	globalThis	SVGSymbolElement					
+Built-ins	Value properties	globalThis	SVGSwitchElement					
+Built-ins	Value properties	globalThis	SVGStyleElement					
+Built-ins	Value properties	globalThis	SVGStringList					
+Built-ins	Value properties	globalThis	SVGStopElement					
+Built-ins	Value properties	globalThis	SVGSetElement					
+Built-ins	Value properties	globalThis	SVGScriptElement					
+Built-ins	Value properties	globalThis	SVGSVGElement					
+Built-ins	Value properties	globalThis	SVGRectElement					
+Built-ins	Value properties	globalThis	SVGRect					
+Built-ins	Value properties	globalThis	SVGRadialGradientElement					
+Built-ins	Value properties	globalThis	SVGPreserveAspectRatio					
+Built-ins	Value properties	globalThis	SVGPolylineElement					
+Built-ins	Value properties	globalThis	SVGPolygonElement					
+Built-ins	Value properties	globalThis	SVGPointList					
+Built-ins	Value properties	globalThis	SVGPoint					
+Built-ins	Value properties	globalThis	SVGPatternElement					
+Built-ins	Value properties	globalThis	SVGPathElement					
+Built-ins	Value properties	globalThis	SVGNumberList					
+Built-ins	Value properties	globalThis	SVGNumber					
+Built-ins	Value properties	globalThis	SVGMetadataElement					
+Built-ins	Value properties	globalThis	SVGMatrix					
+Built-ins	Value properties	globalThis	SVGMaskElement					
+Built-ins	Value properties	globalThis	SVGMarkerElement					
+Built-ins	Value properties	globalThis	SVGMPathElement					
+Built-ins	Value properties	globalThis	SVGLinearGradientElement					
+Built-ins	Value properties	globalThis	SVGLineElement					
+Built-ins	Value properties	globalThis	SVGLengthList					
+Built-ins	Value properties	globalThis	SVGLength					
+Built-ins	Value properties	globalThis	SVGImageElement					
+Built-ins	Value properties	globalThis	SVGGraphicsElement					
+Built-ins	Value properties	globalThis	SVGGradientElement					
+Built-ins	Value properties	globalThis	SVGGeometryElement					
+Built-ins	Value properties	globalThis	SVGGElement					
+Built-ins	Value properties	globalThis	SVGForeignObjectElement					
+Built-ins	Value properties	globalThis	SVGFilterElement					
+Built-ins	Value properties	globalThis	SVGFETurbulenceElement					
+Built-ins	Value properties	globalThis	SVGFETileElement					
+Built-ins	Value properties	globalThis	SVGFESpotLightElement					
+Built-ins	Value properties	globalThis	SVGFESpecularLightingElement					
+Built-ins	Value properties	globalThis	SVGFEPointLightElement					
+Built-ins	Value properties	globalThis	SVGFEOffsetElement					
+Built-ins	Value properties	globalThis	SVGFEMorphologyElement					
+Built-ins	Value properties	globalThis	SVGFEMergeNodeElement					
+Built-ins	Value properties	globalThis	SVGFEMergeElement					
+Built-ins	Value properties	globalThis	SVGFEImageElement					
+Built-ins	Value properties	globalThis	SVGFEGaussianBlurElement					
+Built-ins	Value properties	globalThis	SVGFEFuncRElement					
+Built-ins	Value properties	globalThis	SVGFEFuncGElement					
+Built-ins	Value properties	globalThis	SVGFEFuncBElement					
+Built-ins	Value properties	globalThis	SVGFEFuncAElement					
+Built-ins	Value properties	globalThis	SVGFEFloodElement					
+Built-ins	Value properties	globalThis	SVGFEDropShadowElement					
+Built-ins	Value properties	globalThis	SVGFEDistantLightElement					
+Built-ins	Value properties	globalThis	SVGFEDisplacementMapElement					
+Built-ins	Value properties	globalThis	SVGFEDiffuseLightingElement					
+Built-ins	Value properties	globalThis	SVGFEConvolveMatrixElement					
+Built-ins	Value properties	globalThis	SVGFECompositeElement					
+Built-ins	Value properties	globalThis	SVGFEComponentTransferElement					
+Built-ins	Value properties	globalThis	SVGFEColorMatrixElement					
+Built-ins	Value properties	globalThis	SVGFEBlendElement					
+Built-ins	Value properties	globalThis	SVGEllipseElement					
+Built-ins	Value properties	globalThis	SVGElement					
+Built-ins	Value properties	globalThis	SVGDescElement					
+Built-ins	Value properties	globalThis	SVGDefsElement					
+Built-ins	Value properties	globalThis	SVGComponentTransferFunctionElement					
+Built-ins	Value properties	globalThis	SVGClipPathElement					
+Built-ins	Value properties	globalThis	SVGCircleElement					
+Built-ins	Value properties	globalThis	SVGAnimationElement					
+Built-ins	Value properties	globalThis	SVGAnimatedTransformList					
+Built-ins	Value properties	globalThis	SVGAnimatedString					
+Built-ins	Value properties	globalThis	SVGAnimatedRect					
+Built-ins	Value properties	globalThis	SVGAnimatedPreserveAspectRatio					
+Built-ins	Value properties	globalThis	SVGAnimatedNumberList					
+Built-ins	Value properties	globalThis	SVGAnimatedNumber					
+Built-ins	Value properties	globalThis	SVGAnimatedLengthList					
+Built-ins	Value properties	globalThis	SVGAnimatedLength					
+Built-ins	Value properties	globalThis	SVGAnimatedInteger					
+Built-ins	Value properties	globalThis	SVGAnimatedEnumeration					
+Built-ins	Value properties	globalThis	SVGAnimatedBoolean					
+Built-ins	Value properties	globalThis	SVGAnimatedAngle					
+Built-ins	Value properties	globalThis	SVGAnimateTransformElement					
+Built-ins	Value properties	globalThis	SVGAnimateMotionElement					
+Built-ins	Value properties	globalThis	SVGAnimateElement					
+Built-ins	Value properties	globalThis	SVGAngle					
+Built-ins	Value properties	globalThis	SVGAElement					
+Built-ins	Value properties	globalThis	Response					
+Built-ins	Value properties	globalThis	ResizeObserverSize					
+Built-ins	Value properties	globalThis	ResizeObserverEntry					
+Built-ins	Value properties	globalThis	ResizeObserver					
+Built-ins	Value properties	globalThis	Request					
+Built-ins	Value properties	globalThis	ReportingObserver					
+Built-ins	Value properties	globalThis	ReadableStreamDefaultReader					
+Built-ins	Value properties	globalThis	ReadableStreamDefaultController					
+Built-ins	Value properties	globalThis	ReadableStreamBYOBRequest					
+Built-ins	Value properties	globalThis	ReadableStreamBYOBReader					
+Built-ins	Value properties	globalThis	ReadableStream					
+Built-ins	Value properties	globalThis	ReadableByteStreamController					
+Built-ins	Value properties	globalThis	Range					
+Built-ins	Value properties	globalThis	RadioNodeList					
+Built-ins	Value properties	globalThis	RTCTrackEvent					
+Built-ins	Value properties	globalThis	RTCStatsReport					
+Built-ins	Value properties	globalThis	RTCSessionDescription					
+Built-ins	Value properties	globalThis	RTCSctpTransport					
+Built-ins	Value properties	globalThis	RTCRtpTransceiver					
+Built-ins	Value properties	globalThis	RTCRtpSender					
+Built-ins	Value properties	globalThis	RTCRtpReceiver					
+Built-ins	Value properties	globalThis	RTCPeerConnectionIceEvent					
+Built-ins	Value properties	globalThis	RTCPeerConnectionIceErrorEvent					
+Built-ins	Value properties	globalThis	RTCPeerConnection					
+Built-ins	Value properties	globalThis	RTCIceTransport					
+Built-ins	Value properties	globalThis	RTCIceCandidate					
+Built-ins	Value properties	globalThis	RTCErrorEvent					
+Built-ins	Value properties	globalThis	RTCError					
+Built-ins	Value properties	globalThis	RTCEncodedVideoFrame					
+Built-ins	Value properties	globalThis	RTCEncodedAudioFrame					
+Built-ins	Value properties	globalThis	RTCDtlsTransport					
+Built-ins	Value properties	globalThis	RTCDataChannelEvent					
+Built-ins	Value properties	globalThis	RTCDataChannel					
+Built-ins	Value properties	globalThis	RTCDTMFToneChangeEvent					
+Built-ins	Value properties	globalThis	RTCDTMFSender					
+Built-ins	Value properties	globalThis	RTCCertificate					
+Built-ins	Value properties	globalThis	PromiseRejectionEvent					
+Built-ins	Value properties	globalThis	ProgressEvent					
+Built-ins	Value properties	globalThis	Profiler					
+Built-ins	Value properties	globalThis	ProcessingInstruction					
+Built-ins	Value properties	globalThis	PopStateEvent					
+Built-ins	Value properties	globalThis	PointerEvent					
+Built-ins	Value properties	globalThis	PluginArray					
+Built-ins	Value properties	globalThis	Plugin					
+Built-ins	Value properties	globalThis	PictureInPictureWindow					
+Built-ins	Value properties	globalThis	PictureInPictureEvent					
+Built-ins	Value properties	globalThis	PeriodicWave					
+Built-ins	Value properties	globalThis	PerformanceTiming					
+Built-ins	Value properties	globalThis	PerformanceServerTiming					
+Built-ins	Value properties	globalThis	PerformanceResourceTiming					
+Built-ins	Value properties	globalThis	PerformancePaintTiming					
+Built-ins	Value properties	globalThis	PerformanceObserverEntryList					
+Built-ins	Value properties	globalThis	PerformanceObserver					
+Built-ins	Value properties	globalThis	PerformanceNavigationTiming					
+Built-ins	Value properties	globalThis	PerformanceNavigation					
+Built-ins	Value properties	globalThis	PerformanceMeasure					
+Built-ins	Value properties	globalThis	PerformanceMark					
+Built-ins	Value properties	globalThis	PerformanceLongTaskTiming					
+Built-ins	Value properties	globalThis	PerformanceEventTiming					
+Built-ins	Value properties	globalThis	PerformanceEntry					
+Built-ins	Value properties	globalThis	PerformanceElementTiming					
+Built-ins	Value properties	globalThis	Performance					
+Built-ins	Value properties	globalThis	Path2D					
+Built-ins	Value properties	globalThis	PannerNode					
+Built-ins	Value properties	globalThis	PageTransitionEvent					
+Built-ins	Value properties	globalThis	OverconstrainedError					
+Built-ins	Value properties	globalThis	OscillatorNode					
+Built-ins	Value properties	globalThis	OffscreenCanvasRenderingContext2D					
+Built-ins	Value properties	globalThis	OffscreenCanvas					
+Built-ins	Value properties	globalThis	OfflineAudioContext					
+Built-ins	Value properties	globalThis	OfflineAudioCompletionEvent					
+Built-ins	Value properties	globalThis	NodeList					
+Built-ins	Value properties	globalThis	NodeIterator					
+Built-ins	Value properties	globalThis	NodeFilter					
+Built-ins	Value properties	globalThis	Node					
+Built-ins	Value properties	globalThis	NetworkInformation					
+Built-ins	Value properties	globalThis	Navigator					
+Built-ins	Value properties	globalThis	NavigationTransition					
+Built-ins	Value properties	globalThis	NavigationHistoryEntry					
+Built-ins	Value properties	globalThis	NavigationDestination					
+Built-ins	Value properties	globalThis	NavigationCurrentEntryChangeEvent					
+Built-ins	Value properties	globalThis	Navigation					
+Built-ins	Value properties	globalThis	NavigateEvent					
+Built-ins	Value properties	globalThis	NamedNodeMap					
+Built-ins	Value properties	globalThis	MutationRecord					
+Built-ins	Value properties	globalThis	MutationObserver					
+Built-ins	Value properties	globalThis	MutationEvent					
+Built-ins	Value properties	globalThis	MouseEvent					
+Built-ins	Value properties	globalThis	MimeTypeArray					
+Built-ins	Value properties	globalThis	MimeType					
+Built-ins	Value properties	globalThis	MessagePort					
+Built-ins	Value properties	globalThis	MessageEvent					
+Built-ins	Value properties	globalThis	MessageChannel					
+Built-ins	Value properties	globalThis	MediaStreamTrackProcessor					
+Built-ins	Value properties	globalThis	MediaStreamTrackGenerator					
+Built-ins	Value properties	globalThis	MediaStreamTrackEvent					
+Built-ins	Value properties	globalThis	MediaStreamTrack					
+Built-ins	Value properties	globalThis	MediaStreamEvent					
+Built-ins	Value properties	globalThis	MediaStreamAudioSourceNode					
+Built-ins	Value properties	globalThis	MediaStreamAudioDestinationNode					
+Built-ins	Value properties	globalThis	MediaStream					
+Built-ins	Value properties	globalThis	MediaRecorder					
+Built-ins	Value properties	globalThis	MediaQueryListEvent					
+Built-ins	Value properties	globalThis	MediaQueryList					
+Built-ins	Value properties	globalThis	MediaList					
+Built-ins	Value properties	globalThis	MediaError					
+Built-ins	Value properties	globalThis	MediaEncryptedEvent					
+Built-ins	Value properties	globalThis	MediaElementAudioSourceNode					
+Built-ins	Value properties	globalThis	MediaCapabilities					
+Built-ins	Value properties	globalThis	Location					
+Built-ins	Value properties	globalThis	LayoutShiftAttribution					
+Built-ins	Value properties	globalThis	LayoutShift					
+Built-ins	Value properties	globalThis	LargestContentfulPaint					
+Built-ins	Value properties	globalThis	KeyframeEffect					
+Built-ins	Value properties	globalThis	KeyboardEvent					
+Built-ins	Value properties	globalThis	IntersectionObserverEntry					
+Built-ins	Value properties	globalThis	IntersectionObserver					
+Built-ins	Value properties	globalThis	InputEvent					
+Built-ins	Value properties	globalThis	InputDeviceInfo					
+Built-ins	Value properties	globalThis	InputDeviceCapabilities					
+Built-ins	Value properties	globalThis	ImageData					
+Built-ins	Value properties	globalThis	ImageCapture					
+Built-ins	Value properties	globalThis	ImageBitmapRenderingContext					
+Built-ins	Value properties	globalThis	ImageBitmap					
+Built-ins	Value properties	globalThis	IdleDeadline					
+Built-ins	Value properties	globalThis	IIRFilterNode					
+Built-ins	Value properties	globalThis	IDBVersionChangeEvent					
+Built-ins	Value properties	globalThis	IDBTransaction					
+Built-ins	Value properties	globalThis	IDBRequest					
+Built-ins	Value properties	globalThis	IDBOpenDBRequest					
+Built-ins	Value properties	globalThis	IDBObjectStore					
+Built-ins	Value properties	globalThis	IDBKeyRange					
+Built-ins	Value properties	globalThis	IDBIndex					
+Built-ins	Value properties	globalThis	IDBFactory					
+Built-ins	Value properties	globalThis	IDBDatabase					
+Built-ins	Value properties	globalThis	IDBCursorWithValue					
+Built-ins	Value properties	globalThis	IDBCursor					
+Built-ins	Value properties	globalThis	History					
+Built-ins	Value properties	globalThis	Headers					
+Built-ins	Value properties	globalThis	HashChangeEvent					
+Built-ins	Value properties	globalThis	HTMLVideoElement					
+Built-ins	Value properties	globalThis	HTMLUnknownElement					
+Built-ins	Value properties	globalThis	HTMLUListElement					
+Built-ins	Value properties	globalThis	HTMLTrackElement					
+Built-ins	Value properties	globalThis	HTMLTitleElement					
+Built-ins	Value properties	globalThis	HTMLTimeElement					
+Built-ins	Value properties	globalThis	HTMLTextAreaElement					
+Built-ins	Value properties	globalThis	HTMLTemplateElement					
+Built-ins	Value properties	globalThis	HTMLTableSectionElement					
+Built-ins	Value properties	globalThis	HTMLTableRowElement					
+Built-ins	Value properties	globalThis	HTMLTableElement					
+Built-ins	Value properties	globalThis	HTMLTableColElement					
+Built-ins	Value properties	globalThis	HTMLTableCellElement					
+Built-ins	Value properties	globalThis	HTMLTableCaptionElement					
+Built-ins	Value properties	globalThis	HTMLStyleElement					
+Built-ins	Value properties	globalThis	HTMLSpanElement					
+Built-ins	Value properties	globalThis	HTMLSourceElement					
+Built-ins	Value properties	globalThis	HTMLSlotElement					
+Built-ins	Value properties	globalThis	HTMLSelectElement					
+Built-ins	Value properties	globalThis	HTMLScriptElement					
+Built-ins	Value properties	globalThis	HTMLQuoteElement					
+Built-ins	Value properties	globalThis	HTMLProgressElement					
+Built-ins	Value properties	globalThis	HTMLPreElement					
+Built-ins	Value properties	globalThis	HTMLPictureElement					
+Built-ins	Value properties	globalThis	HTMLParamElement					
+Built-ins	Value properties	globalThis	HTMLParagraphElement					
+Built-ins	Value properties	globalThis	HTMLOutputElement					
+Built-ins	Value properties	globalThis	HTMLOptionsCollection					
+Built-ins	Value properties	globalThis	HTMLOptionElement					
+Built-ins	Value properties	globalThis	HTMLOptGroupElement					
+Built-ins	Value properties	globalThis	HTMLObjectElement					
+Built-ins	Value properties	globalThis	HTMLOListElement					
+Built-ins	Value properties	globalThis	HTMLModElement					
+Built-ins	Value properties	globalThis	HTMLMeterElement					
+Built-ins	Value properties	globalThis	HTMLMetaElement					
+Built-ins	Value properties	globalThis	HTMLMenuElement					
+Built-ins	Value properties	globalThis	HTMLMediaElement					
+Built-ins	Value properties	globalThis	HTMLMarqueeElement					
+Built-ins	Value properties	globalThis	HTMLMapElement					
+Built-ins	Value properties	globalThis	HTMLLinkElement					
+Built-ins	Value properties	globalThis	HTMLLegendElement					
+Built-ins	Value properties	globalThis	HTMLLabelElement					
+Built-ins	Value properties	globalThis	HTMLLIElement					
+Built-ins	Value properties	globalThis	HTMLInputElement					
+Built-ins	Value properties	globalThis	HTMLImageElement					
+Built-ins	Value properties	globalThis	HTMLIFrameElement					
+Built-ins	Value properties	globalThis	HTMLHtmlElement					
+Built-ins	Value properties	globalThis	HTMLHeadingElement					
+Built-ins	Value properties	globalThis	HTMLHeadElement					
+Built-ins	Value properties	globalThis	HTMLHRElement					
+Built-ins	Value properties	globalThis	HTMLFrameSetElement					
+Built-ins	Value properties	globalThis	HTMLFrameElement					
+Built-ins	Value properties	globalThis	HTMLFormElement					
+Built-ins	Value properties	globalThis	HTMLFormControlsCollection					
+Built-ins	Value properties	globalThis	HTMLFontElement					
+Built-ins	Value properties	globalThis	HTMLFieldSetElement					
+Built-ins	Value properties	globalThis	HTMLEmbedElement					
+Built-ins	Value properties	globalThis	HTMLElement					
+Built-ins	Value properties	globalThis	HTMLDocument					
+Built-ins	Value properties	globalThis	HTMLDivElement					
+Built-ins	Value properties	globalThis	HTMLDirectoryElement					
+Built-ins	Value properties	globalThis	HTMLDialogElement					
+Built-ins	Value properties	globalThis	HTMLDetailsElement					
+Built-ins	Value properties	globalThis	HTMLDataListElement					
+Built-ins	Value properties	globalThis	HTMLDataElement					
+Built-ins	Value properties	globalThis	HTMLDListElement					
+Built-ins	Value properties	globalThis	HTMLCollection					
+Built-ins	Value properties	globalThis	HTMLCanvasElement					
+Built-ins	Value properties	globalThis	HTMLButtonElement					
+Built-ins	Value properties	globalThis	HTMLBodyElement					
+Built-ins	Value properties	globalThis	HTMLBaseElement					
+Built-ins	Value properties	globalThis	HTMLBRElement					
+Built-ins	Value properties	globalThis	HTMLAudioElement					
+Built-ins	Value properties	globalThis	HTMLAreaElement					
+Built-ins	Value properties	globalThis	HTMLAnchorElement					
+Built-ins	Value properties	globalThis	HTMLAllCollection					
+Built-ins	Value properties	globalThis	GeolocationPositionError					
+Built-ins	Value properties	globalThis	GeolocationPosition					
+Built-ins	Value properties	globalThis	GeolocationCoordinates					
+Built-ins	Value properties	globalThis	Geolocation					
+Built-ins	Value properties	globalThis	GamepadHapticActuator					
+Built-ins	Value properties	globalThis	GamepadEvent					
+Built-ins	Value properties	globalThis	GamepadButton					
+Built-ins	Value properties	globalThis	Gamepad					
+Built-ins	Value properties	globalThis	GainNode					
+Built-ins	Value properties	globalThis	FormDataEvent					
+Built-ins	Value properties	globalThis	FormData					
+Built-ins	Value properties	globalThis	FontFaceSetLoadEvent					
+Built-ins	Value properties	globalThis	FontFace					
+Built-ins	Value properties	globalThis	FocusEvent					
+Built-ins	Value properties	globalThis	FileReader					
+Built-ins	Value properties	globalThis	FileList					
+Built-ins	Value properties	globalThis	File					
+Built-ins	Value properties	globalThis	FeaturePolicy					
+Built-ins	Value properties	globalThis	External					
+Built-ins	Value properties	globalThis	EventTarget					
+Built-ins	Value properties	globalThis	EventSource					
+Built-ins	Value properties	globalThis	EventCounts					
+Built-ins	Value properties	globalThis	Event					
+Built-ins	Value properties	globalThis	ErrorEvent					
+Built-ins	Value properties	globalThis	ElementInternals					
+Built-ins	Value properties	globalThis	Element					
+Built-ins	Value properties	globalThis	DynamicsCompressorNode					
+Built-ins	Value properties	globalThis	DragEvent					
+Built-ins	Value properties	globalThis	DocumentType					
+Built-ins	Value properties	globalThis	DocumentFragment					
+Built-ins	Value properties	globalThis	Document					
+Built-ins	Value properties	globalThis	DelayNode					
+Built-ins	Value properties	globalThis	DecompressionStream					
+Built-ins	Value properties	globalThis	DataTransferItemList					
+Built-ins	Value properties	globalThis	DataTransferItem					
+Built-ins	Value properties	globalThis	DataTransfer					
+Built-ins	Value properties	globalThis	DOMTokenList					
+Built-ins	Value properties	globalThis	DOMStringMap					
+Built-ins	Value properties	globalThis	DOMStringList					
+Built-ins	Value properties	globalThis	DOMRectReadOnly					
+Built-ins	Value properties	globalThis	DOMRectList					
+Built-ins	Value properties	globalThis	DOMRect					
+Built-ins	Value properties	globalThis	DOMQuad					
+Built-ins	Value properties	globalThis	DOMPointReadOnly					
+Built-ins	Value properties	globalThis	DOMPoint					
+Built-ins	Value properties	globalThis	DOMParser					
+Built-ins	Value properties	globalThis	DOMMatrixReadOnly					
+Built-ins	Value properties	globalThis	DOMMatrix					
+Built-ins	Value properties	globalThis	DOMImplementation					
+Built-ins	Value properties	globalThis	DOMException					
+Built-ins	Value properties	globalThis	DOMError					
+Built-ins	Value properties	globalThis	CustomStateSet					
+Built-ins	Value properties	globalThis	CustomEvent					
+Built-ins	Value properties	globalThis	CustomElementRegistry					
+Built-ins	Value properties	globalThis	Crypto					
+Built-ins	Value properties	globalThis	CountQueuingStrategy					
+Built-ins	Value properties	globalThis	ConvolverNode					
+Built-ins	Value properties	globalThis	ConstantSourceNode					
+Built-ins	Value properties	globalThis	CompressionStream					
+Built-ins	Value properties	globalThis	CompositionEvent					
+Built-ins	Value properties	globalThis	Comment					
+Built-ins	Value properties	globalThis	CloseEvent					
+Built-ins	Value properties	globalThis	ClipboardEvent					
+Built-ins	Value properties	globalThis	CharacterData					
+Built-ins	Value properties	globalThis	ChannelSplitterNode					
+Built-ins	Value properties	globalThis	ChannelMergerNode					
+Built-ins	Value properties	globalThis	CanvasRenderingContext2D					
+Built-ins	Value properties	globalThis	CanvasPattern					
+Built-ins	Value properties	globalThis	CanvasGradient					
+Built-ins	Value properties	globalThis	CanvasFilter					
+Built-ins	Value properties	globalThis	CanvasCaptureMediaStreamTrack					
+Built-ins	Value properties	globalThis	CSSVariableReferenceValue					
+Built-ins	Value properties	globalThis	CSSUnparsedValue					
+Built-ins	Value properties	globalThis	CSSUnitValue					
+Built-ins	Value properties	globalThis	CSSTranslate					
+Built-ins	Value properties	globalThis	CSSTransformValue					
+Built-ins	Value properties	globalThis	CSSTransformComponent					
+Built-ins	Value properties	globalThis	CSSSupportsRule					
+Built-ins	Value properties	globalThis	CSSStyleValue					
+Built-ins	Value properties	globalThis	CSSStyleSheet					
+Built-ins	Value properties	globalThis	CSSStyleRule					
+Built-ins	Value properties	globalThis	CSSStyleDeclaration					
+Built-ins	Value properties	globalThis	CSSSkewY					
+Built-ins	Value properties	globalThis	CSSSkewX					
+Built-ins	Value properties	globalThis	CSSSkew					
+Built-ins	Value properties	globalThis	CSSScale					
+Built-ins	Value properties	globalThis	CSSRuleList					
+Built-ins	Value properties	globalThis	CSSRule					
+Built-ins	Value properties	globalThis	CSSRotate					
+Built-ins	Value properties	globalThis	CSSPropertyRule					
+Built-ins	Value properties	globalThis	CSSPositionValue					
+Built-ins	Value properties	globalThis	CSSPerspective					
+Built-ins	Value properties	globalThis	CSSPageRule					
+Built-ins	Value properties	globalThis	CSSNumericValue					
+Built-ins	Value properties	globalThis	CSSNumericArray					
+Built-ins	Value properties	globalThis	CSSNamespaceRule					
+Built-ins	Value properties	globalThis	CSSMediaRule					
+Built-ins	Value properties	globalThis	CSSMatrixComponent					
+Built-ins	Value properties	globalThis	CSSMathValue					
+Built-ins	Value properties	globalThis	CSSMathSum					
+Built-ins	Value properties	globalThis	CSSMathProduct					
+Built-ins	Value properties	globalThis	CSSMathNegate					
+Built-ins	Value properties	globalThis	CSSMathMin					
+Built-ins	Value properties	globalThis	CSSMathMax					
+Built-ins	Value properties	globalThis	CSSMathInvert					
+Built-ins	Value properties	globalThis	CSSMathClamp					
+Built-ins	Value properties	globalThis	CSSLayerStatementRule					
+Built-ins	Value properties	globalThis	CSSLayerBlockRule					
+Built-ins	Value properties	globalThis	CSSKeywordValue					
+Built-ins	Value properties	globalThis	CSSKeyframesRule					
+Built-ins	Value properties	globalThis	CSSKeyframeRule					
+Built-ins	Value properties	globalThis	CSSImportRule					
+Built-ins	Value properties	globalThis	CSSImageValue					
+Built-ins	Value properties	globalThis	CSSGroupingRule					
+Built-ins	Value properties	globalThis	CSSFontPaletteValuesRule					
+Built-ins	Value properties	globalThis	CSSFontFaceRule					
+Built-ins	Value properties	globalThis	CSSCounterStyleRule					
+Built-ins	Value properties	globalThis	CSSContainerRule					
+Built-ins	Value properties	globalThis	CSSConditionRule					
+Built-ins	Value properties	globalThis	CSS					
+Built-ins	Value properties	globalThis	CDATASection					
+Built-ins	Value properties	globalThis	ByteLengthQueuingStrategy					
+Built-ins	Value properties	globalThis	BroadcastChannel					
+Built-ins	Value properties	globalThis	BlobEvent					
+Built-ins	Value properties	globalThis	Blob					
+Built-ins	Value properties	globalThis	BiquadFilterNode					
+Built-ins	Value properties	globalThis	BeforeUnloadEvent					
+Built-ins	Value properties	globalThis	BeforeInstallPromptEvent					
+Built-ins	Value properties	globalThis	BaseAudioContext					
+Built-ins	Value properties	globalThis	BarProp					
+Built-ins	Value properties	globalThis	AudioWorkletNode					
+Built-ins	Value properties	globalThis	AudioSinkInfo					
+Built-ins	Value properties	globalThis	AudioScheduledSourceNode					
+Built-ins	Value properties	globalThis	AudioProcessingEvent					
+Built-ins	Value properties	globalThis	AudioParamMap					
+Built-ins	Value properties	globalThis	AudioParam					
+Built-ins	Value properties	globalThis	AudioNode					
+Built-ins	Value properties	globalThis	AudioListener					
+Built-ins	Value properties	globalThis	AudioDestinationNode					
+Built-ins	Value properties	globalThis	AudioContext					
+Built-ins	Value properties	globalThis	AudioBufferSourceNode					
+Built-ins	Value properties	globalThis	AudioBuffer					
+Built-ins	Value properties	globalThis	Attr					
+Built-ins	Value properties	globalThis	AnimationEvent					
+Built-ins	Value properties	globalThis	AnimationEffect					
+Built-ins	Value properties	globalThis	Animation					
+Built-ins	Value properties	globalThis	AnalyserNode					
+Built-ins	Value properties	globalThis	AbstractRange					
+Built-ins	Value properties	globalThis	AbortSignal					
+Built-ins	Value properties	globalThis	AbortController					
+Built-ins	Value properties	globalThis	window					
+Built-ins	Value properties	globalThis	self					
+Built-ins	Value properties	globalThis	document					
+Built-ins	Value properties	globalThis	name					
+Built-ins	Value properties	globalThis	location					
+Built-ins	Value properties	globalThis	customElements					
+Built-ins	Value properties	globalThis	history					
+Built-ins	Value properties	globalThis	navigation					
+Built-ins	Value properties	globalThis	locationbar					
+Built-ins	Value properties	globalThis	menubar					
+Built-ins	Value properties	globalThis	personalbar					
+Built-ins	Value properties	globalThis	scrollbars					
+Built-ins	Value properties	globalThis	statusbar					
+Built-ins	Value properties	globalThis	toolbar					
+Built-ins	Value properties	globalThis	status					
+Built-ins	Value properties	globalThis	closed					
+Built-ins	Value properties	globalThis	frames					
+Built-ins	Value properties	globalThis	length					
+Built-ins	Value properties	globalThis	top					
+Built-ins	Value properties	globalThis	opener					
+Built-ins	Value properties	globalThis	parent					
+Built-ins	Value properties	globalThis	frameElement					
+Built-ins	Value properties	globalThis	navigator					
+Built-ins	Value properties	globalThis	origin					
+Built-ins	Value properties	globalThis	external					
+Built-ins	Value properties	globalThis	screen					
+Built-ins	Value properties	globalThis	innerWidth					
+Built-ins	Value properties	globalThis	innerHeight					
+Built-ins	Value properties	globalThis	scrollX					
+Built-ins	Value properties	globalThis	pageXOffset					
+Built-ins	Value properties	globalThis	scrollY					
+Built-ins	Value properties	globalThis	pageYOffset					
+Built-ins	Value properties	globalThis	visualViewport					
+Built-ins	Value properties	globalThis	screenX					
+Built-ins	Value properties	globalThis	screenY					
+Built-ins	Value properties	globalThis	outerWidth					
+Built-ins	Value properties	globalThis	outerHeight					
+Built-ins	Value properties	globalThis	devicePixelRatio					
+Built-ins	Value properties	globalThis	event					
+Built-ins	Value properties	globalThis	clientInformation					
+Built-ins	Value properties	globalThis	offscreenBuffering					
+Built-ins	Value properties	globalThis	screenLeft					
+Built-ins	Value properties	globalThis	screenTop					
+Built-ins	Value properties	globalThis	styleMedia					
+Built-ins	Value properties	globalThis	onsearch					
+Built-ins	Value properties	globalThis	isSecureContext					
+Built-ins	Value properties	globalThis	trustedTypes					
+Built-ins	Value properties	globalThis	performance					
+Built-ins	Value properties	globalThis	onappinstalled					
+Built-ins	Value properties	globalThis	onbeforeinstallprompt					
+Built-ins	Value properties	globalThis	crypto					
+Built-ins	Value properties	globalThis	indexedDB					
+Built-ins	Value properties	globalThis	sessionStorage					
+Built-ins	Value properties	globalThis	localStorage					
+Built-ins	Value properties	globalThis	onbeforexrselect					
+Built-ins	Value properties	globalThis	onabort					
+Built-ins	Value properties	globalThis	onbeforeinput					
+Built-ins	Value properties	globalThis	onblur					
+Built-ins	Value properties	globalThis	oncancel					
+Built-ins	Value properties	globalThis	oncanplay					
+Built-ins	Value properties	globalThis	oncanplaythrough					
+Built-ins	Value properties	globalThis	onchange					
+Built-ins	Value properties	globalThis	onclick					
+Built-ins	Value properties	globalThis	onclose					
+Built-ins	Value properties	globalThis	oncontextlost					
+Built-ins	Value properties	globalThis	oncontextmenu					
+Built-ins	Value properties	globalThis	oncontextrestored					
+Built-ins	Value properties	globalThis	oncuechange					
+Built-ins	Value properties	globalThis	ondblclick					
+Built-ins	Value properties	globalThis	ondrag					
+Built-ins	Value properties	globalThis	ondragend					
+Built-ins	Value properties	globalThis	ondragenter					
+Built-ins	Value properties	globalThis	ondragleave					
+Built-ins	Value properties	globalThis	ondragover					
+Built-ins	Value properties	globalThis	ondragstart					
+Built-ins	Value properties	globalThis	ondrop					
+Built-ins	Value properties	globalThis	ondurationchange					
+Built-ins	Value properties	globalThis	onemptied					
+Built-ins	Value properties	globalThis	onended					
+Built-ins	Value properties	globalThis	onerror					
+Built-ins	Value properties	globalThis	onfocus					
+Built-ins	Value properties	globalThis	onformdata					
+Built-ins	Value properties	globalThis	oninput					
+Built-ins	Value properties	globalThis	oninvalid					
+Built-ins	Value properties	globalThis	onkeydown					
+Built-ins	Value properties	globalThis	onkeypress					
+Built-ins	Value properties	globalThis	onkeyup					
+Built-ins	Value properties	globalThis	onload					
+Built-ins	Value properties	globalThis	onloadeddata					
+Built-ins	Value properties	globalThis	onloadedmetadata					
+Built-ins	Value properties	globalThis	onloadstart					
+Built-ins	Value properties	globalThis	onmousedown					
+Built-ins	Value properties	globalThis	onmouseenter					
+Built-ins	Value properties	globalThis	onmouseleave					
+Built-ins	Value properties	globalThis	onmousemove					
+Built-ins	Value properties	globalThis	onmouseout					
+Built-ins	Value properties	globalThis	onmouseover					
+Built-ins	Value properties	globalThis	onmouseup					
+Built-ins	Value properties	globalThis	onmousewheel					
+Built-ins	Value properties	globalThis	onpause					
+Built-ins	Value properties	globalThis	onplay					
+Built-ins	Value properties	globalThis	onplaying					
+Built-ins	Value properties	globalThis	onprogress					
+Built-ins	Value properties	globalThis	onratechange					
+Built-ins	Value properties	globalThis	onreset					
+Built-ins	Value properties	globalThis	onresize					
+Built-ins	Value properties	globalThis	onscroll					
+Built-ins	Value properties	globalThis	onsecuritypolicyviolation					
+Built-ins	Value properties	globalThis	onseeked					
+Built-ins	Value properties	globalThis	onseeking					
+Built-ins	Value properties	globalThis	onselect					
+Built-ins	Value properties	globalThis	onslotchange					
+Built-ins	Value properties	globalThis	onstalled					
+Built-ins	Value properties	globalThis	onsubmit					
+Built-ins	Value properties	globalThis	onsuspend					
+Built-ins	Value properties	globalThis	ontimeupdate					
+Built-ins	Value properties	globalThis	ontoggle					
+Built-ins	Value properties	globalThis	onvolumechange					
+Built-ins	Value properties	globalThis	onwaiting					
+Built-ins	Value properties	globalThis	onwebkitanimationend					
+Built-ins	Value properties	globalThis	onwebkitanimationiteration					
+Built-ins	Value properties	globalThis	onwebkitanimationstart					
+Built-ins	Value properties	globalThis	onwebkittransitionend					
+Built-ins	Value properties	globalThis	onwheel					
+Built-ins	Value properties	globalThis	onauxclick					
+Built-ins	Value properties	globalThis	ongotpointercapture					
+Built-ins	Value properties	globalThis	onlostpointercapture					
+Built-ins	Value properties	globalThis	onpointerdown					
+Built-ins	Value properties	globalThis	onpointermove					
+Built-ins	Value properties	globalThis	onpointerrawupdate					
+Built-ins	Value properties	globalThis	onpointerup					
+Built-ins	Value properties	globalThis	onpointercancel					
+Built-ins	Value properties	globalThis	onpointerover					
+Built-ins	Value properties	globalThis	onpointerout					
+Built-ins	Value properties	globalThis	onpointerenter					
+Built-ins	Value properties	globalThis	onpointerleave					
+Built-ins	Value properties	globalThis	onselectstart					
+Built-ins	Value properties	globalThis	onselectionchange					
+Built-ins	Value properties	globalThis	onanimationend					
+Built-ins	Value properties	globalThis	onanimationiteration					
+Built-ins	Value properties	globalThis	onanimationstart					
+Built-ins	Value properties	globalThis	ontransitionrun					
+Built-ins	Value properties	globalThis	ontransitionstart					
+Built-ins	Value properties	globalThis	ontransitionend					
+Built-ins	Value properties	globalThis	ontransitioncancel					
+Built-ins	Value properties	globalThis	onafterprint					
+Built-ins	Value properties	globalThis	onbeforeprint					
+Built-ins	Value properties	globalThis	onbeforeunload					
+Built-ins	Value properties	globalThis	onhashchange					
+Built-ins	Value properties	globalThis	onlanguagechange					
+Built-ins	Value properties	globalThis	onmessage					
+Built-ins	Value properties	globalThis	onmessageerror					
+Built-ins	Value properties	globalThis	onoffline					
+Built-ins	Value properties	globalThis	ononline					
+Built-ins	Value properties	globalThis	onpagehide					
+Built-ins	Value properties	globalThis	onpageshow					
+Built-ins	Value properties	globalThis	onpopstate					
+Built-ins	Value properties	globalThis	onrejectionhandled					
+Built-ins	Value properties	globalThis	onstorage					
+Built-ins	Value properties	globalThis	onunhandledrejection					
+Built-ins	Value properties	globalThis	onunload					
+Built-ins	Value properties	globalThis	crossOriginIsolated					
+Built-ins	Value properties	globalThis	scheduler					
+Built-ins	Value properties	globalThis	alert					
+Built-ins	Value properties	globalThis	atob					
+Built-ins	Value properties	globalThis	blur					
+Built-ins	Value properties	globalThis	btoa					
+Built-ins	Value properties	globalThis	cancelAnimationFrame					
+Built-ins	Value properties	globalThis	cancelIdleCallback					
+Built-ins	Value properties	globalThis	captureEvents					
+Built-ins	Value properties	globalThis	clearInterval					
+Built-ins	Value properties	globalThis	clearTimeout					
+Built-ins	Value properties	globalThis	close					
+Built-ins	Value properties	globalThis	confirm					
+Built-ins	Value properties	globalThis	createImageBitmap					
+Built-ins	Value properties	globalThis	fetch					
+Built-ins	Value properties	globalThis	find					
+Built-ins	Value properties	globalThis	focus					
+Built-ins	Value properties	globalThis	getComputedStyle					
+Built-ins	Value properties	globalThis	getSelection					
+Built-ins	Value properties	globalThis	matchMedia					
+Built-ins	Value properties	globalThis	moveBy					
+Built-ins	Value properties	globalThis	moveTo					
+Built-ins	Value properties	globalThis	open					
+Built-ins	Value properties	globalThis	postMessage					
+Built-ins	Value properties	globalThis	print					
+Built-ins	Value properties	globalThis	prompt					
+Built-ins	Value properties	globalThis	queueMicrotask					
+Built-ins	Value properties	globalThis	releaseEvents					
+Built-ins	Value properties	globalThis	reportError					
+Built-ins	Value properties	globalThis	requestAnimationFrame					
+Built-ins	Value properties	globalThis	requestIdleCallback					
+Built-ins	Value properties	globalThis	resizeBy					
+Built-ins	Value properties	globalThis	resizeTo					
+Built-ins	Value properties	globalThis	scroll					
+Built-ins	Value properties	globalThis	scrollBy					
+Built-ins	Value properties	globalThis	scrollTo					
+Built-ins	Value properties	globalThis	setInterval					
+Built-ins	Value properties	globalThis	setTimeout					
+Built-ins	Value properties	globalThis	stop					
+Built-ins	Value properties	globalThis	structuredClone					
+Built-ins	Value properties	globalThis	webkitCancelAnimationFrame					
+Built-ins	Value properties	globalThis	webkitRequestAnimationFrame					
+Built-ins	Value properties	globalThis	Atomics					
+Built-ins	Value properties	globalThis	chrome					
+Built-ins	Value properties	globalThis	WebAssembly					
+Built-ins	Value properties	globalThis	credentialless					
+Built-ins	Value properties	globalThis	caches					
+Built-ins	Value properties	globalThis	cookieStore					
+Built-ins	Value properties	globalThis	ondevicemotion					
+Built-ins	Value properties	globalThis	ondeviceorientation					
+Built-ins	Value properties	globalThis	ondeviceorientationabsolute					
+Built-ins	Value properties	globalThis	launchQueue					
+Built-ins	Value properties	globalThis	onbeforematch					
+Built-ins	Value properties	globalThis	AbsoluteOrientationSensor					
+Built-ins	Value properties	globalThis	Accelerometer					
+Built-ins	Value properties	globalThis	AudioWorklet					
+Built-ins	Value properties	globalThis	BatteryManager					
+Built-ins	Value properties	globalThis	Cache					
+Built-ins	Value properties	globalThis	CacheStorage					
+Built-ins	Value properties	globalThis	Clipboard					
+Built-ins	Value properties	globalThis	ClipboardItem					
+Built-ins	Value properties	globalThis	CookieChangeEvent					
+Built-ins	Value properties	globalThis	CookieStore					
+Built-ins	Value properties	globalThis	CookieStoreManager					
+Built-ins	Value properties	globalThis	Credential					
+Built-ins	Value properties	globalThis	CredentialsContainer					
+Built-ins	Value properties	globalThis	CryptoKey					
+Built-ins	Value properties	globalThis	DeviceMotionEvent					
+Built-ins	Value properties	globalThis	DeviceMotionEventAcceleration					
+Built-ins	Value properties	globalThis	DeviceMotionEventRotationRate					
+Built-ins	Value properties	globalThis	DeviceOrientationEvent					
+Built-ins	Value properties	globalThis	FederatedCredential					
+Built-ins	Value properties	globalThis	GravitySensor					
+Built-ins	Value properties	globalThis	Gyroscope					
+Built-ins	Value properties	globalThis	Keyboard					
+Built-ins	Value properties	globalThis	KeyboardLayoutMap					
+Built-ins	Value properties	globalThis	LinearAccelerationSensor					
+Built-ins	Value properties	globalThis	Lock					
+Built-ins	Value properties	globalThis	LockManager					
+Built-ins	Value properties	globalThis	MIDIAccess					
+Built-ins	Value properties	globalThis	MIDIConnectionEvent					
+Built-ins	Value properties	globalThis	MIDIInput					
+Built-ins	Value properties	globalThis	MIDIInputMap					
+Built-ins	Value properties	globalThis	MIDIMessageEvent					
+Built-ins	Value properties	globalThis	MIDIOutput					
+Built-ins	Value properties	globalThis	MIDIOutputMap					
+Built-ins	Value properties	globalThis	MIDIPort					
+Built-ins	Value properties	globalThis	MediaDeviceInfo					
+Built-ins	Value properties	globalThis	MediaDevices					
+Built-ins	Value properties	globalThis	MediaKeyMessageEvent					
+Built-ins	Value properties	globalThis	MediaKeySession					
+Built-ins	Value properties	globalThis	MediaKeyStatusMap					
+Built-ins	Value properties	globalThis	MediaKeySystemAccess					
+Built-ins	Value properties	globalThis	MediaKeys					
+Built-ins	Value properties	globalThis	NavigationPreloadManager					
+Built-ins	Value properties	globalThis	NavigatorManagedData					
+Built-ins	Value properties	globalThis	OrientationSensor					
+Built-ins	Value properties	globalThis	PasswordCredential					
+Built-ins	Value properties	globalThis	RelativeOrientationSensor					
+Built-ins	Value properties	globalThis	Sanitizer					
+Built-ins	Value properties	globalThis	ScreenDetailed					
+Built-ins	Value properties	globalThis	ScreenDetails					
+Built-ins	Value properties	globalThis	Sensor					
+Built-ins	Value properties	globalThis	SensorErrorEvent					
+Built-ins	Value properties	globalThis	ServiceWorker					
+Built-ins	Value properties	globalThis	ServiceWorkerContainer					
+Built-ins	Value properties	globalThis	ServiceWorkerRegistration					
+Built-ins	Value properties	globalThis	StorageManager					
+Built-ins	Value properties	globalThis	SubtleCrypto					
+Built-ins	Value properties	globalThis	VirtualKeyboard					
+Built-ins	Value properties	globalThis	WebTransport					
+Built-ins	Value properties	globalThis	WebTransportBidirectionalStream					
+Built-ins	Value properties	globalThis	WebTransportDatagramDuplexStream					
+Built-ins	Value properties	globalThis	WebTransportError					
+Built-ins	Value properties	globalThis	Worklet					
+Built-ins	Value properties	globalThis	XRDOMOverlayState					
+Built-ins	Value properties	globalThis	XRLayer					
+Built-ins	Value properties	globalThis	XRWebGLBinding					
+Built-ins	Value properties	globalThis	AudioData					
+Built-ins	Value properties	globalThis	EncodedAudioChunk					
+Built-ins	Value properties	globalThis	EncodedVideoChunk					
+Built-ins	Value properties	globalThis	ImageTrack					
+Built-ins	Value properties	globalThis	ImageTrackList					
+Built-ins	Value properties	globalThis	VideoColorSpace					
+Built-ins	Value properties	globalThis	VideoFrame					
+Built-ins	Value properties	globalThis	AudioDecoder					
+Built-ins	Value properties	globalThis	AudioEncoder					
+Built-ins	Value properties	globalThis	ImageDecoder					
+Built-ins	Value properties	globalThis	VideoDecoder					
+Built-ins	Value properties	globalThis	VideoEncoder					
+Built-ins	Value properties	globalThis	AuthenticatorAssertionResponse					
+Built-ins	Value properties	globalThis	AuthenticatorAttestationResponse					
+Built-ins	Value properties	globalThis	AuthenticatorResponse					
+Built-ins	Value properties	globalThis	PublicKeyCredential					
+Built-ins	Value properties	globalThis	CaptureController					
+Built-ins	Value properties	globalThis	EyeDropper					
+Built-ins	Value properties	globalThis	FileSystemDirectoryHandle					
+Built-ins	Value properties	globalThis	FileSystemFileHandle					
+Built-ins	Value properties	globalThis	FileSystemHandle					
+Built-ins	Value properties	globalThis	FileSystemWritableFileStream					
+Built-ins	Value properties	globalThis	FontData					
+Built-ins	Value properties	globalThis	FragmentDirective					
+Built-ins	Value properties	globalThis	HID					
+Built-ins	Value properties	globalThis	HIDConnectionEvent					
+Built-ins	Value properties	globalThis	HIDDevice					
+Built-ins	Value properties	globalThis	HIDInputReportEvent					
+Built-ins	Value properties	globalThis	IdentityCredential					
+Built-ins	Value properties	globalThis	IdleDetector					
+Built-ins	Value properties	globalThis	LaunchParams					
+Built-ins	Value properties	globalThis	LaunchQueue					
+Built-ins	Value properties	globalThis	OTPCredential					
+Built-ins	Value properties	globalThis	PaymentAddress					
+Built-ins	Value properties	globalThis	PaymentRequest					
+Built-ins	Value properties	globalThis	PaymentResponse					
+Built-ins	Value properties	globalThis	PaymentMethodChangeEvent					
+Built-ins	Value properties	globalThis	Presentation					
+Built-ins	Value properties	globalThis	PresentationAvailability					
+Built-ins	Value properties	globalThis	PresentationConnection					
+Built-ins	Value properties	globalThis	PresentationConnectionAvailableEvent					
+Built-ins	Value properties	globalThis	PresentationConnectionCloseEvent					
+Built-ins	Value properties	globalThis	PresentationConnectionList					
+Built-ins	Value properties	globalThis	PresentationReceiver					
+Built-ins	Value properties	globalThis	PresentationRequest					
+Built-ins	Value properties	globalThis	Serial					
+Built-ins	Value properties	globalThis	SerialPort					
+Built-ins	Value properties	globalThis	USB					
+Built-ins	Value properties	globalThis	USBAlternateInterface					
+Built-ins	Value properties	globalThis	USBConfiguration					
+Built-ins	Value properties	globalThis	USBConnectionEvent					
+Built-ins	Value properties	globalThis	USBDevice					
+Built-ins	Value properties	globalThis	USBEndpoint					
+Built-ins	Value properties	globalThis	USBInTransferResult					
+Built-ins	Value properties	globalThis	USBInterface					
+Built-ins	Value properties	globalThis	USBIsochronousInTransferPacket					
+Built-ins	Value properties	globalThis	USBIsochronousInTransferResult					
+Built-ins	Value properties	globalThis	USBIsochronousOutTransferPacket					
+Built-ins	Value properties	globalThis	USBIsochronousOutTransferResult					
+Built-ins	Value properties	globalThis	USBOutTransferResult					
+Built-ins	Value properties	globalThis	WakeLock					
+Built-ins	Value properties	globalThis	WakeLockSentinel					
+Built-ins	Value properties	globalThis	WindowControlsOverlay					
+Built-ins	Value properties	globalThis	WindowControlsOverlayGeometryChangeEvent					
+Built-ins	Value properties	globalThis	XRAnchor					
+Built-ins	Value properties	globalThis	XRAnchorSet					
+Built-ins	Value properties	globalThis	XRBoundedReferenceSpace					
+Built-ins	Value properties	globalThis	XRCPUDepthInformation					
+Built-ins	Value properties	globalThis	XRCamera					
+Built-ins	Value properties	globalThis	XRDepthInformation					
+Built-ins	Value properties	globalThis	XRFrame					
+Built-ins	Value properties	globalThis	XRHitTestResult					
+Built-ins	Value properties	globalThis	XRHitTestSource					
+Built-ins	Value properties	globalThis	XRInputSource					
+Built-ins	Value properties	globalThis	XRInputSourceArray					
+Built-ins	Value properties	globalThis	XRInputSourceEvent					
+Built-ins	Value properties	globalThis	XRInputSourcesChangeEvent					
+Built-ins	Value properties	globalThis	XRLightEstimate					
+Built-ins	Value properties	globalThis	XRLightProbe					
+Built-ins	Value properties	globalThis	XRPose					
+Built-ins	Value properties	globalThis	XRRay					
+Built-ins	Value properties	globalThis	XRReferenceSpace					
+Built-ins	Value properties	globalThis	XRReferenceSpaceEvent					
+Built-ins	Value properties	globalThis	XRRenderState					
+Built-ins	Value properties	globalThis	XRRigidTransform					
+Built-ins	Value properties	globalThis	XRSession					
+Built-ins	Value properties	globalThis	XRSessionEvent					
+Built-ins	Value properties	globalThis	XRSpace					
+Built-ins	Value properties	globalThis	XRSystem					
+Built-ins	Value properties	globalThis	XRTransientInputHitTestResult					
+Built-ins	Value properties	globalThis	XRTransientInputHitTestSource					
+Built-ins	Value properties	globalThis	XRView					
+Built-ins	Value properties	globalThis	XRViewerPose					
+Built-ins	Value properties	globalThis	XRViewport					
+Built-ins	Value properties	globalThis	XRWebGLDepthInformation					
+Built-ins	Value properties	globalThis	XRWebGLLayer					
+Built-ins	Value properties	globalThis	getScreenDetails					
+Built-ins	Value properties	globalThis	queryLocalFonts					
+Built-ins	Value properties	globalThis	showDirectoryPicker					
+Built-ins	Value properties	globalThis	showOpenFilePicker					
+Built-ins	Value properties	globalThis	showSaveFilePicker					
+Built-ins	Value properties	globalThis	originAgentCluster					
+Built-ins	Value properties	globalThis	speechSynthesis					
+Built-ins	Value properties	globalThis	oncontentvisibilityautostatechange					
+Built-ins	Value properties	globalThis	AnimationPlaybackEvent					
+Built-ins	Value properties	globalThis	AnimationTimeline					
+Built-ins	Value properties	globalThis	CSSAnimation					
+Built-ins	Value properties	globalThis	CSSTransition					
+Built-ins	Value properties	globalThis	DocumentTimeline					
+Built-ins	Value properties	globalThis	BackgroundFetchManager					
+Built-ins	Value properties	globalThis	BackgroundFetchRecord					
+Built-ins	Value properties	globalThis	BackgroundFetchRegistration					
+Built-ins	Value properties	globalThis	BrowserCaptureMediaStreamTrack					
+Built-ins	Value properties	globalThis	CropTarget					
+Built-ins	Value properties	globalThis	ContentVisibilityAutoStateChangeEvent					
+Built-ins	Value properties	globalThis	DelegatedInkTrailPresenter					
+Built-ins	Value properties	globalThis	Ink					
+Built-ins	Value properties	globalThis	Highlight					
+Built-ins	Value properties	globalThis	HighlightRegistry					
+Built-ins	Value properties	globalThis	MathMLElement					
+Built-ins	Value properties	globalThis	MediaMetadata					
+Built-ins	Value properties	globalThis	MediaSession					
+Built-ins	Value properties	globalThis	MediaSource					
+Built-ins	Value properties	globalThis	SourceBuffer					
+Built-ins	Value properties	globalThis	SourceBufferList					
+Built-ins	Value properties	globalThis	MediaSourceHandle					
+Built-ins	Value properties	globalThis	NavigatorUAData					
+Built-ins	Value properties	globalThis	Notification					
+Built-ins	Value properties	globalThis	PaymentManager					
+Built-ins	Value properties	globalThis	PaymentRequestUpdateEvent					
+Built-ins	Value properties	globalThis	PeriodicSyncManager					
+Built-ins	Value properties	globalThis	PermissionStatus					
+Built-ins	Value properties	globalThis	Permissions					
+Built-ins	Value properties	globalThis	PushManager					
+Built-ins	Value properties	globalThis	PushSubscription					
+Built-ins	Value properties	globalThis	PushSubscriptionOptions					
+Built-ins	Value properties	globalThis	RemotePlayback					
+Built-ins	Value properties	globalThis	SharedWorker					
+Built-ins	Value properties	globalThis	SpeechSynthesisErrorEvent					
+Built-ins	Value properties	globalThis	SpeechSynthesisEvent					
+Built-ins	Value properties	globalThis	SpeechSynthesisUtterance					
+Built-ins	Value properties	globalThis	VideoPlaybackQuality					
+Built-ins	Value properties	globalThis	ViewTransition					
+Built-ins	Value properties	globalThis	webkitSpeechGrammar					
+Built-ins	Value properties	globalThis	webkitSpeechGrammarList					
+Built-ins	Value properties	globalThis	webkitSpeechRecognition					
+Built-ins	Value properties	globalThis	webkitSpeechRecognitionError					
+Built-ins	Value properties	globalThis	webkitSpeechRecognitionEvent					
+Built-ins	Value properties	globalThis	openDatabase					
+Built-ins	Value properties	globalThis	webkitRequestFileSystem					
+Built-ins	Value properties	globalThis	webkitResolveLocalFileSystemURL					
+Built-ins	Value properties	globalThis	openTab					
+Built-ins	Value properties	globalThis	test					
+Built-ins	Value properties	globalThis	dir					
+Built-ins	Value properties	globalThis	dirxml					
+Built-ins	Value properties	globalThis	profile					
+Built-ins	Value properties	globalThis	profileEnd					
+Built-ins	Value properties	globalThis	clear					
+Built-ins	Value properties	globalThis	table					
+Built-ins	Value properties	globalThis	keys					
+Built-ins	Value properties	globalThis	values					
+Built-ins	Value properties	globalThis	debug					
+Built-ins	Value properties	globalThis	undebug					
+Built-ins	Value properties	globalThis	monitor					
+Built-ins	Value properties	globalThis	unmonitor					
+Built-ins	Value properties	globalThis	inspect					
+Built-ins	Value properties	globalThis	copy					
+Built-ins	Value properties	globalThis	queryObjects					
+Built-ins	Value properties	globalThis	$_					
+Built-ins	Value properties	globalThis	$0					
+Built-ins	Value properties	globalThis	$1					
+Built-ins	Value properties	globalThis	$2					
+Built-ins	Value properties	globalThis	$3					
+Built-ins	Value properties	globalThis	$4					
+Built-ins	Value properties	globalThis	getEventListeners					
+Built-ins	Value properties	globalThis	getAccessibleName					
+Built-ins	Value properties	globalThis	getAccessibleRole					
+Built-ins	Value properties	globalThis	monitorEvents					
+Built-ins	Value properties	globalThis	unmonitorEvents					
+Built-ins	Value properties	globalThis	$					
+Built-ins	Value properties	globalThis	$$					
+Built-ins	Value properties	globalThis	$x					
+Built-ins	Value properties	undefined	undefined					
+Built-ins	Function properties	eval()	eval()					
+Built-ins	Function properties	isFinite()	isFinite()					
+Built-ins	Function properties	isNaN()	isNaN()					
+Built-ins	Function properties	parseFloat()	parseFloat()					
+Built-ins	Function properties	parseInt()	parseInt()					
+Built-ins	Function properties	decodeURI()	decodeURI()					
+Built-ins	Function properties	decodeURIComponent()	decodeURIComponent()					
+Built-ins	Function properties	encodeURI()	encodeURI()					
+Built-ins	Function properties	encodeURIComponent()	encodeURIComponent()					
+Built-ins	Fundamental objects	Object	length					
+Built-ins	Fundamental objects	Object	name					
+Built-ins	Fundamental objects	Object	prototype					
+Built-ins	Fundamental objects	Object	assign					
+Built-ins	Fundamental objects	Object	getOwnPropertyDescriptor					
+Built-ins	Fundamental objects	Object	getOwnPropertyDescriptors					
+Built-ins	Fundamental objects	Object	getOwnPropertyNames					
+Built-ins	Fundamental objects	Object	getOwnPropertySymbols					
+Built-ins	Fundamental objects	Object	hasOwn					
+Built-ins	Fundamental objects	Object	is					
+Built-ins	Fundamental objects	Object	preventExtensions					
+Built-ins	Fundamental objects	Object	seal					
+Built-ins	Fundamental objects	Object	create					
+Built-ins	Fundamental objects	Object	defineProperties					
+Built-ins	Fundamental objects	Object	defineProperty					
+Built-ins	Fundamental objects	Object	freeze					
+Built-ins	Fundamental objects	Object	getPrototypeOf					
+Built-ins	Fundamental objects	Object	setPrototypeOf					
+Built-ins	Fundamental objects	Object	isExtensible					
+Built-ins	Fundamental objects	Object	isFrozen					
+Built-ins	Fundamental objects	Object	isSealed					
+Built-ins	Fundamental objects	Object	keys					
+Built-ins	Fundamental objects	Object	entries					
+Built-ins	Fundamental objects	Object	fromEntries					
+Built-ins	Fundamental objects	Object	values					
+Built-ins	Fundamental objects	Function	length					
+Built-ins	Fundamental objects	Function	name					
+Built-ins	Fundamental objects	Function	prototype					
+Built-ins	Fundamental objects	Boolean	length					
+Built-ins	Fundamental objects	Boolean	name					
+Built-ins	Fundamental objects	Boolean	prototype					
+Built-ins	Fundamental objects	Symbol	length					
+Built-ins	Fundamental objects	Symbol	name					
+Built-ins	Fundamental objects	Symbol	prototype					
+Built-ins	Fundamental objects	Symbol	for					
+Built-ins	Fundamental objects	Symbol	keyFor					
+Built-ins	Fundamental objects	Symbol	asyncIterator					
+Built-ins	Fundamental objects	Symbol	hasInstance					
+Built-ins	Fundamental objects	Symbol	isConcatSpreadable					
+Built-ins	Fundamental objects	Symbol	iterator					
+Built-ins	Fundamental objects	Symbol	match					
+Built-ins	Fundamental objects	Symbol	matchAll					
+Built-ins	Fundamental objects	Symbol	replace					
+Built-ins	Fundamental objects	Symbol	search					
+Built-ins	Fundamental objects	Symbol	species					
+Built-ins	Fundamental objects	Symbol	split					
+Built-ins	Fundamental objects	Symbol	toPrimitive					
+Built-ins	Fundamental objects	Symbol	toStringTag					
+Built-ins	Fundamental objects	Symbol	unscopables					
+Built-ins	Error objects	Error	length					
+Built-ins	Error objects	Error	name					
+Built-ins	Error objects	Error	prototype					
+Built-ins	Error objects	Error	captureStackTrace					
+Built-ins	Error objects	Error	stackTraceLimit					
+Built-ins	Error objects	EvalError	length					
+Built-ins	Error objects	EvalError	name					
+Built-ins	Error objects	EvalError	prototype					
+Built-ins	Error objects	RangeError	length					
+Built-ins	Error objects	RangeError	name					
+Built-ins	Error objects	RangeError	prototype					
+Built-ins	Error objects	ReferenceError	length					
+Built-ins	Error objects	ReferenceError	name					
+Built-ins	Error objects	ReferenceError	prototype					
+Built-ins	Error objects	SyntaxError	length					
+Built-ins	Error objects	SyntaxError	name					
+Built-ins	Error objects	SyntaxError	prototype					
+Built-ins	Error objects	TypeError	length					
+Built-ins	Error objects	TypeError	name					
+Built-ins	Error objects	TypeError	prototype					
+Built-ins	Error objects	URIError	length					
+Built-ins	Error objects	URIError	name					
+Built-ins	Error objects	URIError	prototype					
+Built-ins	Error objects	AggregateError	length					
+Built-ins	Error objects	AggregateError	name					
+Built-ins	Error objects	AggregateError	prototype					
+Built-ins	Numbers & dates	Number	length					
+Built-ins	Numbers & dates	Number	name					
+Built-ins	Numbers & dates	Number	prototype					
+Built-ins	Numbers & dates	Number	isFinite					
+Built-ins	Numbers & dates	Number	isInteger					
+Built-ins	Numbers & dates	Number	isNaN					
+Built-ins	Numbers & dates	Number	isSafeInteger					
+Built-ins	Numbers & dates	Number	parseFloat					
+Built-ins	Numbers & dates	Number	parseInt					
+Built-ins	Numbers & dates	Number	MAX_VALUE					
+Built-ins	Numbers & dates	Number	MIN_VALUE					
+Built-ins	Numbers & dates	Number	NaN					
+Built-ins	Numbers & dates	Number	NEGATIVE_INFINITY					
+Built-ins	Numbers & dates	Number	POSITIVE_INFINITY					
+Built-ins	Numbers & dates	Number	MAX_SAFE_INTEGER					
+Built-ins	Numbers & dates	Number	MIN_SAFE_INTEGER					
+Built-ins	Numbers & dates	Number	EPSILON					
+Built-ins	Numbers & dates	BigInt	length					
+Built-ins	Numbers & dates	BigInt	name					
+Built-ins	Numbers & dates	BigInt	prototype					
+Built-ins	Numbers & dates	BigInt	asUintN					
+Built-ins	Numbers & dates	BigInt	asIntN					
+Built-ins	Numbers & dates	Math	abs					
+Built-ins	Numbers & dates	Math	acos					
+Built-ins	Numbers & dates	Math	acosh					
+Built-ins	Numbers & dates	Math	asin					
+Built-ins	Numbers & dates	Math	asinh					
+Built-ins	Numbers & dates	Math	atan					
+Built-ins	Numbers & dates	Math	atanh					
+Built-ins	Numbers & dates	Math	atan2					
+Built-ins	Numbers & dates	Math	ceil					
+Built-ins	Numbers & dates	Math	cbrt					
+Built-ins	Numbers & dates	Math	expm1					
+Built-ins	Numbers & dates	Math	clz32					
+Built-ins	Numbers & dates	Math	cos					
+Built-ins	Numbers & dates	Math	cosh					
+Built-ins	Numbers & dates	Math	exp					
+Built-ins	Numbers & dates	Math	floor					
+Built-ins	Numbers & dates	Math	fround					
+Built-ins	Numbers & dates	Math	hypot					
+Built-ins	Numbers & dates	Math	imul					
+Built-ins	Numbers & dates	Math	log					
+Built-ins	Numbers & dates	Math	log1p					
+Built-ins	Numbers & dates	Math	log2					
+Built-ins	Numbers & dates	Math	log10					
+Built-ins	Numbers & dates	Math	max					
+Built-ins	Numbers & dates	Math	min					
+Built-ins	Numbers & dates	Math	pow					
+Built-ins	Numbers & dates	Math	random					
+Built-ins	Numbers & dates	Math	round					
+Built-ins	Numbers & dates	Math	sign					
+Built-ins	Numbers & dates	Math	sin					
+Built-ins	Numbers & dates	Math	sinh					
+Built-ins	Numbers & dates	Math	sqrt					
+Built-ins	Numbers & dates	Math	tan					
+Built-ins	Numbers & dates	Math	tanh					
+Built-ins	Numbers & dates	Math	trunc					
+Built-ins	Numbers & dates	Math	E					
+Built-ins	Numbers & dates	Math	LN10					
+Built-ins	Numbers & dates	Math	LN2					
+Built-ins	Numbers & dates	Math	LOG10E					
+Built-ins	Numbers & dates	Math	LOG2E					
+Built-ins	Numbers & dates	Math	PI					
+Built-ins	Numbers & dates	Math	SQRT1_2					
+Built-ins	Numbers & dates	Math	SQRT2					
+Built-ins	Numbers & dates	Date	length					
+Built-ins	Numbers & dates	Date	name					
+Built-ins	Numbers & dates	Date	prototype					
+Built-ins	Numbers & dates	Date	now					
+Built-ins	Numbers & dates	Date	parse					
+Built-ins	Numbers & dates	Date	UTC					
+Built-ins	Text processing	String	length					
+Built-ins	Text processing	String	name					
+Built-ins	Text processing	String	prototype					
+Built-ins	Text processing	String	fromCharCode					
+Built-ins	Text processing	String	fromCodePoint					
+Built-ins	Text processing	String	raw					
+Built-ins	Text processing	RegExp	length					
+Built-ins	Text processing	RegExp	name					
+Built-ins	Text processing	RegExp	prototype					
+Built-ins	Text processing	RegExp	input					
+Built-ins	Text processing	RegExp	$_					
+Built-ins	Text processing	RegExp	lastMatch					
+Built-ins	Text processing	RegExp	$&					
+Built-ins	Text processing	RegExp	lastParen					
+Built-ins	Text processing	RegExp	$+					
+Built-ins	Text processing	RegExp	leftContext					
+Built-ins	Text processing	RegExp	$`					
+Built-ins	Text processing	RegExp	rightContext					
+Built-ins	Text processing	RegExp	$'					
+Built-ins	Text processing	RegExp	$1					
+Built-ins	Text processing	RegExp	$2					
+Built-ins	Text processing	RegExp	$3					
+Built-ins	Text processing	RegExp	$4					
+Built-ins	Text processing	RegExp	$5					
+Built-ins	Text processing	RegExp	$6					
+Built-ins	Text processing	RegExp	$7					
+Built-ins	Text processing	RegExp	$8					
+Built-ins	Text processing	RegExp	$9					
+Built-ins	Indexed Collections	Array	length					
+Built-ins	Indexed Collections	Array	name					
+Built-ins	Indexed Collections	Array	prototype					
+Built-ins	Indexed Collections	Array	isArray					
+Built-ins	Indexed Collections	Array	from					
+Built-ins	Indexed Collections	Array	of					
+Built-ins	Indexed Collections	Int8Array	length					
+Built-ins	Indexed Collections	Int8Array	name					
+Built-ins	Indexed Collections	Int8Array	prototype					
+Built-ins	Indexed Collections	Int8Array	BYTES_PER_ELEMENT			Indexed Collections	indexed	Array
+Built-ins	Indexed Collections	Uint8Array	length			Indexed Collections	indexed	Array
+Built-ins	Indexed Collections	Uint8Array	name			Indexed Collections	indexed	Array
+Built-ins	Indexed Collections	Uint8Array	prototype			Indexed Collections	indexed	Array
+Built-ins	Indexed Collections	Uint8Array	BYTES_PER_ELEMENT			Indexed Collections	indexed	Array
+Built-ins	Indexed Collections	Uint8ClampedArray	length			Indexed Collections	indexed	Array
+Built-ins	Indexed Collections	Uint8ClampedArray	name			Indexed Collections	signed	Int8Array
+Built-ins	Indexed Collections	Uint8ClampedArray	prototype			Indexed Collections	signed	Int8Array
+Built-ins	Indexed Collections	Uint8ClampedArray	BYTES_PER_ELEMENT			Indexed Collections	signed	Int8Array
+Built-ins	Indexed Collections	Int16Array	length			Indexed Collections	signed	Int8Array
+Built-ins	Indexed Collections	Int16Array	name			Indexed Collections	unsigned	Uint8Array
+Built-ins	Indexed Collections	Int16Array	prototype			Indexed Collections	unsigned	Uint8Array
+Built-ins	Indexed Collections	Int16Array	BYTES_PER_ELEMENT			Indexed Collections	unsigned	Uint8Array
+Built-ins	Indexed Collections	Uint16Array	length			Indexed Collections	unsigned	Uint8Array
+Built-ins	Indexed Collections	Uint16Array	name			Indexed Collections	unsigned	Uint8ClampedArray
+Built-ins	Indexed Collections	Uint16Array	prototype			Indexed Collections	unsigned	Uint8ClampedArray
+Built-ins	Indexed Collections	Uint16Array	BYTES_PER_ELEMENT			Indexed Collections	unsigned	Uint8ClampedArray
+Built-ins	Indexed Collections	Int32Array	length			Indexed Collections	unsigned	Uint8ClampedArray
+Built-ins	Indexed Collections	Int32Array	name			Indexed Collections	signed	Int16Array
+Built-ins	Indexed Collections	Int32Array	prototype			Indexed Collections	signed	Int16Array
+Built-ins	Indexed Collections	Int32Array	BYTES_PER_ELEMENT			Indexed Collections	signed	Int16Array
+Built-ins	Indexed Collections	Uint32Array	length			Indexed Collections	signed	Int16Array
+Built-ins	Indexed Collections	Uint32Array	name			Indexed Collections	unsigned	Uint16Array
+Built-ins	Indexed Collections	Uint32Array	prototype			Indexed Collections	unsigned	Uint16Array
+Built-ins	Indexed Collections	Uint32Array	BYTES_PER_ELEMENT			Indexed Collections	unsigned	Uint16Array
+Built-ins	Indexed Collections	BigInt64Array	length			Indexed Collections	unsigned	Uint16Array
+Built-ins	Indexed Collections	BigInt64Array	name			Indexed Collections	signed	Int32Array
+Built-ins	Indexed Collections	BigInt64Array	prototype			Indexed Collections	signed	Int32Array
+Built-ins	Indexed Collections	BigInt64Array	BYTES_PER_ELEMENT			Indexed Collections	signed	Int32Array
+Built-ins	Indexed Collections	BigUint64Array	length			Indexed Collections	signed	Int32Array
+Built-ins	Indexed Collections	BigUint64Array	name			Indexed Collections	unsigned	Uint32Array
+Built-ins	Indexed Collections	BigUint64Array	prototype			Indexed Collections	unsigned	Uint32Array
+Built-ins	Indexed Collections	BigUint64Array	BYTES_PER_ELEMENT			Indexed Collections	unsigned	Uint32Array
+Built-ins	Indexed Collections	Float32Array	length			Indexed Collections	unsigned	Uint32Array
+Built-ins	Indexed Collections	Float32Array	name			Indexed Collections	signed	BigInt64Array
+Built-ins	Indexed Collections	Float32Array	prototype			Indexed Collections	signed	BigInt64Array
+Built-ins	Indexed Collections	Float32Array	BYTES_PER_ELEMENT			Indexed Collections	signed	BigInt64Array
+Built-ins	Indexed Collections	Float64Array	length			Indexed Collections	signed	BigInt64Array
+Built-ins	Indexed Collections	Float64Array	name			Indexed Collections	unsigned	BigUint64Array
+Built-ins	Indexed Collections	Float64Array	prototype			Indexed Collections	unsigned	BigUint64Array
+Built-ins	Indexed Collections	Float64Array	BYTES_PER_ELEMENT			Indexed Collections	unsigned	BigUint64Array
+Built-ins	Keyed collections	Map	length			Indexed Collections	unsigned	BigUint64Array
+Built-ins	Keyed collections	Map	name			Indexed Collections	float	Float32Array
+Built-ins	Keyed collections	Map	prototype			Indexed Collections	float	Float32Array
+Built-ins	Keyed collections	Set	length			Indexed Collections	float	Float32Array
+Built-ins	Keyed collections	Set	name			Indexed Collections	float	Float32Array
+Built-ins	Keyed collections	Set	prototype			Indexed Collections	float	Float64Array
+Built-ins	Keyed collections	WeakMap	length			Indexed Collections	float	Float64Array
+Built-ins	Keyed collections	WeakMap	name			Indexed Collections	float	Float64Array
+Built-ins	Keyed collections	WeakMap	prototype			Indexed Collections	float	Float64Array
+Built-ins	Keyed collections	WeakSet	length					
+Built-ins	Keyed collections	WeakSet	name					
+Built-ins	Keyed collections	WeakSet	prototype					
+Built-ins	Structured data	ArrayBuffer	length					
+Built-ins	Structured data	ArrayBuffer	name					
+Built-ins	Structured data	ArrayBuffer	prototype					
+Built-ins	Structured data	ArrayBuffer	isView					
+Built-ins	Structured data	SharedArrayBuffer	SharedArrayBuffer					
+Built-ins	Structured data	DataView	length					
+Built-ins	Structured data	DataView	name					
+Built-ins	Structured data	DataView	prototype					
+Built-ins	Structured data	Atomics	load					
+Built-ins	Structured data	Atomics	store					
+Built-ins	Structured data	Atomics	add					
+Built-ins	Structured data	Atomics	sub					
+Built-ins	Structured data	Atomics	and					
+Built-ins	Structured data	Atomics	or					
+Built-ins	Structured data	Atomics	xor					
+Built-ins	Structured data	Atomics	exchange					
+Built-ins	Structured data	Atomics	compareExchange					
+Built-ins	Structured data	Atomics	isLockFree					
+Built-ins	Structured data	Atomics	wait					
+Built-ins	Structured data	Atomics	waitAsync					
+Built-ins	Structured data	Atomics	notify					
+Built-ins	Structured data	JSON	parse					
+Built-ins	Structured data	JSON	stringify					
+Built-ins	Memory management	WeakRef	length					
+Built-ins	Memory management	WeakRef	name					
+Built-ins	Memory management	WeakRef	prototype					
+Built-ins	Memory management	FinalizationRegistry	length					
+Built-ins	Memory management	FinalizationRegistry	name					
+Built-ins	Memory management	FinalizationRegistry	prototype					
+Built-ins	Control abstraction	Promise	length					
+Built-ins	Control abstraction	Promise	name					
+Built-ins	Control abstraction	Promise	prototype					
+Built-ins	Control abstraction	Promise	all					
+Built-ins	Control abstraction	Promise	allSettled					
+Built-ins	Control abstraction	Promise	any					
+Built-ins	Control abstraction	Promise	race					
+Built-ins	Control abstraction	Promise	resolve					
+Built-ins	Control abstraction	Promise	reject					
+Built-ins	Control abstraction	GeneratorFunction	GeneratorFunction					
+Built-ins	Control abstraction	AsyncGeneratorFunction	AsyncGeneratorFunction					
+Built-ins	Control abstraction	Generator	Generator					
+Built-ins	Control abstraction	AsyncGenerator	AsyncGenerator					
+Built-ins	Control abstraction	AsyncFunction	AsyncFunction					
+Built-ins	Reflection	Reflect	defineProperty					
+Built-ins	Reflection	Reflect	deleteProperty					
+Built-ins	Reflection	Reflect	apply					
+Built-ins	Reflection	Reflect	construct					
+Built-ins	Reflection	Reflect	get					
+Built-ins	Reflection	Reflect	getOwnPropertyDescriptor					
+Built-ins	Reflection	Reflect	getPrototypeOf					
+Built-ins	Reflection	Reflect	has					
+Built-ins	Reflection	Reflect	isExtensible					
+Built-ins	Reflection	Reflect	ownKeys					
+Built-ins	Reflection	Reflect	preventExtensions					
+Built-ins	Reflection	Reflect	set					
+Built-ins	Reflection	Reflect	setPrototypeOf					
+Built-ins	Reflection	Proxy	length					
+Built-ins	Reflection	Proxy	name					
+Built-ins	Reflection	Proxy	revocable					
+Built-ins	Internationalization	Intl	getCanonicalLocales					
+Built-ins	Internationalization	Intl	supportedValuesOf					
+Built-ins	Internationalization	Intl	DateTimeFormat					
+Built-ins	Internationalization	Intl	NumberFormat					
+Built-ins	Internationalization	Intl	Collator					
+Built-ins	Internationalization	Intl	v8BreakIterator					
+Built-ins	Internationalization	Intl	PluralRules					
+Built-ins	Internationalization	Intl	RelativeTimeFormat					
+Built-ins	Internationalization	Intl	ListFormat					
+Built-ins	Internationalization	Intl	Locale					
+Built-ins	Internationalization	Intl	DisplayNames					
+Built-ins	Internationalization	Intl	Segmenter					
+Built-ins	Internationalization	Intl.Collator	Intl.Collator					
+Built-ins	Internationalization	Intl.DateTimeFormat	Intl.DateTimeFormat					
+Built-ins	Internationalization	Intl.DisplayNames	Intl.DisplayNames					
+Built-ins	Internationalization	Intl.ListFormat	Intl.ListFormat					
+Built-ins	Internationalization	Intl.Locale	Intl.Locale					
+Built-ins	Internationalization	Intl.NumberFormat	Intl.NumberFormat					
+Built-ins	Internationalization	Intl.PluralRules	Intl.PluralRules					
+Built-ins	Internationalization	Intl.RelativeTimeFormat	Intl.RelativeTimeFormat					
+Built-ins	Internationalization	Intl.Segmenter	Intl.Segmenter					
+Built-ins	WebAssembly	WebAssembly	compile					
+Built-ins	WebAssembly	WebAssembly	validate					
+Built-ins	WebAssembly	WebAssembly	instantiate					
+Built-ins	WebAssembly	WebAssembly	compileStreaming					
+Built-ins	WebAssembly	WebAssembly	instantiateStreaming					
+Built-ins	WebAssembly	WebAssembly	Module					
+Built-ins	WebAssembly	WebAssembly	Instance					
+Built-ins	WebAssembly	WebAssembly	Table					
+Built-ins	WebAssembly	WebAssembly	Memory					
+Built-ins	WebAssembly	WebAssembly	Global					
+Built-ins	WebAssembly	WebAssembly	Tag					
+Built-ins	WebAssembly	WebAssembly	Exception					
+Built-ins	WebAssembly	WebAssembly	CompileError					
+Built-ins	WebAssembly	WebAssembly	LinkError					
+Built-ins	WebAssembly	WebAssembly	RuntimeError					
+Built-ins	WebAssembly	WebAssembly.Module	WebAssembly.Module					
+Built-ins	WebAssembly	WebAssembly.Instance	WebAssembly.Instance					
+Built-ins	WebAssembly	WebAssembly.Memory	WebAssembly.Memory					
+Built-ins	WebAssembly	WebAssembly.Table	WebAssembly.Table					
+Built-ins	WebAssembly	WebAssembly.CompileError	WebAssembly.CompileError					
+Built-ins	WebAssembly	WebAssembly.LinkError	WebAssembly.LinkError					
+Built-ins	WebAssembly	WebAssembly.RuntimeError	WebAssembly.RuntimeError					
+Statements	Control flow	Block	Block					
+Statements	Control flow	Empty statement	Empty statement					
+Statements	Control flow	break	break					
+Statements	Control flow	continue	continue					
+Statements	Control flow	if...else	if...else					
+Statements	Control flow	switch	switch					
+Statements	Control flow	throw	throw					
+Statements	Control flow	try...catch	try...catch					
+Statements	Declarations	var	var					
+Statements	Declarations	let	let					
+Statements	Declarations	const	const					
+Statements	Functions and classes	function	function					
+Statements	Functions and classes	function*	function*					
+Statements	Functions and classes	async function	async function					
+Statements	Functions and classes	async function*	async function*					
+Statements	Functions and classes	return	return					
+Statements	Functions and classes	class	class					
+Statements	Iterations	do...while	do...while					
+Statements	Iterations	for	for					
+Statements	Iterations	for...in	for...in					
+Statements	Iterations	for...of	for...of					
+Statements	Iterations	for await...of	for await...of					
+Statements	Iterations	while	while					
+Statements	Other	debugger	debugger					
+Statements	Other	export	export					
+Statements	Other	import	import					
+Statements	Other	label	label					
+Statements	Other	with	with					
+Expressions and operators	Primary expressions	this	this					
+Expressions and operators	Primary expressions	function	function					
+Expressions and operators	Primary expressions	class	class					
+Expressions and operators	Primary expressions	function*	function*					
+Expressions and operators	Primary expressions	yield	yield					
+Expressions and operators	Primary expressions	yield*	yield*					
+Expressions and operators	Primary expressions	async function	async function					
+Expressions and operators	Primary expressions	async function*	async function*					
+Expressions and operators	Primary expressions	await	await					
+Expressions and operators	Primary expressions	[]	[]					
+Expressions and operators	Primary expressions	{}	{}					
+Expressions and operators	Primary expressions	/ab+c/i	/ab+c/i					
+Expressions and operators	Primary expressions	( )	( )					
+Expressions and operators	Primary expressions	null	null					
+Expressions and operators	Left-hand-side expressions	Property accessors	Property accessors					
+Expressions and operators	Left-hand-side expressions	?. (Optional chaining)	?. (Optional chaining)					
+Expressions and operators	Left-hand-side expressions	new	new					
+Expressions and operators	Left-hand-side expressions	new.target	new.target					
+Expressions and operators	Left-hand-side expressions	import.meta	import.meta					
+Expressions and operators	Left-hand-side expressions	super	super					
+Expressions and operators	Left-hand-side expressions	...obj	...obj					
+Expressions and operators	Increment & decrement	A++	A++					
+Expressions and operators	Increment & decrement	A--	A--					
+Expressions and operators	Increment & decrement	++A	++A					
+Expressions and operators	Increment & decrement	--A	--A					
+Expressions and operators	Unary operators	delete	delete					
+Expressions and operators	Unary operators	void	void					
+Expressions and operators	Unary operators	typeof	typeof					
+Expressions and operators	Unary operators	+	+					
+Expressions and operators	Unary operators	-	-					
+Expressions and operators	Unary operators	~	~					
+Expressions and operators	Unary operators	!	!					
+Expressions and operators	Arithmetic operators	+	+					
+Expressions and operators	Arithmetic operators	-	-					
+Expressions and operators	Arithmetic operators	/	/					
+Expressions and operators	Arithmetic operators	*	*					
+Expressions and operators	Arithmetic operators	%	%					
+Expressions and operators	Arithmetic operators	**	**					
+Expressions and operators	Relational operators	in	in					
+Expressions and operators	Relational operators	instanceof	instanceof					
+Expressions and operators	Relational operators	<	<					
+Expressions and operators	Relational operators	>	>					
+Expressions and operators	Relational operators	<=	<=					
+Expressions and operators	Relational operators	>=	>=					
+Expressions and operators	Equality operators	Err:520	Err:520					
+Expressions and operators	Equality operators	!=	!=					
+Expressions and operators	Equality operators	Err:510	Err:510					
+Expressions and operators	Equality operators	!==	!==					
+Expressions and operators	Bitwise shift operators	<<	<<					
+Expressions and operators	Bitwise shift operators	>>	>>					
+Expressions and operators	Bitwise shift operators	>>>	>>>					
+Expressions and operators	Binary bitwise operators	&	&					
+Expressions and operators	Binary bitwise operators	|	|					
+Expressions and operators	Binary bitwise operators	^	^					
+Expressions and operators	Binary logical operators	&&	&&					
+Expressions and operators	Binary logical operators	||	||					
+Expressions and operators	Binary logical operators	??	??					
+Expressions and operators	Conditional (ternary) operator	(condition ? ifTrue : ifFalse)	(condition ? ifTrue : ifFalse)					
+Expressions and operators	Assignment operators	=	=					
+Expressions and operators	Assignment operators	*=	*=					
+Expressions and operators	Assignment operators	**=	**=					
+Expressions and operators	Assignment operators	/=	/=					
+Expressions and operators	Assignment operators	%=	%=					
+Expressions and operators	Assignment operators	+=	+=					
+Expressions and operators	Assignment operators	-=	-=					
+Expressions and operators	Assignment operators	<<=	<<=					
+Expressions and operators	Assignment operators	>>=	>>=					
+Expressions and operators	Assignment operators	>>>=	>>>=					
+Expressions and operators	Assignment operators	&=	&=					
+Expressions and operators	Assignment operators	^=	^=					
+Expressions and operators	Assignment operators	|=	|=					
+Expressions and operators	Assignment operators	&&=	&&=					
+Expressions and operators	Assignment operators	||=	||=					
+Expressions and operators	Assignment operators	??=	??=					
+Expressions and operators	Assignment operators	[a, b] = arr	[a, b] = arr					
+Expressions and operators	Assignment operators	{ a, b } = obj	{ a, b } = obj					
+Expressions and operators	Comma operators	,	,					
+Functions	Functions	Arrow Functions	Arrow Functions					
+Functions	Functions	Default parameters	Default parameters					
+Functions	Functions	Rest parameters	Rest parameters					
+Functions	Functions	arguments	arguments					
+Functions	Functions	Method definitions	Method definitions					
+Functions	Functions	getter	getter					
+Functions	Functions	setter	setter					
+Classes	Classes	class	class					
